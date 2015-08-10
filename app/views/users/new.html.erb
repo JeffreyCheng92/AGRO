@@ -1,6 +1,9 @@
 <h3>Sign Up</h3>
 
 <form action="<%= users_url %>" method="post">
+
+  <%= auth_token %>
+
   <label for="users-email">Email Address: </label>
   <input type="text"
          name="user[email]"
