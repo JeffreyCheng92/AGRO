@@ -15,19 +15,21 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def show
-
-  end
+  # probably needs to go into the API:Users controller
+  # def edit
+  # end
+  #
+  # def update
+  # end
+  #
+  # def show
+  #   @user = user.find(params[:id])
+  # end
 
   private
   def user_params
-    params.require(:user).permit(:username, :password, :bio, :email, :location)
+    # bio, location
+    params.require(:user).permit(:username, :password, :email)
   end
 
 end

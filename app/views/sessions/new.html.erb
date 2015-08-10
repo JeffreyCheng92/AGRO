@@ -1,0 +1,20 @@
+<h3>Sign In</h3>
+
+<form action="<%= users_url %>" method="post">
+  
+  <label for="users-username">Username: </label>
+  <input type="text"
+         name="user[username]"
+         value="<%= @user.username %>"
+         id="users-username">
+  <br>
+
+  <label for="users-password">Password: </label>
+  <input type="password"
+         name="user[password]"
+         id="users-password">
+ <br>
+
+ <input type="submit" value="Log In">
+
+</form>
