@@ -1,9 +1,9 @@
-# AGRORO
+# AGRO
 
 [link here]
 
 ## Minimum Viable Product
-AGRORO (Authentic Game Reviews Online) is a clone of Yelp built on Rails and Backbone. Users can:
+AGRO (Authentic Game Reviews Online) is a clone of Yelp built on Rails and Backbone. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
