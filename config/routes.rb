@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:update, :show]
-    resources :games
+    resources :games, except: [:new, :edit]
   end
 
 end

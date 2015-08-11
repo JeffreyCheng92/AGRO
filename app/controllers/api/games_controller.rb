@@ -1,18 +1,23 @@
 class Api::GamesController < ApplicationController
-  def new
-
-  end
 
   def create
+    @game = current_user.games.new(game_params)
 
-  end
-
-  def edit
-
+    if @game.save
+      render json: @game
+    else
+      render json: @game.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   def update
+    @game = Game.find(params[:id])
 
+    if @game.update(game_params)
+      render json: @game
+    else
+      render json: @game.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   def index
