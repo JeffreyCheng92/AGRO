@@ -1,7 +1,8 @@
-TrelloClone.Views.gameListItem = Backbone.View.extend({
+AGRO.Views.gameListItem = Backbone.View.extend({
   template: JST["games/game_list_item"],
 
   initialize: function (options) {
+    this.listenTo(this.model, "sync", this.render);
   },
 
   render: function () {
