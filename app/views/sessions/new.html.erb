@@ -1,36 +1,38 @@
-<div class="container">
-  <div class="jumbotron">
-    <div class="jumbotron-container">
+<div class="login-background">
+  <div class="container">
+    <div class="jumbotron">
+      <div class="jumbotron-container">
 
-      <h1 class="jumbotron-header">Log In</h1>
-
-
-      <form action="<%= session_url %>" method="post">
-
-        <%= auth_token %>
-
-        <div class="form-group">
-          <label for="users-username">Username: </label>
-
-          <input type="text"
-                 name="user[username]"
-                 value="<%= @user.username %>"
-                 class="form-control"
-                 id="users-username">
-        </div>
-
-        <div class="form-group">
-          <label for="users-password">Password: </label>
-          <input type="password"
-                 name="user[password]"
-                 id="users-password"
-                 class="form-control">
-        </div>
+        <h1 class="jumbotron-header">Log In</h1>
 
 
-       <input class="btn btn-primary btn-lg" type="submit" value="Log In">
+        <form action="<%= session_url %>" method="post">
 
-      </form>
+          <%= auth_token %>
+
+          <div class="form-group">
+            <label for="users-username">Username: </label>
+
+            <input type="text"
+                   name="user[username]"
+                   value="<%= @user.username %>"
+                   class="form-control"
+                   id="users-username">
+          </div>
+
+          <div class="form-group">
+            <label for="users-password">Password: </label>
+            <input type="password"
+                   name="user[password]"
+                   id="users-password"
+                   class="form-control">
+          </div>
+
+
+         <input class="btn btn-primary btn-lg" type="submit" value="Log In">
+
+        </form>
+      </div>
     </div>
   </div>
 </div>
