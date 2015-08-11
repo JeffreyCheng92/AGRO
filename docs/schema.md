@@ -7,6 +7,9 @@ id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users)
 title       | string    | not null
 description | text      | not null
+developer   | string    | not null
+release_date| string    | not null
+rating      | string    | not null
 
 ## genre_tag
 column name | data type | details
@@ -41,4 +44,4 @@ email           | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, unique
 bio             | text      | defaults null, (added in the users show page)
-location        | string    | 
+location        | string    |

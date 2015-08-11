@@ -6,6 +6,13 @@ class User < ActiveRecord::Base
   attr_reader :password
   after_initialize :ensure_session_token
 
+  has_many(
+    :games,
+    class_name: :Game,
+    foreign_key: :author_id,
+    primary_key: :id
+  )
+
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
     return (user && user.is_password?(password)) ? user : nil
