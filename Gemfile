@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'rename'
 gem 'annotate'
 gem 'backbone-on-rails'
+gem 'bootstrap-sass', '~> 3.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
