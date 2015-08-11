@@ -1,7 +1,4 @@
-<ul>
-  <% if flash[:errors] %>
-    <% flash[:errors].each do |err| %>
-      <li> <%= err %> </li>
-    <% end %>
-  <% end %>
-</ul>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag(:div, msg, class: "alert alert-info") %>
+<% end %>

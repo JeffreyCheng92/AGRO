@@ -18,7 +18,11 @@
 @import "bootstrap";
 
 .jumbotron {
-  margin-top: 250px;
+  min-width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .jumbotron-header {
@@ -27,4 +31,8 @@
 
 .jumbotron-container {
   text-align: center;
+}
+
+body {
+  padding-top: 50px;
 }
