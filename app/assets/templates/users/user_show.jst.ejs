@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="table-responsive">
+          <table class='table'>
+            <tr>
+              <td><strong>Username: </strong></td>
+              <td> <%= user.escape("username") %> </td>
+            </tr>
+
+            <tr>
+              <td><strong>Location: </strong></td>
+              <td><%= user.escape("location") %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <h1>PROFILE</h1>
+        <div class="description">
+          Bio: <%= user.escape("bio") %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
