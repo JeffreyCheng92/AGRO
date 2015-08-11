@@ -1,8 +1,8 @@
-AGRO.Views.boardForm = Backbone.View.extend({
+AGRO.Views.gameForm = Backbone.View.extend({
   template: JST["games/game_form"],
 
   initialize: function(options) {
-
+    this.listenTo(this.model, "sync", this.render);
   },
 
   events: {
@@ -10,25 +10,26 @@ AGRO.Views.boardForm = Backbone.View.extend({
   },
 
   render: function() {
-    var header = (this.model.isNew()) ? "New Game" : "Edit Game?";
+    var header = (this.model.isNew()) ? "New Game" : "Edit Game";
     var button_name = (this.model.isNew()) ? "Add Game" : "Confirm Changes";
-    this.$el.html(this.template({
+    var content = this.template({
       header: header,
       button_name: button_name,
-      board: this.model
-    }));
+      game: this.model,
+    });
+
+    this.$el.html(content);
     return this;
   },
 
   sendForm: function(event) {
     event.preventDefault();
-
     var formData = $(event.currentTarget).serializeJSON();
 
     this.model.save(formData.game, {
       success: function() {
         this.collection.add(this.model);
-        Backbone.history.navigate("#/game/" + this.model.id);
+        Backbone.history.navigate("");
       }.bind(this)
     });
   }

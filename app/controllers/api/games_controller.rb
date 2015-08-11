@@ -2,7 +2,7 @@ class Api::GamesController < ApplicationController
 
   def create
     @game = current_user.games.new(game_params)
-
+    fail
     if @game.save
       render json: @game
     else
@@ -26,6 +26,12 @@ class Api::GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+
+    if @game
+      render :show
+    else
+      render json: @game, status: :unprocessable_entity
+    end
   end
 
   private
