@@ -16,6 +16,7 @@
 //= require underscore
 //= require backbone
 //= require agro
+//= require_tree ./utils
 //= require jquery.serializejson
 //= require_tree ../templates
 //= require_tree ./models

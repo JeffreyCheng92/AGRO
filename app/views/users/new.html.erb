@@ -9,12 +9,13 @@
         <%= auth_token %>
 
         <div class="form-group">
-          <label for="users-email">Email Address: </label>
+          <label for="users-email">Email: </label>
           <input type="text"
                  name="user[email]"
                  value="<%= @user.email %>"
                  id="users-email"
-                 class="form-control">
+                 class="form-control"
+                 placeholder="abc123@example.com">
         </div>
 
         <div class="form-group">
@@ -24,7 +25,8 @@
                  name="user[username]"
                  value="<%= @user.username %>"
                  class="form-control"
-                 id="users-username">
+                 id="users-username"
+                 placeholder="Username">
         </div>
 
         <div class="form-group">
@@ -32,7 +34,8 @@
           <input type="password"
                  name="user[password]"
                  id="users-password"
-                 class="form-control">
+                 class="form-control"
+                 placeholder="Password">
         </div>
 
 

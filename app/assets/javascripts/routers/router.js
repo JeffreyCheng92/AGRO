@@ -3,11 +3,19 @@ AGRO.Routers.Router = Backbone.Router.extend({
   initialize: function(options) {
     this.$rootEl = options.$rootEl;
     this.users = options.users;
+    this.games = options.games;
   },
 
   routes: {
+    "": "gameIndex",
     "users/:id": "userShow",
     "users/:id/edit": "userEdit"
+  },
+
+  gameIndex: function() {
+    this.games.fetch();
+    var gameIndexView = new AGRO.Views.gameIndex({collection: this.games});
+    this._swapView(gameIndexView);
   },
 
   userShow: function(id) {

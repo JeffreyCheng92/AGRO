@@ -6,7 +6,8 @@ window.AGRO = {
   initialize: function() {
     new AGRO.Routers.Router({
       $rootEl: $("#content"),
-      users: new AGRO.Collections.Users()
+      users: new AGRO.Collections.Users(),
+      games: new AGRO.Collections.Games(),
     });
     Backbone.history.start();
   }
