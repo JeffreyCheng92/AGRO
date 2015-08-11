@@ -1,0 +1,26 @@
+<div class="panel panel-default profile-page">
+  <div class="panel-body">
+    <form class="user-edit-form" action="/api/users/<%= user.id %>" method="post">
+
+      <div class="form-group">
+        <label for="users-loc">Location</label>
+        <input type="text"
+               name="user[location]"
+               value="<%= user.escape("location") %>"
+               id="users-loc"
+               class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="users-bio">Biography: </label>
+        <textarea class="form-control"
+                  name="user[bio]"
+                  rows="8"
+                  cols="40"><%= user.escape("bio") %></textarea>
+      </div>
+
+      <input class="btn btn-primary btn-lg" type="submit" value="Update">
+
+    </form>
+  </div>
+</div>
