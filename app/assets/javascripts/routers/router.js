@@ -7,12 +7,19 @@ AGRO.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "users/:id": "userShow",
+    "users/:id/edit": "userEdit"
   },
 
   userShow: function(id) {
     var user = this.users.getOrFetch(id);
     var userShowView = new AGRO.Views.userShow({model: user});
     this._swapView(userShowView);
+  },
+
+  userEdit: function(id) {
+    var user = this.user.getOrFetch(id);
+    var userEditView = new AGRO.Views.userEdit({model: user});
+    this._swapView(userEditView);
   },
 
   _swapView: function(view) {
