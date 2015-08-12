@@ -1,6 +1,4 @@
 class Api::GamesController < ApplicationController
-
-
   def create
     @game = current_user.games.new(game_params)
 
@@ -39,7 +37,7 @@ class Api::GamesController < ApplicationController
     @game = Game.find(params[:id])
 
     if current_user.nil?
-      flash[:errors] = "Must be logged in to do that"
+      flash[:errors] = "You must log in as the author to delete games."
       render json: flash[:errors]
     elsif @game.author_id == current_user.id
       @game.destroy()
