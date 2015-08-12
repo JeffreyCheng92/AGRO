@@ -32,8 +32,9 @@ AGRO.Routers.Router = Backbone.Router.extend({
   },
 
   gameSearch: function(letter) {
+    this.games.reset();
     this.games.fetch({ data: { letter: letter } });
-    var gameLetterView = new AGRO.Views.gameLetter({collection: this.games});
+    var gameLetterView = new AGRO.Views.gameIndex({collection: this.games});
     this._swapView(gameLetterView);
   },
 

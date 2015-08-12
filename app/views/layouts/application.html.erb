@@ -9,9 +9,11 @@
 
 
   <script type="text/javascript">
-    // window.current_user = {
-    //   id: <%= (logged_in?) ? return (current_user.id) : return (0) %>
-    // }
+    <% if logged_in? %>
+      window.current_user = {
+        id: <%= (current_user.id) %>
+      }
+    <% end %>
 
     window.CLOUDINARY_OPTIONS = {
       cloud_name: "<%=ENV['CLOUD_NAME']%>",
