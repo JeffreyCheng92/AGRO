@@ -22,7 +22,7 @@ class Api::GamesController < ApplicationController
   def index
     if params[:letter]
       let = params[:letter]
-      @games = Game.where("title LIKE ?", '\A#{let}*')
+      @games = Game.where("LOWER(title) LIKE ?", "#{let.downcase}%")
     else
       @games = Game.all
     end

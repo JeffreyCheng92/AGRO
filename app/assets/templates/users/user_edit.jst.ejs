@@ -3,7 +3,7 @@
     <form class="user-edit-form" action="/api/users/<%= user.id %>" method="post">
 
       <div class="form-group">
-        <label for="users-loc">Location</label>
+        <label for="users-loc">Location: </label>
         <input type="text"
                name="user[location]"
                value="<%= user.escape("location") %>"
@@ -17,6 +17,11 @@
                   name="user[bio]"
                   rows="8"
                   cols="40"><%= user.escape("bio") %></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="users-avatar">Avatar: </label>
+        <button class="upload-button">Upload New Image</button>
       </div>
 
       <input class="btn btn-primary btn-lg" type="submit" value="Update">

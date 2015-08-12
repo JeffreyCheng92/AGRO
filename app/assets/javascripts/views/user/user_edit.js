@@ -2,7 +2,8 @@ AGRO.Views.userEdit = Backbone.View.extend({
   template: JST["users/user_edit"],
 
   events:{
-    "submit form": "updateUser"
+    "submit form": "updateUser",
+    "click .upload-button": "upload"
   },
 
   initialize: function(options) {
@@ -27,6 +28,21 @@ AGRO.Views.userEdit = Backbone.View.extend({
         window.location.replace("http://localhost:3000/session/new");
       }
     });
+  },
+
+  upload: function(event) {
+    event.preventDefault();
+    var image = new CloudinaryDemo.Models.Image();
+
+    // cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result){
+    //   var data = result[0];
+    //   image.set({url: data.url, thumb_url: data.thumbnail_url});
+    //   image.save({}, {
+    //     success: function(){
+    //       CloudinaryDemo.Collections.images.add(image);
+    //     }
+    //   });
+    // });
   }
 
 });
