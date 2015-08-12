@@ -35,7 +35,7 @@
 
   <div class="form-group">
     <label for="game-rating"> ESRB Rating: </label>
-    <select>
+    <select name="game[rating]">
       <% for(var i = 0; i < ratings.length; i++) { %>
         <option value="<%= ratings[i] %>"
                 <%= (game.get('rating') == ratings[i]) ? 'selected' : '' %> >   <%= desc[i] %>

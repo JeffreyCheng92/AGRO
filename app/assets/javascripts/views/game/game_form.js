@@ -29,7 +29,7 @@ AGRO.Views.gameForm = Backbone.View.extend({
     this.model.save(formData.game, {
       success: function() {
         this.collection.add(this.model);
-        Backbone.history.navigate("");
+        Backbone.history.navigate("", {trigger: true});
       }.bind(this)
     });
   }
