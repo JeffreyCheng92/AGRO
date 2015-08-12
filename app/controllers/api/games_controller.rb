@@ -1,8 +1,9 @@
 class Api::GamesController < ApplicationController
 
+
   def create
     @game = current_user.games.new(game_params)
-    
+
     if @game.save
       render json: @game
     else
@@ -31,6 +32,17 @@ class Api::GamesController < ApplicationController
       render :show
     else
       render json: @game, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @game = Game.find(params[:id])
+
+    if @game.author_id == current_user.id
+      @game.destroy()
+      render json: @game
+    else
+      redirect_to new_session_url
     end
   end
 

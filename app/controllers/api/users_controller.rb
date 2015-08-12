@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-  before_action :require_log_in
+  before_action :require_log_in only: :update
 
   def update
     @user = User.find(params[:id])

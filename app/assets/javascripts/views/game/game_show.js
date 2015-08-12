@@ -5,10 +5,28 @@ AGRO.Views.gameShow = Backbone.View.extend({
     this.listenTo(this.model, 'sync', this.render);
   },
 
+  events: {
+    "click .delete-button": "deleteGame"
+  },
+
   render: function() {
     var content = this.template({ game: this.model });
     this.$el.html(content);
     return this;
+  },
+
+  deleteGame: function(event) {
+    event.preventDefault();
+
+    this.model.destroy({
+      success: function() {
+        Backbone.history.navigate("", {trigger: true});
+      },
+      error: function() {
+        // window.location.replace("http://localhost:3000/session/new");
+        alert("You must be the author to delete the game.");
+      }
+    });
   },
 
 });

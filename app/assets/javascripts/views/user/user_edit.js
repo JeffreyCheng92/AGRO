@@ -23,7 +23,6 @@ AGRO.Views.userEdit = Backbone.View.extend({
         this.collection.add(this.model);
         Backbone.history.navigate("#/users/" + this.model.id, {trigger: true});
       }.bind(this),
-
       error: function() {
         window.location.replace("http://localhost:3000/session/new");
       }
