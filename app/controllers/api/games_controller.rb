@@ -20,7 +20,12 @@ class Api::GamesController < ApplicationController
   end
 
   def index
-    @games = Game.all
+    if params[:letter]
+      let = params[:letter]
+      @games = Game.where("title LIKE ?", '\A#{let}*')
+    else
+      @games = Game.all
+    end
   end
 
   def show

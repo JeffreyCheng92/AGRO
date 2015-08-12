@@ -1,4 +1,4 @@
-AGRO.Views.gameIndex = Backbone.CompositeView.extend({
+AGRO.Views.gameLetter = Backbone.CompositeView.extend({
   template: JST["games/game_index"],
 
   initialize: function(options) {
@@ -11,6 +11,7 @@ AGRO.Views.gameIndex = Backbone.CompositeView.extend({
   render: function () {
     this.$el.html(this.template());
     this.attachSubviews();
+
     return this;
   },
 
