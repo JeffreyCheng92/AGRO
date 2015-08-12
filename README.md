@@ -7,10 +7,10 @@ AGRO (Authentic Game Reviews Online) is a clone of Yelp built on Rails and Backb
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [ ] Create accounts
-- [ ] Create sessions (log in)
-- [ ] Create games
-- [ ] Create users
+- [X] Create accounts
+- [X] Create sessions (log in)
+- [X] Create games
+- [X] Create users
 - [ ] Create reviews/posts
 - [ ] Search for games by title
 
