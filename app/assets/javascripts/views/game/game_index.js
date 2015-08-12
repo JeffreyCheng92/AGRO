@@ -33,12 +33,22 @@ AGRO.Views.gameIndex = Backbone.CompositeView.extend({
 
   search: function(event) {
     event.preventDefault();
-    debugger
+    // Remove current selected letter in alphabet bar
     this.$(".selected").removeClass("selected");
+
     var target = $(event.currentTarget);
-    var url = target.data('link');
-    Backbone.history.navigate(url, {trigger: true});
+    // Add red bg to newly selected in alphabet bar
     target.addClass("selected");
+
+    // Removes the subviews manually in games list preserving alphabet bar
+    this.subviews(".game-list").each( function(view) { view.remove(); });
+
+    // Setting the subview hash object to empty to prevent persisting views
+    // from rerendering.
+    this._subviews[".game-list"] = _([]);
+    this.collection.fetch({
+      data: {letter: target.data("letter"),
+      reset: true} });
   },
 
 });

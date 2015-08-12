@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
+  has_one :avatar, as: :imageable  
+
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
     return (user && user.is_password?(password)) ? user : nil

@@ -36,7 +36,7 @@ AGRO.Views.userEdit = Backbone.View.extend({
 
     // cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result){
     //   var data = result[0];
-    //   image.set({url: data.url, thumb_url: data.thumbnail_url});
+    //   image.set({url: data.url, thumbnail_url: data.thumbnail_url});
     //   image.save({}, {
     //     success: function(){
     //       CloudinaryDemo.Collections.images.add(image);
