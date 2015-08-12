@@ -22,9 +22,8 @@ AGRO.Views.gameShow = Backbone.View.extend({
       success: function() {
         Backbone.history.navigate("", {trigger: true});
       },
-      error: function() {
-        // window.location.replace("http://localhost:3000/session/new");
-        alert("You must be the author to delete the game.");
+      error: function(__, res) {
+        window.location.assign("http://localhost:3000/session/new");
       }
     });
   },
