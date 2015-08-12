@@ -9,7 +9,12 @@ class Api::ImagesController < ApplicationController
   end
 
   def update
-    # image = 
+    @image = Image.find(params[:id])
+    if @image.update(image_params)
+      render json: @image
+    else
+      render json: @image.errors.full_messages, status: 422
+    end
   end
 
   def show
