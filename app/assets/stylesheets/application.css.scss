@@ -40,9 +40,12 @@ body {
   color: red;
 }
 
+.letters {
+  min-height: 20px;
+}
 .alphabet {
     list-style-type: none;
-    margin:90px auto 0;
+    margin:50px auto 0;
     padding:0;
     cursor: pointer;
     width:80%;
