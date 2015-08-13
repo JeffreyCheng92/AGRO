@@ -23,9 +23,10 @@
             </tr>
           </table>
         </div>
-
-        <div><button class="delete-button">Delete Game</button></div>
-        <div><a href="/#/games/<%= game.id %>/edit">Edit Game</a></div>
+        <% if (id === game.get('author_id')) { %>
+          <div><button class="delete-button">Delete Game</button></div>
+          <div><a href="/#/games/<%= game.id %>/edit">Edit Game</a></div>
+        <% } %>
       </div>
       <div class="col-md-8">
         <h3 class='text-center'>Description/Storyline</h3>

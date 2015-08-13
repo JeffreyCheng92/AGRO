@@ -10,7 +10,8 @@ AGRO.Views.gameShow = Backbone.View.extend({
   },
 
   render: function() {
-    var content = this.template({ game: this.model });
+    var id = current_user.id;
+    var content = this.template({ id: id, game: this.model });
     this.$el.html(content);
     return this;
   },
