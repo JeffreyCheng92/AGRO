@@ -15,6 +15,10 @@ AGRO.Views.userShow = Backbone.View.extend({
       var $img = $('<img>').attr('src', link);
       this.$(".image-link").attr("href", "#/images/" + avatar.id)
                            .html($img);
+    } else {
+      var linke = "http://res.cloudinary.com/jeffreycheng/image/upload/c_scale,h_400,w_350/v1439448506/Blank-Gray-Pic-03_skgolu.jpg";
+      var $image = $('<img>').attr('src', linke);
+      this.$(".image-link").html($image);
     }
     return this;
   },
