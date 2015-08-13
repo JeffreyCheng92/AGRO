@@ -8,6 +8,7 @@ window.AGRO = {
       $rootEl: $("#content"),
       users: new AGRO.Collections.Users(),
       games: new AGRO.Collections.Games(),
+      images: new AGRO.Collection.Images(),
     });
     Backbone.history.start();
   }

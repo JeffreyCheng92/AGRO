@@ -4,6 +4,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
     this.$rootEl = options.$rootEl;
     this.users = options.users;
     this.games = options.games;
+    this.images = options.images;
   },
 
   routes: {
@@ -62,8 +63,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
   },
 
   imageShow: function(id) {
-    var image = new AGRO.Models.Image({id: id});
-    image.fetch();
+    var image = this.images.getOrFetch(id);
     var view = new AGRO.Views.ImagesShow({ model: image });
     this._swapView(image);
   },
