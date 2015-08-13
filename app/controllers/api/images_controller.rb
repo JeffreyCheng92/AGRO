@@ -4,7 +4,7 @@ class Api::ImagesController < ApplicationController
     if @image.save
       render json: @image
     else
-      render json: {message: 'failure'}, status: 422
+      render json: @image.errors.full_messages, status: 422
     end
   end
 
