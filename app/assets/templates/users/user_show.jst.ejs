@@ -2,12 +2,12 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-4">
-        <a href="#/images/<%= user.avatar().id %> ">
-          <img src="<%= user.avatar().escape("url") %>" />
+        <a class="image-link">
+          <!-- here goes the image -->
         </a>
-
         <div class="table-responsive">
           <table class='table'>
+            <br>
             <tr>
               <td><strong>Username: </strong></td>
               <td> <%= user.escape("username") %> </td>
