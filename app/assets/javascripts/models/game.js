@@ -1,18 +1,18 @@
 AGRO.Models.Game = Backbone.Model.extend({
   urlRoot: "/api/games",
 
-  covers: function() {
-    if (!this._covers) {
-      this._covers = new AGRO.Collections.Images();
+  cover: function() {
+    if (!this._cover) {
+      this._cover = new AGRO.Models.Image();
     }
 
-    return this._covers;
+    return this._cover;
   },
 
   parse: function (response) {
-    if (response.covers) {
-      this.covers().set(response.covers, { parse: true });
-      delete response.covers;
+    if (response.cover) {
+      this.cover().set(response.cover, { parse: true });
+      delete response.cover;
     }
 
     return response;
