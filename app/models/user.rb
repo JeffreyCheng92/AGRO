@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
+  has_many :reviews, dependent: :destroy
+
+  has_many :reviewed_games, through: :reviews, source: :game
+
   has_many :avatars, as: :imageable, class_name: :Image
 
   def self.find_by_credentials(username, password)

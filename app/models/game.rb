@@ -10,6 +10,8 @@ class Game < ActiveRecord::Base
     primary_key: :id
     )
 
+  has_many :reviews, dependent: :destroy
+  has_many :reviewers, through: :reviews, source: :author
   has_many :covers, as: :imageable, class_name: :Image
 
 end
