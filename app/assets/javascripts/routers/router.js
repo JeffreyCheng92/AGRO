@@ -57,7 +57,8 @@ AGRO.Routers.Router = Backbone.Router.extend({
     var user = this.users.getOrFetch(id);
     var userEditView = new AGRO.Views.userEdit({
       model: user,
-      collection: this.users
+      collection: this.users,
+      images: this.images,
     });
     this._swapView(userEditView);
   },

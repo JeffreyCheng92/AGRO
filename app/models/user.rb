@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
-  has_one :avatar, as: :imageable  
+  has_one :avatar, as: :imageable, class_name: :Image
 
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)

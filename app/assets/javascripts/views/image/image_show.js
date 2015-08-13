@@ -6,7 +6,8 @@ AGRO.Views.ImagesShow = Backbone.View.extend({
   },
 
   render: function(){
-    this.$el.html(this.template({image: this.model}));
+    var content = this.template({ image: this.model });
+    this.$el.html(content);
     return this;
   },
 

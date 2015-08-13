@@ -8,6 +8,7 @@ AGRO.Views.userEdit = Backbone.View.extend({
 
   initialize: function(options) {
     this.listenTo(this.model, 'sync', this.render);
+    this.images = options.images;
   },
 
   render: function() {
@@ -33,20 +34,24 @@ AGRO.Views.userEdit = Backbone.View.extend({
   upload: function(event) {
     event.preventDefault();
     var image = new AGRO.Models.Image();
+    debugger
 
-    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result){
-      var data = result[0];
-      image.set({ url: data.url,
-                  thumbnail_url: data.thumbnail_url,
-                  imageable_id: current_user,
-                  imageable_type: "User"
-                });
-      image.save({}, {
-        success: function(){
-          AGRO.Collections.images.add(image);
-        }
-      });
-    });
+    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result) {
+      if (error === null ) {
+        this.$('.help-inline').html("");
+        var data = result[0];
+        var formData = { url: data.url,
+                         thumbnail_url: data.thumbnail_url,
+                         imageable_id: current_user.id,
+                         imageable_type: "User"
+                       };
+        image.save(formData, {
+          success: function() { this.images.add(image); }.bind(this)
+        });
+      } else {
+        this.$('.help-inline').html("Image upload failed");
+      }
+    }.bind(this));
   }
 
 });
