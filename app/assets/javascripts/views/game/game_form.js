@@ -3,10 +3,12 @@ AGRO.Views.gameForm = Backbone.View.extend({
 
   initialize: function(options) {
     this.listenTo(this.model, "sync", this.render);
+    this.images = options.images;
   },
 
   events: {
-    "submit form": "sendForm"
+    "submit form": "sendForm",
+    "click .upload-button": "upload"
   },
 
   render: function() {
@@ -50,5 +52,27 @@ AGRO.Views.gameForm = Backbone.View.extend({
     this.$('.control-group').removeClass('error');
     this.$('.help-inline').text('');
   },
+
+  upload: function(event) {
+    event.preventDefault();
+    var image = new AGRO.Models.Image();
+
+    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result) {
+      if (error === null) {
+        this.$('.help-inline').html("");
+        var data = result[0];
+        var formData = { url: data.url,
+                         thumbnail_url: data.thumbnail_url,
+                         imageable_id: this.model.id,
+                         imageable_type: "Game"
+                       };
+        image.save(formData, {
+          success: function() { this.images.add(image); }.bind(this)
+        });
+      } else {
+        this.$('.help-inline').html("Image upload failed");
+      }
+    }.bind(this));
+  }
 
 });

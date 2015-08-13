@@ -10,6 +10,6 @@ class Game < ActiveRecord::Base
     primary_key: :id
     )
 
-  has_one :cover, as: :imageable, class_name: :Image
+  has_many :covers, as: :imageable, class_name: :Image
 
 end

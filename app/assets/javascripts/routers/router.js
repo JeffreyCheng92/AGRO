@@ -27,7 +27,8 @@ AGRO.Routers.Router = Backbone.Router.extend({
     var game = new AGRO.Models.Game();
     var gameNewView = new AGRO.Views.gameForm({
       collection: this.games,
-      model: game
+      model: game,
+      images: this.images,
     });
     this._swapView(gameNewView);
   },
@@ -42,7 +43,8 @@ AGRO.Routers.Router = Backbone.Router.extend({
     var game = this.games.getOrFetch(id);
     var gameEditView = new AGRO.Views.gameForm({
       collection: this.games,
-      model: game
+      model: game,
+      images: this.images,
     });
     this._swapView(gameEditView);
   },
