@@ -15,13 +15,17 @@ class Api::ReviewsController < ApplicationController
     if @review.update(review_params)
       render json: @review
     else
-      render @review.errors.full_messages, status: 422
+      render json: @review.errors.full_messages, status: 422
     end
   end
 
   def destroy
     @review = Review.find(params[:id])
     @review.destroy()
+  end
+
+  def show
+    @review = Review.find(params[:id])
   end
 
   private
