@@ -12,7 +12,8 @@ AGRO.Routers.Router = Backbone.Router.extend({
     "games/:id": "gameShow",
     "games/:id/edit": "gameEdit",
     "users/:id": "userShow",
-    "users/:id/edit": "userEdit"
+    "users/:id/edit": "userEdit",
+    "images/:id": "imageShow",
   },
 
   gameIndex: function() {
@@ -58,6 +59,13 @@ AGRO.Routers.Router = Backbone.Router.extend({
       collection: this.users
     });
     this._swapView(userEditView);
+  },
+
+  imageShow: function(id) {
+    var image = new AGRO.Models.Image({id: id});
+    image.fetch();
+    var view = new AGRO.Views.ImagesShow({ model: image });
+    this._swapView(image);
   },
 
   _swapView: function(view) {

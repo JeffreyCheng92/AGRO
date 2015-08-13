@@ -32,17 +32,21 @@ AGRO.Views.userEdit = Backbone.View.extend({
 
   upload: function(event) {
     event.preventDefault();
-    var image = new CloudinaryDemo.Models.Image();
+    var image = new AGRO.Models.Image();
 
-    // cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result){
-    //   var data = result[0];
-    //   image.set({url: data.url, thumbnail_url: data.thumbnail_url});
-    //   image.save({}, {
-    //     success: function(){
-    //       CloudinaryDemo.Collections.images.add(image);
-    //     }
-    //   });
-    // });
+    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result){
+      var data = result[0];
+      image.set({ url: data.url,
+                  thumbnail_url: data.thumbnail_url,
+                  imageable_id: current_user,
+                  imageable_type: "User"
+                });
+      image.save({}, {
+        success: function(){
+          AGRO.Collections.images.add(image);
+        }
+      });
+    });
   }
 
 });
