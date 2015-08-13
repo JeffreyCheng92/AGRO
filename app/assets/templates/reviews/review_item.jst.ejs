@@ -1,0 +1,23 @@
+<div class="panel panel-default review-item">
+  <div class="panel-body">
+
+    <div class="col-md-4">
+      <div class="table-responsive">
+        <table class='table'>
+          <tr>
+            <td> <%= username %> </td>
+          </tr>
+          <tr>
+            <td><strong>Posted: </strong></td>
+            <td> <%= review.escape('created_at') %> </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="review-body">
+        <%= review.escape('body') %>
+      </div>
+    </div>
+  </div>
+</div>
