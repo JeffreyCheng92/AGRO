@@ -1,1 +1,1 @@
-json.extract! (@review, :id, :body, :created_at, :author, :game, :rating)
+json.extract!(@review, :id, :body, :created_at, :author, :game, :rating)

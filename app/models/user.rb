@@ -14,7 +14,12 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
-  has_many :reviews, dependent: :destroy
+  has_many(
+    :reviews,
+    class_name: :Review,
+    foreign_key: :author_id,
+    dependent: :destroy
+    )
 
   has_many :reviewed_games, through: :reviews, source: :game
 
