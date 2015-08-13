@@ -34,7 +34,6 @@ AGRO.Views.userEdit = Backbone.View.extend({
   upload: function(event) {
     event.preventDefault();
     var image = new AGRO.Models.Image();
-    debugger
 
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result) {
       if (error === null ) {
