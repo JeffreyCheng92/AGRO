@@ -20,5 +20,3 @@ AGRO.Collections.Images = Backbone.Collection.extend({
     return image;
   },
 });
-
-// AGRO.Collections.images = new AGRO.Collections.Images();
