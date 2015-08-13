@@ -1,5 +1,5 @@
 AGRO.Models.Review = Backbone.Model.extend({
-  urlRoot: "api/reviews",
+  urlRoot: "/api/reviews",
 
   author: function() {
     if (!this._author) {

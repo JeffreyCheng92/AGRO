@@ -9,8 +9,14 @@ window.AGRO = {
       users: new AGRO.Collections.Users(),
       games: new AGRO.Collections.Games(),
       images: new AGRO.Collections.Images(),
+      reviews: new AGRO.Collections.Reviews(),
     });
     Backbone.history.start();
+
+    $(".all-games").on('click', function(event) {
+      Backbone.history.navigate('.');
+      Backbone.history.navigate('/', { trigger: true });
+    });
   }
 };
 

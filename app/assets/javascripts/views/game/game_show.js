@@ -2,7 +2,12 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
   template: JST["games/game_show"],
 
   initialize: function(options) {
+    this.reviews = options.reviews;
+    this.reviews.each(this.addReviewItem.bind(this));
+
     this.listenTo(this.model, 'sync', this.render);
+    this.listenTo(this.reviews, "sync remove", this.render);
+    this.listenTo(this.reviews, "add", this.addReviewItem);
   },
 
   events: {
@@ -13,6 +18,8 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
     var id = (typeof current_user === "undefined") ? 0 : current_user.id;
     var content = this.template({ id: id, game: this.model });
     this.$el.html(content);
+
+    //hard coding image into page
     if (this.model.cover().has("id")) {
       var cover = this.model.cover();
       //hard coding link to meet size criteria in show page
@@ -21,7 +28,14 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
       this.$(".image-link").attr("href", "#/images/" + cover.id)
                            .html($img);
     }
+    
+    this.attachSubviews();
     return this;
+  },
+
+  addReviewItem: function(item) {
+    var view = new AGRO.Views.reviewItem({ model: item });
+    this.addSubview('.review-list', view);
   },
 
   deleteGame: function(event) {

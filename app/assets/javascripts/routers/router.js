@@ -5,6 +5,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
     this.users = options.users;
     this.games = options.games;
     this.images = options.images;
+    this.reviews = options.reviews;
   },
 
   routes: {
@@ -35,7 +36,10 @@ AGRO.Routers.Router = Backbone.Router.extend({
 
   gameShow: function(id) {
     var game = this.games.getOrFetch(id);
-    var gameShowView = new AGRO.Views.gameShow({ model: game });
+    var gameShowView = new AGRO.Views.gameShow({
+      model: game,
+      reviews: game.reviews(),
+     });
     this._swapView(gameShowView);
   },
 

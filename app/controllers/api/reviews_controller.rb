@@ -1,4 +1,8 @@
 class Api::ReviewsController < ApplicationController
+  def index
+    @reviews = Review.all;
+  end
+
   def create
     @review = Review.new(review_params)
 
@@ -22,10 +26,6 @@ class Api::ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy()
-  end
-
-  def show
-    @review = Review.find(params[:id])
   end
 
   private
