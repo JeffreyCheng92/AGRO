@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 
   attr_reader :password
   after_initialize :ensure_session_token
+  before_save :ensure_has_avatar
 
   has_many(
     :games,
@@ -17,7 +18,7 @@ class User < ActiveRecord::Base
 
   has_many :reviewed_games, through: :reviews, source: :game
 
-  has_many :avatars, as: :imageable, class_name: :Image
+  has_one :avatar, as: :imageable, class_name: :Image
 
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
@@ -45,5 +46,14 @@ class User < ActiveRecord::Base
     self.session_token = generate_session_token
     self.save!
     return self.session_token
+  end
+
+  def ensure_has_avatar
+    self.avatar ||= Image.new({
+      url: "http://res.cloudinary.com/jeffreycheng/image/upload/c_scale,h_400,w_350/v1439448506/Blank-Gray-Pic-03_skgolu.jpg",
+      thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439448506/Blank-Gray-Pic-03_skgolu.jpg",
+      imageable_type: "Default",
+      imageable_id: "1"
+    })
   end
 end

@@ -34,6 +34,7 @@ body {
 
 .profile-page {
   height: 100vh;
+  overflow: auto;
 }
 
 .help-inline {
@@ -78,4 +79,9 @@ body {
 
 .selected {
   background-color: red;
+}
+
+.sidebar img {
+  width: 100%;
+  height: auto;
 }

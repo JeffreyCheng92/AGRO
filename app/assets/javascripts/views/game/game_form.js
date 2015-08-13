@@ -3,7 +3,6 @@ AGRO.Views.gameForm = Backbone.View.extend({
 
   initialize: function(options) {
     this.listenTo(this.model, "sync", this.render);
-    // this.images = options.images;
   },
 
   events: {
@@ -31,11 +30,13 @@ AGRO.Views.gameForm = Backbone.View.extend({
       success: function() {
         this.hideErrors();
         this.collection.add(this.model);
+
         var image = this.model.cover();
         if (typeof this.formData !== 'undefined') {
           this.formData.imageable_id =  this.model.id;
           image.save(this.formData, {} );
         }
+        
         Backbone.history.navigate("", {trigger: true});
       }.bind(this),
 

@@ -1,18 +1,18 @@
 AGRO.Models.User = Backbone.Model.extend({
   urlRoot: "/api/users",
 
-  avatars: function() {
-    if (!this._avatars) {
-      this._avatars = new AGRO.Collections.Images();
+  avatar: function() {
+    if (!this._avatar) {
+      this._avatar = new AGRO.Models.Image();
     }
 
-    return this._avatars;
+    return this._avatar;
   },
 
   parse: function (response) {
-    if (response.avatars) {
-      this.avatars().set(response.avatars, { parse: true });
-      delete response.avatars;
+    if (response.avatar) {
+      this.avatar().set(response.avatar, { parse: true });
+      delete response.avatar;
     }
 
     return response;

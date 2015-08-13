@@ -13,7 +13,6 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
     var id = (typeof current_user === "undefined") ? 0 : current_user.id;
     var content = this.template({ id: id, game: this.model });
     this.$el.html(content);
-
     if (this.model.cover().has("id")) {
       var cover = this.model.cover();
       //hard coding link to meet size criteria in show page
