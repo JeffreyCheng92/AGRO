@@ -26,18 +26,28 @@ AGRO.Views.gameForm = Backbone.View.extend({
   sendForm: function(event) {
     event.preventDefault();
     var formData = $(event.currentTarget).serializeJSON();
-    debugger
+
+
+
     this.model.save(formData.game, {
       success: function() {
         this.hideErrors();
         this.collection.add(this.model);
-
         var image = this.model.cover();
-        if (typeof this.formData !== 'undefined') {
-          this.formData.imageable_id =  this.model.id;
-          image.save(this.formData, {} );
-        }
 
+
+
+        if (typeof this.formData !== 'undefined') {
+          // this.formData.imageable_id =  this.model.id;
+          image.save(this.formData, {
+            success: function (image, rep) {
+              // debugger;
+            }.bind(this),
+            error: function (image, resp) {
+              // debugger;
+            }.bind(this)
+          } );
+        }
         Backbone.history.navigate("/games/" + this.model.id, {trigger: true});
       }.bind(this),
 
@@ -69,8 +79,12 @@ AGRO.Views.gameForm = Backbone.View.extend({
         var data = result[0];
         this.formData = { url: data.url,
                          thumbnail_url: data.thumbnail_url,
-                         imageable_type: "Game"
+                         imageable_type: "Game",
+                        //  cant do this because this.model is new
+                        //  imageable_id: this.model.id
+                        // but this.model can be saved and can add after
                        };
+
       } else {
         this.$('.help-inline').html("Image upload failed");
       }

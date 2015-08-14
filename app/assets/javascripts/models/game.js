@@ -3,7 +3,9 @@ AGRO.Models.Game = Backbone.Model.extend({
 
   cover: function() {
     if (!this._cover) {
-      this._cover = new AGRO.Models.Image();
+      this._cover = new AGRO.Models.Image({
+        imageable_id: this.id,
+      });
     }
 
     return this._cover;

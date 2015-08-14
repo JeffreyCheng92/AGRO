@@ -3,7 +3,7 @@ class Api::GamesController < ApplicationController
     @game = current_user.games.new(game_params)
 
     if @game.save
-      render json: @game
+      render 'show'
     else
       render json: @game.errors.full_messages, status: :unprocessable_entity
     end

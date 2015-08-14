@@ -35,11 +35,7 @@ AGRO.Views.reviewForm = Backbone.View.extend({
     review.save(formData.review, {
       success: function() {
         this.collection.add(review);
-        //
-        //on navigate, it only renders the body correction but not the username
-        // seems i need to visit another game before it resets
         Backbone.history.navigate("#/games/" + this.model.get("game_id"), {trigger: true});
-        // Backbone.history.navigate("", {trigger: true});
       }.bind(this),
       error: function(_, response) {
         debugger
