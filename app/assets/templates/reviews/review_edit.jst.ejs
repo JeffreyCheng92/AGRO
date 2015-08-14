@@ -1,0 +1,24 @@
+<div class="modal-background">
+  <div class="modal-content">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form class="edit-review">
+          <div>
+            <label for="review-rating">Rating: </label>
+            <div id="star-rerater"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="review-body">Edit Review: </label>
+            <textarea class="form-control"
+                      name="review[body]"
+                      rows="8"
+                      cols="40"><%= review.escape('body') %></textarea>
+            <button type="submit" class="btn btn-default edit">Submit</button>
+            <span class="help-inline"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

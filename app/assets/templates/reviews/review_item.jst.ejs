@@ -16,6 +16,16 @@
             <td><strong>Total Posts: </strong></td>
             <td><%= review.author().escape('review_count') %></td>
           </tr>
+          <tr>
+            <% if (review.author().id === id) { %>
+              <td>
+                <button class="edit-review"> Edit </button>
+              </td>
+              <td>
+                <button class="delete-review"> Delete </button>
+              </td>
+            <% } %>
+          </tr>
         </table>
       </div>
     </div>

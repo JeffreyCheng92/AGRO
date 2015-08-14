@@ -5,11 +5,18 @@ AGRO.Views.reviewItem = Backbone.View.extend({
     this.listenTo(this.model, 'sync', this.render);
   },
 
+  events: {
+    'click .edit-review': 'editReview',
+    'click .delete-review': 'deleteReview'
+  },
+
   render: function() {
+    var id = (typeof current_user === "undefined") ? 0 : current_user.id;
+
     var content = this.template({
+      id: id,
       review: this.model
     });
-
     this.$el.html(content);
     this.onRender();
     return this;
@@ -23,12 +30,27 @@ AGRO.Views.reviewItem = Backbone.View.extend({
       half: true,
       readOnly: true,
       score: function() {
-        // debugger /;
-        // console.log(view.model.get("rating"));
-            return $(this).attr('data-score');
-          }
+        return $(this).attr('data-score');
+      }
     });
-  }
+  },
+
+  editReview: function(event) {
+    event.preventDefault();
+    var editView = new AGRO.Views.reviewEdit({
+      model: this.model,
+    });
+
+    $('body').append(editView.render().$el);
+  },
+
+  deleteReview: function(event) {
+    event.preventDefault();
+
+    this.model.destroy();
+    Backbone.history
+    .navigate("#/games/" + this.model.get('game').id, { trigger: true });
+  },
 
 
 });

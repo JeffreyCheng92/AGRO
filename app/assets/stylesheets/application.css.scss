@@ -89,3 +89,21 @@ body {
 .help-inline-image {
   color: red;
 }
+
+.modal-background {
+  background: rgba(0, 0, 0, 0.5); //add transparency to gray out background
+  // background-size: cover;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 1;
+}
+
+.modal-content {
+  position: absolute;
+  z-index: 2;
+  top: 25%;
+  left: 25%;
+}

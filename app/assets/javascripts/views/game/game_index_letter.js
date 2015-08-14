@@ -9,6 +9,6 @@ AGRO.Views.gameIndexLetter = Backbone.View.extend({
     var content = this.template({ letter: this.letter });
     this.$el.html(content);
     return this;
-  }
+  },
 
 });
