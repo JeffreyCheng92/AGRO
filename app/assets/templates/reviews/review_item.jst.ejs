@@ -5,11 +5,16 @@
       <div class="table-responsive">
         <table class='table'>
           <tr>
+            <td><strong>Username: </strong></td>
             <td> <%= review.author().escape("username") %> </td>
           </tr>
           <tr>
             <td><strong>Posted: </strong></td>
             <td> <%= review.escape('created_at') %> </td>
+          </tr>
+          <tr>
+            <td><strong>Total Posts: </strong></td>
+            <td><%= review.author().escape('review_count') %></td>
           </tr>
         </table>
       </div>
