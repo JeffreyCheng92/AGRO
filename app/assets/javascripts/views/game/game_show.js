@@ -12,7 +12,8 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
   },
 
   events: {
-    "click .delete-button": "deleteGame"
+    "click .delete-button": "deleteGame",
+    "submit form": "addReview",
   },
 
   render: function() {
@@ -56,5 +57,15 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
       }
     });
   },
+
+  addReview: function(event) {
+    event.preventDefault();
+    var review = new AGRO.Models.Review();
+    var formData = $(event.currentTarget).serializeJSON();
+    // formData.author_id = current_user.id;
+    formData.game_id = this.model.id;
+    debugger
+
+  }
 
 });
