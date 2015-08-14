@@ -26,9 +26,11 @@ class Game < ActiveRecord::Base
 
   def average_rating
     total = 0
-    reviews.each { |review| total += review.rating }
-    return total/(reviews.count)
-    #not working yet because division is bad check terminal
+    if reviews.length != 0
+      reviews.each { |review| total += review.rating }
+      return total/(reviews.count)
+    end
+    return total
   end
 
 end

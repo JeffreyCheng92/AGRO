@@ -13,7 +13,7 @@ class Api::GamesController < ApplicationController
     @game = Game.find(params[:id])
 
     if @game.update(game_params)
-      render json: @game
+      render @games
     else
       render json: @game.errors.full_messages, status: :unprocessable_entity
     end

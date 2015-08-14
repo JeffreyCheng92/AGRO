@@ -1,6 +1,6 @@
 class Review < ActiveRecord::Base
   validates :author, :game, :body, :rating, presence: true
-  validate :user_reviews_game_only_once
+  validate :user_reviews_game_only_once, on: :create
 
   belongs_to(
     :author,

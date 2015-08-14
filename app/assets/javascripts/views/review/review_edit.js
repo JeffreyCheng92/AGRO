@@ -19,25 +19,24 @@ AGRO.Views.reviewEdit = Backbone.View.extend({
 
   onRender: function() {
     var view = this;
-    debugger;
     this.$('#star-rerater').raty('destroy');
     this.$('#star-rerater').raty({
       path: '/assets/',
-      half: true
-      // score: function() {
-      //   return $(this).attr('data-score');
-      // }
+      half: true,
+      score: view.model.get('rating'),
+      scoreName: 'review[rating]'
     });
   },
 
   sendEdit: function(event) {
-    debugger
     event.preventDefault();
-
-    this.model.update(formData.review, {
+    debugger
+    var formData = this.$el.serializeJSON();
+    this.model.set(formData.review);
+    this.model.save({}, {
       success: function() {
-
-      },
+        this.remove();
+      }.bind(this),
       error: function() {
 
       }
