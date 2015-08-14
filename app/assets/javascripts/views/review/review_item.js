@@ -6,7 +6,6 @@ AGRO.Views.reviewItem = Backbone.View.extend({
   },
 
   render: function() {
-    debugger
     var content = this.template({
       review: this.model
     });

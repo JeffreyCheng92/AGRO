@@ -4,6 +4,7 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
   initialize: function(options) {
     this.reviews = options.reviews;
     this.reviews.each(this.addReviewItem.bind(this));
+    this.addReviewForm();
 
     this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.reviews, "sync remove", this.render);
@@ -28,7 +29,7 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
       this.$(".image-link").attr("href", "#/images/" + cover.id)
                            .html($img);
     }
-    
+
     this.attachSubviews();
     return this;
   },
@@ -36,6 +37,11 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
   addReviewItem: function(item) {
     var view = new AGRO.Views.reviewItem({ model: item });
     this.addSubview('.review-list', view);
+  },
+
+  addReviewForm: function() {
+    var form = new AGRO.Views.reviewForm();
+    this.addSubview('.review-form', form);
   },
 
   deleteGame: function(event) {
