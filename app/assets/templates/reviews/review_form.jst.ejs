@@ -1,5 +1,10 @@
 <form class="">
 
+  <div>
+    <label for="review-rating">Rating: </label>
+    <div id="star-rate"></div>
+  </div>
+
   <div class="form-group">
     <label for="review-body">Add Review: </label>
     <textarea class="form-control"
@@ -12,3 +17,18 @@
 
 
 </form>
+
+<script>
+  $('#star-rate').raty({
+    path: '/assets/',
+    half: true,
+    score: 3,
+    scoreName: 'review[rating]'
+  });
+  $('#star-rate').raty({
+    path: '/assets/',
+    half: true,
+    score: 3,
+    scoreName: 'review[rating]'
+  });
+</script>

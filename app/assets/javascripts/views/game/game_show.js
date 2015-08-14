@@ -7,7 +7,7 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
     this.addReviewForm();
 
     this.listenTo(this.model, 'sync', this.render);
-    this.listenTo(this.reviews, "sync remove", this.render);
+    this.listenTo(this.reviews, "sync remove add", this.render);
     this.listenTo(this.reviews, "add", this.addReviewItem);
   },
 
@@ -32,6 +32,9 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
     }
 
     this.attachSubviews();
+    if (this.$('#star-rate').children().length > 6) {
+      this.$('#star-rate').children().last().remove();
+    }
     return this;
   },
 
@@ -58,13 +61,26 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
     });
   },
 
+
   addReview: function(event) {
     event.preventDefault();
     var review = new AGRO.Models.Review();
     var formData = $(event.currentTarget).serializeJSON();
-    // formData.author_id = current_user.id;
-    formData.game_id = this.model.id;
-    debugger
+    formData.review.author_id = current_user.id;
+    formData.review.game_id = this.model.id;
+    review.save(formData.review, {
+      success: function() {
+        this.reviews.add(review);
+        //
+        //on navigate, it only renders the body correction but not the username
+        // seems i need to visit another game before it resets
+        // Backbone.history.navigate("#/games/" + this.model.id, {trigger: true});
+        Backbone.history.navigate("", {trigger: true});
+      }.bind(this),
+      error: function(_, response) {
+        debugger
+      }
+    });
 
   }
 

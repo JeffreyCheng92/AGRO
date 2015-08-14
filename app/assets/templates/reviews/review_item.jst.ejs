@@ -19,10 +19,29 @@
         </table>
       </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
+      <div class="star-rating" data-score= <%= review.rating %> ></div>
       <div class="review-body">
         <%= review.escape('body') %>
       </div>
     </div>
   </div>
 </div>
+
+
+<script>
+    $('.star-rating').raty({
+      path: '/assets/',
+      readOnly: true,
+      score: function() {
+            return $(this).attr('data-score');
+    }
+  });
+  $('.star-rating').raty({
+    path: '/assets/',
+    readOnly: true,
+    score: function() {
+          return $(this).attr('data-score');
+  }
+});
+</script>
