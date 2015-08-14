@@ -34,11 +34,12 @@ AGRO.Views.reviewForm = Backbone.View.extend({
 
     review.save(formData.review, {
       success: function() {
+        this.$(".help-inline").empty();
         this.collection.add(review);
         Backbone.history.navigate("#/games/" + this.model.get("game_id"), {trigger: true});
       }.bind(this),
       error: function(_, response) {
-        debugger
+        this.$(".help-inline").html(response.responseText);
       }
     });
   }

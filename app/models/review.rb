@@ -16,11 +16,7 @@ class Review < ActiveRecord::Base
 
   def user_reviews_game_only_once
     if author.reviewed_games.include?(game)
-      errors(:author) << "cannot create multiple reviews for one game"
+      errors[:You] << "can't create multiple reviews for one game."
     end
-
-    # if game.reviewers.include?(author)
-    #   error(:game) << "cannot create multiple reviews for one game"
-    # end
   end
 end
