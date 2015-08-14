@@ -30,7 +30,7 @@ class Game < ActiveRecord::Base
       reviews.each { |review| total += review.rating }
       return total/(reviews.count)
     end
-    return total
+    return "Unrated"
   end
 
 end

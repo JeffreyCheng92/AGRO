@@ -47,7 +47,7 @@ AGRO.Views.gameIndex = Backbone.CompositeView.extend({
     target.addClass("selected");
 
     // Removes the subviews manually in games list preserving alphabet bar
-    this.subviews(".game-list").each( function(view) { view.remove(); });
+    this.subviews(".games-table").each( function(view) { view.remove(); });
 
     // Setting the subview hash object to empty to prevent persisting views
     // from rerendering.
