@@ -7,7 +7,7 @@ class Api::ReviewsController < ApplicationController
     @review = current_user.reviews.new(review_params)
 
     if @review.save
-      render json: @review
+      render :show
     else
       fail
       render json: @review.errors.full_messages, status: 422

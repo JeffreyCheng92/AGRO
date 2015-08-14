@@ -498,7 +498,8 @@
       if (name) {
         var
           icon = this.opt[name],
-          star = this.stars[Math.ceil(score) - 1];
+          starIdx = Math.max(0, Math.ceil(score) - 1),
+          star = this.stars[starIdx];
 
         methods._setIcon.call(this, star, icon);
       }                                                         // Full down: [x.00 .. x.25]
@@ -524,7 +525,8 @@
       if (score) {
         var
           integer = parseInt(Math.ceil(score), 10),
-          star    = this.stars[integer - 1];
+          starIdx = Math.max(0, integer - 1),
+          star    = this.stars[starIdx];
 
         star.title = methods._getHint.call(this, score, evt);
       }

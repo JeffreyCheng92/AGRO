@@ -11,7 +11,23 @@ AGRO.Views.reviewItem = Backbone.View.extend({
     });
 
     this.$el.html(content);
+    this.onRender();
     return this;
+  },
+
+  onRender: function() {
+    var view = this;
+    this.$('.star-rating').raty('destroy');
+    this.$('.star-rating').raty({
+      path: '/assets/',
+      half: true,
+      readOnly: true,
+      score: function() {
+        // debugger /;
+        // console.log(view.model.get("rating"));
+            return $(this).attr('data-score');
+          }
+    });
   }
 
 

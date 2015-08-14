@@ -26,6 +26,7 @@ AGRO.Views.gameForm = Backbone.View.extend({
   sendForm: function(event) {
     event.preventDefault();
     var formData = $(event.currentTarget).serializeJSON();
+    debugger
     this.model.save(formData.game, {
       success: function() {
         this.hideErrors();
@@ -36,8 +37,8 @@ AGRO.Views.gameForm = Backbone.View.extend({
           this.formData.imageable_id =  this.model.id;
           image.save(this.formData, {} );
         }
-        
-        Backbone.history.navigate("", {trigger: true});
+
+        Backbone.history.navigate("/games/" + this.model.id, {trigger: true});
       }.bind(this),
 
       error: function(model, errors) {

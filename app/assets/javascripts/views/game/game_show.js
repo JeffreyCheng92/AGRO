@@ -13,7 +13,6 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
 
   events: {
     "click .delete-button": "deleteGame",
-    "submit form": "addReview",
   },
 
   render: function() {
@@ -32,9 +31,7 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
     }
 
     this.attachSubviews();
-    if (this.$('#star-rate').children().length > 6) {
-      this.$('#star-rate').children().last().remove();
-    }
+    this.onRender();
     return this;
   },
 
@@ -44,7 +41,12 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
   },
 
   addReviewForm: function() {
-    var form = new AGRO.Views.reviewForm();
+    var form = new AGRO.Views.reviewForm({
+      collection: this.reviews,
+      model: new AGRO.Models.Review({
+        game_id: this.model.id
+      })
+    });
     this.addSubview('.review-form', form);
   },
 
@@ -59,29 +61,5 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
         window.location.assign("http://localhost:3000/session/new");
       }
     });
-  },
-
-
-  addReview: function(event) {
-    event.preventDefault();
-    var review = new AGRO.Models.Review();
-    var formData = $(event.currentTarget).serializeJSON();
-    formData.review.author_id = current_user.id;
-    formData.review.game_id = this.model.id;
-    review.save(formData.review, {
-      success: function() {
-        this.reviews.add(review);
-        //
-        //on navigate, it only renders the body correction but not the username
-        // seems i need to visit another game before it resets
-        // Backbone.history.navigate("#/games/" + this.model.id, {trigger: true});
-        Backbone.history.navigate("", {trigger: true});
-      }.bind(this),
-      error: function(_, response) {
-        debugger
-      }
-    });
-
   }
-
 });
