@@ -12,21 +12,21 @@ AGRO.Views.reviewEdit = Backbone.View.extend({
 
   render: function(){
     var content = this.template({ review: this.model });
-    this.onRender();
     this.$el.html(content);
+    this.onRender();
     return this;
   },
 
   onRender: function() {
     var view = this;
-    this.$('.star-rating').raty('destroy');
-    this.$('.star-rating').raty({
+    debugger;
+    this.$('#star-rerater').raty('destroy');
+    this.$('#star-rerater').raty({
       path: '/assets/',
-      half: true,
-      readOnly: true,
-      score: function() {
-        return $(this).attr('data-score');
-      }
+      half: true
+      // score: function() {
+      //   return $(this).attr('data-score');
+      // }
     });
   },
 

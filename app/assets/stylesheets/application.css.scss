@@ -94,7 +94,7 @@ body {
 .modal-background {
   background: rgba(0, 0, 0, 0.5); //add transparency to gray out background
   // background-size: cover;
-  position: absolute;
+  position: fixed;
   top:0;
   bottom:0;
   left:0;
@@ -105,8 +105,9 @@ body {
 .modal-content {
   position: absolute;
   z-index: 2;
-  top: 25%;
-  left: 25%;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
 }
 
 tr.game-list-item:nth-child(even) {

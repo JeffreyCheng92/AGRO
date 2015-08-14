@@ -41,7 +41,8 @@ AGRO.Views.reviewItem = Backbone.View.extend({
       model: this.model,
     });
 
-    $('body').append(editView.render().$el);
+    $('body').append(editView.$el);
+    editView.render();
   },
 
   deleteReview: function(event) {
