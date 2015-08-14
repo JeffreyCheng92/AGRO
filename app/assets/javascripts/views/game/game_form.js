@@ -59,9 +59,14 @@ AGRO.Views.gameForm = Backbone.View.extend({
 
   showErrors: function(errors) {
     _.each(errors.responseJSON, function (error) {
-        var controlGroup = this.$('.' + error.split(" ")[0].toLowerCase());
+        var field = error.split(" ")[0].toLowerCase();
+        var controlGroup = this.$('.' + field);
         controlGroup.addClass('error');
-        controlGroup.find('.help-inline').text(error.split(" ")[0] + " cannot be blank.");
+        if (field === 'title') {
+          controlGroup.find('.help-inline').text(error.split(" ")[0] + " cannot be blank or already taken.");
+        } else {
+          controlGroup.find('.help-inline').text(error.split(" ")[0] + " cannot be blank.");
+        }
     }, this);
   },
 
@@ -86,7 +91,7 @@ AGRO.Views.gameForm = Backbone.View.extend({
                        };
 
       } else {
-        this.$('.help-inline').html("Image upload failed");
+        this.$('.help-inline-image').html("Image upload failed");
       }
     }.bind(this));
   }
