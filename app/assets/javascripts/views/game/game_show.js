@@ -32,7 +32,21 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
 
     this.attachSubviews();
     this.onRender();
+    this.starOnRender();
     return this;
+  },
+
+  starOnRender: function() {
+    var view = this;
+    this.$('.game-avg-rating').raty('destroy');
+    this.$('.game-avg-rating').raty({
+      path: '/assets/',
+      half: true,
+      readOnly: true,
+      score: function() {
+        return $(this).attr('data-score');
+      }
+    });
   },
 
   addReviewItem: function(item) {
