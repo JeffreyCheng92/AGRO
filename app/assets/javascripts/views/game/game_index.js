@@ -5,19 +5,13 @@ AGRO.Views.gameIndex = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "add", this.addGameListItem);
     this.listenTo(this.collection, "remove", this.removeGameListItem);
     this.listenTo(this.collection, "sync", this.render);
-    // this.listenTo(this.collection, "sync", this.addAllGames);
+
     this.addAlphaBar();
     this.collection.each(this.addGameListItem.bind(this));
   },
 
-  // addAllGames: function () {
-  //   debugger;
-  //   this.collection.each(this.addGameListItem.bind(this));
-  //   this.render();
-  // },
-
   removeGameListItem: function (game) {
-    this.removeModelSubview('.game-list', game);
+    this.removeModelSubview('.games-table', game);
   },
 
   events: {
@@ -40,7 +34,7 @@ AGRO.Views.gameIndex = Backbone.CompositeView.extend({
 
   addGameListItem: function(game) {
     var view = new AGRO.Views.gameListItem({ model: game });
-    this.addSubview('.game-list', view);
+    this.addSubview('.games-table', view);
   },
 
   search: function(event) {

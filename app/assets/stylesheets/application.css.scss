@@ -43,6 +43,7 @@ body {
 
 .alphabet-bar {
   min-height: 20px;
+  padding-bottom: 40px;
 }
 .alphabet {
     list-style-type: none;
@@ -106,4 +107,11 @@ body {
   z-index: 2;
   top: 25%;
   left: 25%;
+}
+
+tr.game-list-item:nth-child(even) {
+  background: #CCC;
+}
+tr.game-list-item:nth-child(odd) {
+  background: #FFF;
 }
