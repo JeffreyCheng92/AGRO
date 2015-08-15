@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: reviews
+#
+#  id         :integer          not null, primary key
+#  author_id  :integer          not null
+#  game_id    :integer          not null
+#  body       :text             not null
+#  rating     :float            not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Review < ActiveRecord::Base
   validates :author, :game, :body, :rating, presence: true
   validate :user_reviews_game_only_once, on: :create
