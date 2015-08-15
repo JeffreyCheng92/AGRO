@@ -1,6 +1,9 @@
 <% ratings = ["", "eC", "E", "10+", "T", "M", "A", "RP"] %>
 <% desc = ["", "Early Childhood", "Everyone", "Ages 10+",
            "Teen", "Mature", "Adults", "Rating Pending"] %>
+<% consoles = ["Gameboy", "Gameboy Color", "Gameboy Advance", "Gamecube", "iOS",
+            "Nintendo64", "NintendoDS", "Nintendo3DS", "PC", "PlayStation",
+            "PS-2", "PS-3", "PS-4", "PS-P", "VITA", "XBox", "XBox360", "XBoxOne", "Wii", "Wii U"] %>
 
 <h3><%= header %></h3>
 
@@ -50,6 +53,27 @@
       <% } %>
     </select>
     <span class="help-inline"></span>
+  </div>
+
+
+  <div class="form-group control-group game-consoles">
+    <input type="hidden" name="game[console_ids][]" value="">
+    <p>
+      <label>Consoles: (Check all that apply)</label>
+    </p>
+
+    <div class="col-md-3 first-column">
+    </div>
+
+    <div class="col-md-3 second-column">
+    </div>
+
+    <div class="col-md-3 third-column">
+    </div>
+
+    <div class="col-md-3 fourth-column">
+    </div>
+
   </div>
 
   <div class="form-group control-group description">

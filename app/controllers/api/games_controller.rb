@@ -1,6 +1,7 @@
 class Api::GamesController < ApplicationController
   def create
     @game = current_user.games.new(game_params)
+    @game.console_ids = params[:console_ids]
 
     if @game.save
       render 'show'
@@ -11,9 +12,10 @@ class Api::GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
+    @game.console_ids = params[:console_ids]
 
     if @game.update(game_params)
-      render @game
+      render 'show'
     else
       render json: @game.errors.full_messages, status: :unprocessable_entity
     end
@@ -56,7 +58,8 @@ class Api::GamesController < ApplicationController
   private
   def game_params
     params.require(:game)
-          .permit(:title, :description, :developer, :release_date, :rating)
+          .permit(:title, :description, :developer,
+                  :release_date, :rating, console_ids: [])
   end
 
 end

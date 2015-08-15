@@ -5,6 +5,10 @@ AGRO.Views.gameForm = Backbone.View.extend({
     this.listenTo(this.model, "sync", this.render);
   },
 
+  CONSOLES: ["Gameboy", "Gameboy Color", "Gameboy Advance", "Gamecube", "iOS",
+              "Nintendo64", "NintendoDS", "Nintendo3DS", "PC", "PlayStation",
+              "PS-2", "PS-3", "PS-4", "PS-P", "VITA", "XBox", "XBox360", "XBoxOne", "Wii", "Wii U"],
+
   events: {
     "submit form": "sendForm",
     "click .upload-button": "upload"
@@ -20,14 +24,35 @@ AGRO.Views.gameForm = Backbone.View.extend({
     });
 
     this.$el.html(content);
+    this.onRender();
     return this;
+  },
+
+  onRender: function() {
+    this.CONSOLES.forEach( function(consoul, index) {
+      var $p = $('<p>');
+      var $label = $('<label>').html(consoul);
+      var $input = $('<input>').attr('type', 'checkbox')
+                             .attr('name', "game[console_ids][]")
+                             .attr('value', index + 1);
+      var content = $p.append($input).append($label);
+
+      if (index < 5) {
+        this.$('.first-column').append(content);
+      } else if (index < 10) {
+        this.$('.second-column').append(content);
+      } else if (index < 15) {
+        this.$('.third-column').append(content);
+      } else if (index < 20) {
+        this.$('.fourth-column').append(content);
+      }
+
+    });
   },
 
   sendForm: function(event) {
     event.preventDefault();
     var formData = $(event.currentTarget).serializeJSON();
-
-
 
     this.model.save(formData.game, {
       success: function() {
