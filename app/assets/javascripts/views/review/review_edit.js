@@ -8,6 +8,8 @@ AGRO.Views.reviewEdit = Backbone.View.extend({
 
   events: {
     'click .edit': 'sendEdit',
+    'click .modal-background': 'remove',
+    'click .close': 'remove'
   },
 
   render: function(){
