@@ -14,14 +14,9 @@ window.AGRO = {
     });
     Backbone.history.start();
 
-    $(".all-games").on('click', function(event) {
+    $(".navlink").on('click', function(event) {
       var link = $(event.currentTarget).attr('href');
       Backbone.history.navigate(link, { trigger: true });
-    });
-
-    $(".nav-con").on('click', function(event) {
-      var link = $(event.currentTarget).attr('href');
-      Backbone.history.navigate(link, {trigger: true});
     });
   }
 };
