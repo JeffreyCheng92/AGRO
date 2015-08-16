@@ -33,7 +33,18 @@
                 <td><a href="/#/games/<%= game.id %>/edit">Edit Game</a></td>
               <% } %>
             </tr>
+            <tr>
+              <td><strong>Platform(s): </strong></td>
+              <td></td>
+            </tr>
+
+
           </table>
+          <ul class="platform-list">
+            <% this.model.consoles().each( function(consoul) { %>
+              <li><%= consoul.escape('name') %></li>
+            <% }) %>
+          </ul>
         </div>
 
       </div>

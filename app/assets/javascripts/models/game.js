@@ -20,7 +20,7 @@ AGRO.Models.Game = Backbone.Model.extend({
 
   consoles: function() {
     if (!this._consoles) {
-      this._reviews = new AGRO.Collections.Consoles();
+      this._consoles = new AGRO.Collections.Consoles();
     }
     return this._consoles;
   },
