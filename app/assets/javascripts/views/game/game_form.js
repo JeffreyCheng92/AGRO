@@ -35,6 +35,19 @@ AGRO.Views.gameForm = Backbone.View.extend({
       var $input = $('<input>').attr('type', 'checkbox')
                              .attr('name', "game[console_ids][]")
                              .attr('value', index + 1);
+      if (this.model) {
+        var consoles = [];
+        this.model.consoles().forEach( function(con) {
+          consoles.push(con.get('id')) ;
+        });
+
+        consoles.forEach(function(id) {
+          if (id === index + 1) {
+            $input.attr("checked", "checked");
+          }
+        });
+      }
+
       var content = $p.append($input).append($label);
 
       if (index < 5) {
@@ -47,7 +60,7 @@ AGRO.Views.gameForm = Backbone.View.extend({
         this.$('.fourth-column').append(content);
       }
 
-    });
+    }.bind(this));
   },
 
   sendForm: function(event) {
