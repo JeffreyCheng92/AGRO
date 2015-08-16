@@ -10,6 +10,7 @@ window.AGRO = {
       games: new AGRO.Collections.Games(),
       images: new AGRO.Collections.Images(),
       reviews: new AGRO.Collections.Reviews(),
+      consoles: new AGRO.Collections.Consoles(),
     });
     Backbone.history.start();
 
