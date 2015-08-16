@@ -26,10 +26,21 @@
   transform: translate(-50%,-50%);
 }
 
+.form-control {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+    outline: none;
+}
+
+
 body {
   padding-top: 50px;
-  // background-color: black;
-  // background: #AA4847; //may change this to image url later?
+  background-image: url("supermario.jpg");
+}
+
+.panel {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
 .profile-page {
@@ -39,6 +50,10 @@ body {
 
 .help-inline {
   color: red;
+}
+
+button {
+  opacity: 0.6;
 }
 
 .alphabet-bar {
@@ -93,7 +108,6 @@ body {
 
 .modal-background {
   background: rgba(0, 0, 0, 0.5); //add transparency to gray out background
-  // background-size: cover;
   position: fixed;
   top:0;
   bottom:0;
@@ -112,7 +126,9 @@ body {
 
 tr.game-list-item:nth-child(even) {
   background: #CCC;
+  opacity: 0.4;
 }
 tr.game-list-item:nth-child(odd) {
   background: #FFF;
+  opacity: 0.4;
 }

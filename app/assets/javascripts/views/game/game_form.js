@@ -31,7 +31,7 @@ AGRO.Views.gameForm = Backbone.View.extend({
   onRender: function() {
     this.CONSOLES.forEach( function(consoul, index) {
       var $p = $('<p>');
-      var $label = $('<label>').html(consoul);
+      var $label = $('<label>').html(" " + consoul);
       var $input = $('<input>').attr('type', 'checkbox')
                              .attr('name', "game[console_ids][]")
                              .attr('value', index + 1);
@@ -48,7 +48,7 @@ AGRO.Views.gameForm = Backbone.View.extend({
         });
       }
 
-      var content = $p.append($input).append($label);
+      var content = $p.append($label.prepend($input));
 
       if (index < 5) {
         this.$('.first-column').append(content);
