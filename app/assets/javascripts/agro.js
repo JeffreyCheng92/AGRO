@@ -16,6 +16,7 @@ window.AGRO = {
 
     $(".navlink").on('click', function(event) {
       var link = $(event.currentTarget).attr('href');
+      Backbone.history.navigate('.');
       Backbone.history.navigate(link, { trigger: true });
     });
   }
