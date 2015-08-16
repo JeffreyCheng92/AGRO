@@ -15,8 +15,13 @@ window.AGRO = {
     Backbone.history.start();
 
     $(".all-games").on('click', function(event) {
-      Backbone.history.navigate('.');
-      Backbone.history.navigate('/', { trigger: true });
+      var link = $(event.currentTarget).attr('href');
+      Backbone.history.navigate(link, { trigger: true });
+    });
+
+    $(".nav-con").on('click', function(event) {
+      var link = $(event.currentTarget).attr('href');
+      Backbone.history.navigate(link, {trigger: true});
     });
   }
 };

@@ -10,9 +10,14 @@ AGRO.Models.Console = Backbone.Model.extend({
   },
 
   parse: function(response) {
-    if (response.games) {
+    if (response.searched) {
+      this.games().set(response.searched_games, { parse: true });
+      delete response.searched_games;
+      delete response.games;
+    } else if (response.games) {
       this.games().set(response.games, { parse: true });
       delete response.games;
+      delete response.searched_games;
     }
 
     return response;
