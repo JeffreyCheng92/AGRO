@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :games, except: [:new, :edit]
     resources :images, only: [:create, :update, :show]
     resources :reviews, only: [:create, :update, :destroy, :index]
+    resources :consoles, only: [:show]
   end
 
 end

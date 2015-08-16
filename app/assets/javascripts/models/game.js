@@ -18,6 +18,13 @@ AGRO.Models.Game = Backbone.Model.extend({
     return this._reviews;
   },
 
+  consoles: function() {
+    if (!this._consoles) {
+      this._reviews = new AGRO.Collections.Consoles();
+    }
+    return this._consoles;
+  },
+
   parse: function (response) {
     if (response.cover) {
       this.cover().set(response.cover, { parse: true });
@@ -27,6 +34,11 @@ AGRO.Models.Game = Backbone.Model.extend({
     if (response.reviews) {
       this.reviews().set(response.reviews, { parse: true });
       delete response.reviews;
+    }
+
+    if (response.consoles) {
+      this.consoles().set(response.consoles, { parse: true });
+      delete response.consoles;
     }
 
     return response;

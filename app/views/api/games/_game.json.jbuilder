@@ -1,5 +1,6 @@
 json.extract!( game, :title, :id, :description, :author_id, :cover,
-                     :developer, :release_date, :rating, :average_rating )
+                     :developer, :release_date, :rating, :average_rating,
+                     :consoles)
 
 if show_reviews
   json.reviews do
