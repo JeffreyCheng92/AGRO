@@ -10,5 +10,5 @@ end
 
 if show_info
   json.extract!( game, :description, :author_id, :cover, :developer,
-                :release_date, :rating, :consoles)
+                :release_date, :rating, :consoles, :tags)
 end

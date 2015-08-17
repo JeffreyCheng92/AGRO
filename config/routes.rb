@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :images, only: [:create, :update, :show]
     resources :reviews, only: [:create, :update, :destroy, :index]
     resources :consoles, only: [:show]
+    resources :tags, only: [:show]
   end
 
 end

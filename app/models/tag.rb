@@ -1,5 +1,5 @@
 class Tag < ActiveRecord::Base
-  validates :label
+  validates :label, presence: true
 
   has_many :taggings
   has_many :games, through: :taggings, source: :game
