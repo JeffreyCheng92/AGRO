@@ -30,6 +30,8 @@ class Game < ActiveRecord::Base
   has_many :game_consoles, dependent: :destroy, inverse_of: :game
   has_many :consoles, through: :game_consoles, source: :console
   has_one :cover, as: :imageable, class_name: :Image
+  has_many :taggings
+  has_many :tags, through: :taggings, source: :tag
 
   def initialize(parameters)
     super(parameters)

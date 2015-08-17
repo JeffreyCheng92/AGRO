@@ -1,6 +1,9 @@
 class Tag < ActiveRecord::Base
   validates :label
 
+  has_many :taggings
+  has_many :games, through: :taggings, source: :game
+
   def Tag.findOrCreateByLabel(lbl)
     tag = Tag.find_by_label(lbl)
 
