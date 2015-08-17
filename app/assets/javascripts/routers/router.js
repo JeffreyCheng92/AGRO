@@ -18,6 +18,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
     "users/:id/edit": "userEdit",
     "images/:id": "imageShow",
     "consoles/:id": "consoleShow",
+    "about": "aboutShow",
   },
 
   gameIndex: function() {
@@ -81,6 +82,11 @@ AGRO.Routers.Router = Backbone.Router.extend({
     var consoul = this.consoles.getOrFetch(id);
     var view = new AGRO.Views.consoleShow({ model: consoul });
     this._swapView(view);
+  },
+
+  aboutShow: function() {
+    var aboutView = new AGRO.Views.aboutShow();
+    this._swapView(aboutView);
   },
 
   _swapView: function(view) {

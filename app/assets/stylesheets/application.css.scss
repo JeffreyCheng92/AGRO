@@ -126,9 +126,13 @@ button {
 
 tr.game-list-item:nth-child(even) {
   background: #CCC;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 tr.game-list-item:nth-child(odd) {
   background: #FFF;
-  opacity: 0.4;
+  opacity: 0.6;
+}
+
+a.game-item {
+  color: black;
 }

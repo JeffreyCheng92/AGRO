@@ -15,8 +15,8 @@ class Console < ActiveRecord::Base
   has_many :games, through: :game_consoles, source: :game
   attr_accessor :searched_games, :searched
 
-  def initialize
-    super
+  def initialize(a)
+    super(a)
     @searched_games ||= []
     @searched = false
   end
