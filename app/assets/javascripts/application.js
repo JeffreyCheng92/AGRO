@@ -18,6 +18,7 @@
 //= require agro
 //= require_tree ./utils
 //= require jquery.raty
+//= require bootstrap_tokenfield
 //= require jquery.serializejson
 //= require_tree ../templates
 //= require_tree ./models
