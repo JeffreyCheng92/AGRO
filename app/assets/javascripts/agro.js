@@ -19,6 +19,13 @@ window.AGRO = {
       Backbone.history.navigate('.');
       Backbone.history.navigate(link, { trigger: true });
     });
+
+    $(".guest").on('click', function(event) {
+      event.preventDefault();
+      $("#users-username").val("guest");
+      $("#users-password").val("123123");
+      $(".login").trigger("click");
+    });
   }
 };
 
