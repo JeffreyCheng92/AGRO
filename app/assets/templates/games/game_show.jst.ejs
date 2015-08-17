@@ -29,8 +29,9 @@
             </tr>
             <tr>
               <% if (id === game.get('author_id')) { %>
-                <td><button class="delete-button">Delete Game</button></td>
-                <td><a href="/#/games/<%= game.id %>/edit">Edit Game</a></td>
+                <td><button class="delete-button btn btn-default">Delete Game</button></td>
+                <td><a class="edit-link"
+                       href="/#/games/<%= game.id %>/edit">Edit Game</a></td>
               <% } %>
             </tr>
             <tr>

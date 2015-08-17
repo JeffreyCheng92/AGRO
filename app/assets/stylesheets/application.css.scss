@@ -17,15 +17,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+input.form-control::-webkit-input-placeholder {
+    color:    #F0F8FF;
+}
+textarea.form-control::-webkit-input-placeholder {
+  color: #F0F8FF;
+}
+:-moz-placeholder {
+    color:    #F0F8FF;
+}
+::-moz-placeholder {
+    color:    #F0F8FF;
+}
+:-ms-input-placeholder {
+    color:    #F0F8FF;
+}
+
+.new-user {
+  max-width: 600px;
+}
+
 .jumbotron {
-  min-width: 800px;
-  min-height: 400px;
+  min-width: 600px;
+  min-height: 200px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   background: rgba(0, 0, 0, 0.2);
-  
+
 }
 
 .form-control {
@@ -137,4 +157,16 @@ tr.game-list-item:nth-child(odd) {
 
 a.game-item {
   color: black;
+}
+
+a.edit-link {
+  color: white;
+}
+
+input.form-control {
+  color: white;
+}
+
+textarea.form-control {
+  color: white;
 }
