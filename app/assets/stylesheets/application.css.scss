@@ -18,6 +18,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+input.token-input {
+  color: white;
+}
+
 input.form-control::-webkit-input-placeholder {
     color:    #F0F8FF;
 }

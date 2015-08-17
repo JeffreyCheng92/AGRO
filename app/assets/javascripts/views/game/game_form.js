@@ -61,6 +61,8 @@ AGRO.Views.gameForm = Backbone.View.extend({
       }
 
     }.bind(this));
+
+    this.$("input.tokenize").tokenfield();
   },
 
   sendForm: function(event) {
@@ -122,11 +124,8 @@ AGRO.Views.gameForm = Backbone.View.extend({
         var data = result[0];
         this.formData = { url: data.url,
                          thumbnail_url: data.thumbnail_url,
-                         imageable_type: "Game",
-                        //  cant do this because this.model is new
-                        //  imageable_id: this.model.id
-                        // but this.model can be saved and can add after
-                       };
+                         imageable_type: "Game"
+                        };
 
       } else {
         this.$('.help-inline-image').html("Image upload failed");

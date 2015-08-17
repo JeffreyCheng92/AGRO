@@ -3,6 +3,14 @@ class Api::GamesController < ApplicationController
     @game = current_user.games.new(game_params)
     @game.console_ids = params[:console_ids]
 
+    tag_ids = [];
+    params[:tags].each do |tag|
+      tab_obj = Tag.findOrCreateByLabel(tag)
+      tag_ids << tag_obj.id if tag_obj.id
+    end
+
+    @game.tag_ids = tag_ids
+
     if @game.save
       render 'show'
     else
@@ -13,6 +21,14 @@ class Api::GamesController < ApplicationController
   def update
     @game = Game.find(params[:id])
     @game.console_ids = params[:console_ids]
+
+    tag_ids = [];
+    params[:tags].each do |tag|
+      tab_obj = Tag.findOrCreateByLabel(tag)
+      tag_ids << tag_obj.id if tag_obj.id
+    end
+
+    @game.tag_ids = tag_ids
 
     if @game.update(game_params)
       render 'show'
@@ -60,7 +76,7 @@ class Api::GamesController < ApplicationController
   def game_params
     params.require(:game)
           .permit(:title, :description, :developer,
-                  :release_date, :rating, console_ids: [])
+                  :release_date, :rating)
   end
 
 end
