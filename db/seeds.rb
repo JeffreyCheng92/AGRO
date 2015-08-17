@@ -15,28 +15,34 @@ consoles.each do |console|
   Console.create(name: console)
 end
 
-User.create(
+user1 = User.create(
 username: "jeffreycheng92",
 password_digest: "$2a$10$KvfaMTvmJkg.doVmU4QZdet9gE9DWFYtAPiM/y6CkZrAquA0FqwZK",
 email: "jeffreycheng92@gmail.com"
 )
 
-User.create(
+user2 = User.create!(
 username: "guest",
 password_digest: "$2a$10$BjlOdQ/67K2q3Glm4.7LP.a91iuAFDDPyH5jDAOfudSZF8KEcAjRm",
 email: "guest@example.com"
 )
 
-Image.create(
-  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439571028/lsmk6lwp1ph355ulxlqx.jpg",
-  thumbnail_url:"http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439571028/lsmk6lwp1ph355ulxlqx.jpg",
-  imageable_id: 1,
-  imageable_type: "User"
-)
+user2.avatar.update({
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439571028/lsmk6lwp1ph355ulxlqx.jpg", thumbnail_url:"http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439571028/lsmk6lwp1ph355ulxlqx.jpg"
+  })
+
+# image1 = Image.create!(
+#   url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439571028/lsmk6lwp1ph355ulxlqx.jpg",
+#   thumbnail_url:"http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439571028/lsmk6lwp1ph355ulxlqx.jpg",
+#   imageable_id: user2.id,
+#   imageable_type: "User"
+# )
+
+
 
 Game.create(
 title: "Super Smash Bros",
-author_id: "1",
+author_id: 1,
 description: "Super Smash Bros., originally released in Japan as Nintendo All Star! Dairantō Smash Brothers, is a fighting game developed by HAL Laboratory and published by Nintendo for the Nintendo 64. It was released in Japan on January 21, 1999, in North America on April 26, 1999, and in Europe on November 19, 1999. Super Smash Bros. is the first game in the Super Smash Bros. series, followed by Super Smash Bros. Melee for GameCube in 2001, Super Smash Bros. Brawl for Wii in 2008, and Super Smash Bros. for Nintendo 3DS then Super Smash Bros. for Wii U in 2014.
 
 The game is a crossover between many different Nintendo franchises such as Mario, Donkey Kong, The Legend of Zelda, Metroid, Yoshi, Mother, F-Zero, Star Fox, Kirby and Pokémon. It received mostly positive reviews from the media and was commercially successful, selling over 5 million copies worldwide by 2001, with 2.93 million sold in the United States and 1.97 million copies sold in Japan.

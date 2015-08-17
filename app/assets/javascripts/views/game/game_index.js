@@ -2,6 +2,7 @@ AGRO.Views.gameIndex = Backbone.CompositeView.extend({
   template: JST["games/game_index"],
 
   initialize: function(options) {
+    this.collection.reset();
     this.listenTo(this.collection, "add", this.addGameListItem);
     this.listenTo(this.collection, "remove", this.removeGameListItem);
     this.listenTo(this.collection, "sync", this.render);

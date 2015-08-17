@@ -3,6 +3,8 @@ AGRO.Collections.Games = Backbone.Collection.extend({
 
   model: AGRO.Models.Game,
 
+  // comparator: "title",
+
   getOrFetch: function(id) {
     var collection = this;
     var game = collection.get(id);
@@ -18,7 +20,5 @@ AGRO.Collections.Games = Backbone.Collection.extend({
     }
 
     return game;
-  },
-
-
+  }
 });

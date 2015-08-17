@@ -26,8 +26,9 @@ class Api::GamesController < ApplicationController
       let = params[:letter]
       @games = Game.includes(:cover)
                    .where("LOWER(title) LIKE ?", "#{let.downcase}%")
+                   .order(:title)
     else
-      @games = Game.includes(:cover).all
+      @games = Game.includes(:cover).all.order(:title)
     end
   end
 

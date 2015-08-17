@@ -1,6 +1,4 @@
-json.extract!( game, :title, :id, :description, :author_id, :cover,
-                     :developer, :release_date, :rating, :average_rating,
-                     :consoles)
+json.extract!( game, :title, :id, :average_rating)
 
 if show_reviews
   json.reviews do
@@ -8,4 +6,9 @@ if show_reviews
       json.partial! 'api/reviews/review', review: review
     end
   end
+end
+
+if show_info
+  json.extract!( game, :description, :author_id, :cover, :developer,
+                :release_date, :rating, :consoles)
 end

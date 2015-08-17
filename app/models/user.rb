@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
 
   attr_reader :password
   after_initialize :ensure_session_token
-  before_save :ensure_has_avatar
+  after_save :ensure_has_avatar
 
   has_many(
     :games,
@@ -69,11 +69,11 @@ class User < ActiveRecord::Base
   end
 
   def ensure_has_avatar
-    self.avatar ||= Image.new({
+    self.avatar ||= Image.create!({
       url: "http://res.cloudinary.com/jeffreycheng/image/upload/c_scale,h_400,w_350/v1439448506/Blank-Gray-Pic-03_skgolu.jpg",
       thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439448506/Blank-Gray-Pic-03_skgolu.jpg",
-      imageable_type: "Default",
-      imageable_id: "1"
+      imageable_type: "User",
+      imageable_id: self.id
     })
   end
 end

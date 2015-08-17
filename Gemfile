@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'rename'
+gem 'bootstrap_tokenfield_rails'
 gem 'annotate'
 gem 'backbone-on-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
