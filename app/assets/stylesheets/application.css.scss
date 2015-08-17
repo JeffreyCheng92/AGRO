@@ -55,7 +55,7 @@ textarea.form-control::-webkit-input-placeholder {
 
 .form-control {
     background: rgba(0, 0, 0, 0.2);
-    border: 1px solid black;
+    border: 1px solid white;
     outline: none;
 }
 
@@ -144,6 +144,11 @@ button {
 }
 
 .modal-content {
+  background-color: black;
+  color: white;
+  min-width: 400px;
+  min-height: 300px;
+  padding: 10px;
   position: absolute;
   z-index: 2;
   top: 50%;
