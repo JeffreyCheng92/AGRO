@@ -21,6 +21,12 @@ password_digest: "$2a$10$KvfaMTvmJkg.doVmU4QZdet9gE9DWFYtAPiM/y6CkZrAquA0FqwZK",
 email: "jeffreycheng92@gmail.com"
 )
 
+User.create(
+username: "guest",
+password_digest: "$2a$10$BjlOdQ/67K2q3Glm4.7LP.a91iuAFDDPyH5jDAOfudSZF8KEcAjRm",
+email: "guest@example.com"
+)
+
 Image.create(
   url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439571028/lsmk6lwp1ph355ulxlqx.jpg",
   thumbnail_url:"http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439571028/lsmk6lwp1ph355ulxlqx.jpg",
