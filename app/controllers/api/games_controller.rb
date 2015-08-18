@@ -1,4 +1,5 @@
 class Api::GamesController < ApplicationController
+  
   def create
     @game = current_user.games.new(game_params)
     @game.console_ids = params[:console_ids]
