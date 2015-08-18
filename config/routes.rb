@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create, :update, :destroy, :index]
     resources :consoles, only: [:show]
     resources :tags, only: [:show]
+    resources :likes, only: [:create, :destroy]
   end
 
 end
