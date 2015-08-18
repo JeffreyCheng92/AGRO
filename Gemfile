@@ -7,6 +7,7 @@ gem 'cloudinary'
 gem 'figaro'
 gem 'rails_12factor'
 gem 'searchkick'
+gem 'seed_dump'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'

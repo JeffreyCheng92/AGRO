@@ -23,8 +23,8 @@ class Api::GamesController < ApplicationController
     @game.console_ids = params[:console_ids]
 
     tag_ids = [];
-    params[:tags].each do |tag|
-      tab_obj = Tag.findOrCreateByLabel(tag)
+    params[:tags].split(", ").each do |tag|
+      tag_obj = Tag.findOrCreateByLabel(tag)
       tag_ids << tag_obj.id if tag_obj.id
     end
 
