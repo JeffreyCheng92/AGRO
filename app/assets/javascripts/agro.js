@@ -14,21 +14,13 @@ window.AGRO = {
     });
     Backbone.history.start();
 
+    var navbar_view = new AGRO.Views.navbarShow();
+    $("#navbar").html(navbar_view.render().$el);
+
     $(".navlink").on('click', function(event) {
       var link = $(event.currentTarget).attr('href');
       Backbone.history.navigate('.');
       Backbone.history.navigate(link, { trigger: true });
     });
-
-    $(".guest").on('click', function(event) {
-      event.preventDefault();
-      $("#users-username").val("guest");
-      $("#users-password").val("123123");
-      $(".login").trigger("click");
-    });
   }
 };
-
-$(document).ready(function(){
-  AGRO.initialize();
-});

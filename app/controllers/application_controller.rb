@@ -21,7 +21,10 @@ class ApplicationController < ActionController::Base
   end
 
   def require_log_in
-    unless logged_in?
+    if flash[:is_logging_out]
+      flash.discard
+      redirect_to new_session_url
+    elsif !logged_in?
       flash[:errors] = "Please log in or proceed as guest."
       redirect_to new_session_url
     end

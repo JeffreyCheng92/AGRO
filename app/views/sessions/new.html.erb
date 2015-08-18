@@ -1,3 +1,9 @@
+<%= render "/shared/navbar" %>
+
+<div class="container">
+  <%= render "/shared/errors" %>
+</div>
+
 <div class="login-background">
   <div class="container">
     <div class="jumbotron">
@@ -39,3 +45,12 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(".guest").on('click', function(event) {
+    event.preventDefault();
+    $("#users-username").val("guest");
+    $("#users-password").val("123123");
+    $(".login").trigger("click");
+  });  
+</script>
