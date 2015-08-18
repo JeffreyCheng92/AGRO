@@ -36,6 +36,9 @@ class User < ActiveRecord::Base
     dependent: :destroy
     )
 
+  has_many :likes
+  has_many :liked_reviews, through: :likes, source: :reviews
+
   has_many :reviewed_games, through: :reviews, source: :game
 
   has_one :avatar, as: :imageable, class_name: :Image

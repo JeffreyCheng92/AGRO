@@ -27,6 +27,9 @@ class Review < ActiveRecord::Base
     foreign_key: :game_id
   )
 
+  has_many :likes
+  has_many :user_liked, through: :likes, source: :user
+
   def user_reviews_game_only_once
     if author.reviewed_games.include?(game)
       errors[:You] << "can't create multiple reviews for one game."
