@@ -11,6 +11,7 @@ window.AGRO = {
       images: new AGRO.Collections.Images(),
       reviews: new AGRO.Collections.Reviews(),
       consoles: new AGRO.Collections.Consoles(),
+      tags: new AGRO.Collections.Tags(),
     });
     Backbone.history.start();
 

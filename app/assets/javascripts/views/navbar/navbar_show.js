@@ -3,7 +3,6 @@ AGRO.Views.navbarShow = Backbone.View.extend({
 
   initialize: function(options) {
     //put listeners in here
-    // $('.navbar-search').on('submit', '.typeahead', this.search.bind(this));
   },
 
   events: {

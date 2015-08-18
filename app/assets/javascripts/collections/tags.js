@@ -17,6 +17,7 @@ AGRO.Collections.Tags = Backbone.Collection.extend({
       });
     }
 
+    return tag;
   },
 
 });

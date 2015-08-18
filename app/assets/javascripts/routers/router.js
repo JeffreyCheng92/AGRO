@@ -7,6 +7,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
     this.images = options.images;
     this.reviews = options.reviews;
     this.consoles = options.consoles;
+    this.tags = options.tags;
   },
 
   routes: {
@@ -20,6 +21,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
     "consoles/:id": "consoleShow",
     "about": "aboutShow",
     "search/:query": "search",
+    "tags/:id": "tagShow",
   },
 
   search: function(query) {
@@ -96,6 +98,12 @@ AGRO.Routers.Router = Backbone.Router.extend({
   aboutShow: function() {
     var aboutView = new AGRO.Views.aboutShow();
     this._swapView(aboutView);
+  },
+
+  tagShow: function(id) {
+    var tag = this.tags.getOrFetch(id);
+    var tagShowView = new AGRO.Views.tagShow({ model: tag });
+    this._swapView(tagShowView);
   },
 
   _swapView: function(view) {
