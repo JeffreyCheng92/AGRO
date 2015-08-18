@@ -1,5 +1,5 @@
 class Api::GamesController < ApplicationController
-  
+
   def create
     @game = current_user.games.new(game_params)
     @game.console_ids = params[:console_ids]
@@ -43,6 +43,9 @@ class Api::GamesController < ApplicationController
       let = params[:letter]
       @games = Game.where("LOWER(title) LIKE ?", "#{let.downcase}%")
                    .order(:title)
+    elsif params[:query]
+      query = params[:query].gsub("+", " ").downcase
+      @games = Game.where("LOWER(title) LIKE ?", "%#{query}%").order(:title)
     else
       @games = Game.all.order(:title)
     end

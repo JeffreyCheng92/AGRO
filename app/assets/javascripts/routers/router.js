@@ -19,6 +19,15 @@ AGRO.Routers.Router = Backbone.Router.extend({
     "images/:id": "imageShow",
     "consoles/:id": "consoleShow",
     "about": "aboutShow",
+    "search/:query": "search",
+  },
+
+  search: function(query) {
+    this.games.fetch({ data: { query: query }});
+    var searchView = new AGRO.Views.searchIndex({
+      games: this.games
+    });
+    this._swapView(searchView);
   },
 
   gameIndex: function() {

@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require underscore
 //= require backbone
+//= require typeahead
 //= require agro
 //= require_tree ./utils
 //= require jquery.raty
