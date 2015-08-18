@@ -30,6 +30,14 @@ class Review < ActiveRecord::Base
   has_many :likes
   has_many :user_liked, through: :likes, source: :user
 
+  def num_votes
+    likes = Like.where("review_id = ?", self.id)
+    total = 0
+    likes.each { |like| total += like.value }
+    return total
+  end
+
+  private
   def user_reviews_game_only_once
     if author.reviewed_games.include?(game)
       errors[:You] << "can't create multiple reviews for one game."

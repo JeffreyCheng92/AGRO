@@ -3,6 +3,10 @@ class Api::ReviewsController < ApplicationController
     @reviews = Review.all;
   end
 
+  def show
+    @review = Review.find(params[:id])
+  end
+
   def create
     @review = current_user.reviews.new(review_params)
 

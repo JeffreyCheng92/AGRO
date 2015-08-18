@@ -1,7 +1,21 @@
 <div class="panel panel-default review-item">
   <div class="panel-body">
-
-    <div class="col-md-4">
+    <div class="col-md-1 voting">
+      <p>
+        <button class="btn btn-default upvote">
+          <span class='glyphicon glyphicon-chevron-up'></span>
+        </button>
+      </p>
+      <p class="num-votes">
+        <%= review.escape('num_votes') %>
+      </p>
+      <p>
+        <button class="btn btn-default downvote">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </p>
+    </div>
+    <div class="col-md-3">
       <div class="table-responsive">
         <table class='table'>
           <tr>

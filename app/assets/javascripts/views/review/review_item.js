@@ -2,12 +2,15 @@ AGRO.Views.reviewItem = Backbone.View.extend({
   template: JST['reviews/review_item'],
 
   initialize: function(options) {
-    this.listenTo(this.model, 'sync', this.render);
+    this.listenTo(this.model, 'sync change:num_votes', this.render);
+    this.listenTo(this.model.like(), 'change destroy add', this.render);
   },
 
   events: {
     'click .edit-review': 'editReview',
-    'click .delete-review': 'deleteReview'
+    'click .delete-review': 'deleteReview',
+    'click .upvote': 'upvote',
+    'click .downvote': 'downvote',
   },
 
   render: function() {
@@ -33,6 +36,42 @@ AGRO.Views.reviewItem = Backbone.View.extend({
         return $(this).attr('data-score');
       }
     });
+  },
+
+  upvote: function(event) {
+    event.preventDefault();
+    if (this.model.isVoted()) {
+      // if already upvoted
+      if (this.model.isUpvoted()) {
+        this.model.destroy_like();
+        this.model.set({num_votes: this.model.get('num_votes') - 1});
+      } else { // if currently downvoted
+        this.model.destroy_like();
+        this.model.like().save({review_id: this.model.id, value: 1});
+        this.model.set({num_votes: this.model.get('num_votes') + 2});
+      }
+    } else {
+      this.model.like().save({review_id: this.model.id, value: 1});
+      this.model.set({num_votes: this.model.get('num_votes') + 1});
+    }
+  },
+
+  downvote: function(event) {
+    event.preventDefault();
+    if (this.model.isVoted()) {
+      // if currently upvoted
+      if (this.model.isUpvoted()) {
+        this.model.destroy_like();
+        this.model.like().save({review_id: this.model.id, value: -1});
+        this.model.set({num_votes: this.model.get('num_votes') - 2});
+      } else { // if already downvoted
+        this.model.destroy_like();
+        this.model.set({num_votes: this.model.get('num_votes') + 1});
+      }
+    } else {
+      this.model.like().save({review_id: this.model.id, value: -1});
+      this.model.set({num_votes: this.model.get('num_votes') - 1});
+    }
   },
 
   editReview: function(event) {

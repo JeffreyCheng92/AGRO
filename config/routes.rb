@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     resources :users, only: [:update, :show]
     resources :games, except: [:new, :edit]
     resources :images, only: [:create, :update, :show]
-    resources :reviews, only: [:create, :update, :destroy, :index]
+    resources :reviews, only: [:create, :update, :destroy, :index, :show]
     resources :consoles, only: [:show]
     resources :tags, only: [:show]
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy, :update]
   end
 
 end
