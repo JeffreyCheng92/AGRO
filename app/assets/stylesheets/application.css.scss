@@ -21,6 +21,16 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+#navbar {
+  position: absolute;
+}
+
+.tt-menu {
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
 .tag-list-item {
   padding: 3px;
   color: #ad1010;
@@ -31,19 +41,19 @@ input.token-input {
 }
 
 input.form-control::-webkit-input-placeholder {
-    color:    #F0F8FF;
+    color:    #FFFFCC;
 }
 textarea.form-control::-webkit-input-placeholder {
-  color: #F0F8FF;
+  color:      #FFFFCC;
 }
 :-moz-placeholder {
-    color:    #F0F8FF;
+    color:    #FFFFCC;
 }
 ::-moz-placeholder {
-    color:    #F0F8FF;
+    color:    #FFFFCC;
 }
 :-ms-input-placeholder {
-    color:    #F0F8FF;
+    color:    #FFFFCC;
 }
 
 .voting {
@@ -78,7 +88,7 @@ textarea.form-control::-webkit-input-placeholder {
 }
 
 .form-control {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.4);
     border: 1px solid white;
     outline: none;
 }

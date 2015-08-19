@@ -9,16 +9,44 @@ AGRO.Views.navbarShow = Backbone.View.extend({
     "click .log-out": "logout",
     "submit .navbar-search": "search",
     "blur .typeahead": "emptySearchField",
+    "click .typeahead": "addUserTopic",
   },
 
   render: function() {
     this.$el.html(this.template());
+    this.onRender();
     return this;
   },
 
   onRender: function() {
-    $('.typeahead').typeahead('destroy');
-    $('.typeahead').typeahead();
+    this.$('.typeahead').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 3,
+      limit: 7
+    },
+    {
+      name: 'availableTopics',
+      source: this.typeaheadSource,
+      async: true,
+      limit: 10,
+    });
+  },
+
+  typeaheadSource: function(query, sync, async) {
+    var args = arguments;
+    $.ajax({
+      url: '/api/games',
+      dataType: 'json',
+      data: {query: query},
+      success: function(data) {
+        var titles = _.map(data, function(object) {
+          return object.title;
+        });
+        // console.log(args);
+        async(titles);
+      }
+    });
   },
 
   logout: function(event) {
@@ -39,12 +67,11 @@ AGRO.Views.navbarShow = Backbone.View.extend({
 
   search: function(event) {
     event.preventDefault();
-
-    var queryString = this.$('.typeahead').val();
+    this.$('.typeahead').typeahead('close');
+    var queryString = this.$('.tt-input').val();
     queryString = queryString.replace(" ", "+");
     this.$('.typeahead').val("");
 
     Backbone.history.navigate("/search/" + queryString, {trigger: true});
   }
-
 });

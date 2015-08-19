@@ -7,7 +7,7 @@ class Api::GamesController < ApplicationController
     tag_ids = [];
     params[:tags].split(", ").each do |tag|
       tag_obj = Tag.findOrCreateByLabel(tag)
-      tag_ids << tag_obj.id if tag_obj.id
+      tag_ids << tag_obj.id if (tag_obj.id && !tag_ids.include?(tag_obj.id))
     end
 
     @game.tag_ids = tag_ids
@@ -26,7 +26,7 @@ class Api::GamesController < ApplicationController
     tag_ids = [];
     params[:tags].split(", ").each do |tag|
       tag_obj = Tag.findOrCreateByLabel(tag)
-      tag_ids << tag_obj.id if tag_obj.id
+      tag_ids << tag_obj.id if (tag_obj.id && !tag_ids.include?(tag_obj.id))
     end
 
     @game.tag_ids = tag_ids

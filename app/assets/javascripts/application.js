@@ -19,6 +19,8 @@
 //= require agro
 //= require_tree ./utils
 //= require jquery.raty
+//= require jquery-ui.min
+//= require typeahead
 //= require bootstrap_tokenfield
 //= require jquery.serializejson
 //= require_tree ../templates
