@@ -20,7 +20,12 @@
         <table class='table'>
           <tr>
             <td><strong>Username: </strong></td>
-            <td> <%= review.author().escape("username") %> </td>
+            <td>
+              <a href="/#/users/<%= review.escape('author_id') %>"
+                 class="user-link">
+                <%= review.author().escape("username") %>
+              </a>
+            </td>
           </tr>
           <tr>
             <td><strong>Posted: </strong></td>
@@ -36,7 +41,7 @@
                 <button class="edit-review btn btn-default"> Edit </button>
               </td>
               <td>
-                <button class="delete-review btn btn-default"> Delete </button>
+                <button class="delete-review btn btn-danger"> Delete </button>
               </td>
             <% } %>
           </tr>

@@ -25,10 +25,22 @@
   position: absolute;
 }
 
+.user-link {
+  color: red;
+}
+
+input.form-control.typeahead.tt-input {
+  background-color: gray !important;
+}
+
 .tt-menu {
   width: 100%;
   background-color: white;
   border-radius: 2px;
+}
+
+button.glyphicon-search {
+  top: 6px;
 }
 
 .tag-list-item {
@@ -41,19 +53,19 @@ input.token-input {
 }
 
 input.form-control::-webkit-input-placeholder {
-    color:    #FFFFCC;
+    color:    #bdbdbd;
 }
 textarea.form-control::-webkit-input-placeholder {
-  color:      #FFFFCC;
+  color:      #bdbdbd;
 }
 :-moz-placeholder {
-    color:    #FFFFCC;
+    color:    #bdbdbd;
 }
 ::-moz-placeholder {
-    color:    #FFFFCC;
+    color:    #bdbdbd;
 }
 :-ms-input-placeholder {
-    color:    #FFFFCC;
+    color:    #bdbdbd;
 }
 
 .voting {

@@ -9,7 +9,12 @@ AGRO.Views.reviewEdit = Backbone.View.extend({
   events: {
     'click .edit': 'sendEdit',
     'click .modal-background': 'remove',
-    'click .close': 'remove'
+    'click .close': 'remoove'
+  },
+
+  remoove: function(event) {
+    event.preventDefault();
+    this.remove();
   },
 
   render: function(){
@@ -32,7 +37,6 @@ AGRO.Views.reviewEdit = Backbone.View.extend({
 
   sendEdit: function(event) {
     event.preventDefault();
-    debugger
     var formData = this.$el.serializeJSON();
     this.model.set(formData.review);
     this.model.save({}, {

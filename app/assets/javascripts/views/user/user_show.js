@@ -14,7 +14,7 @@ AGRO.Views.userShow = Backbone.View.extend({
       var link = avatar.get('url').split("ad/")
                        .join("ad/c_scale,h_400,w_350/");
       var $img = $('<img>').attr('src', link);
-      this.$(".image-link").attr("href", "#/images/" + avatar.id)
+      this.$(".image-link").attr("href", avatar.get('url'))
                            .html($img);
     }
     return this;

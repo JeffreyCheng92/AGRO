@@ -18,7 +18,7 @@
 
           <div class="form-group">
             <label for="users-username">Username: </label>
-
+            <span class="fa fa-user"></span>
             <input type="text"
                    name="user[username]"
                    value="<%= @user.username %>"
@@ -29,6 +29,7 @@
 
           <div class="form-group">
             <label for="users-password">Password: </label>
+            <span class="fa fa-key"></span>
             <input type="password"
                    name="user[password]"
                    id="users-password"
@@ -52,5 +53,5 @@
     $("#users-username").val("guest");
     $("#users-password").val("123123");
     $(".login").trigger("click");
-  });  
+  });
 </script>

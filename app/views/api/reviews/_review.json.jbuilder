@@ -1,4 +1,4 @@
-json.extract!(review, :id, :body, :created_at, :game, :rating)
+json.extract!(review, :id, :body, :created_at, :game, :rating, :author_id)
 json.num_votes review.num_votes
 
 like = review.likes.find_by(user_id: current_user.id) if logged_in?

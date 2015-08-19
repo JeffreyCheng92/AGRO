@@ -25,9 +25,16 @@
       </div>
 
       <div class="col-md-8">
-        <h3 class='text-center'>PROFILE</h3>
+        <h2 class='text-center'>
+          <%= user.escape('username').toUpperCase() + "'S"%> PROFILE
+        </h2>
         <div class="description">
-          Bio: <%= user.escape("bio") %>
+          <p>
+            <h3>About Me:</h3>
+          </p>
+          <p>
+            <%= user.escape("bio") %>
+          </p>
         </div>
       </div>
 

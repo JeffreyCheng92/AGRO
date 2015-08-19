@@ -3,7 +3,7 @@ AGRO.Views.reviewItem = Backbone.View.extend({
 
   initialize: function(options) {
     this.listenTo(this.model, 'sync change:num_votes', this.render);
-    this.listenTo(this.model.like(), 'change destroy add', this.render);
+    this.listenTo(this.model.like(), 'change add', this.render);
   },
 
   events: {
@@ -22,6 +22,7 @@ AGRO.Views.reviewItem = Backbone.View.extend({
     });
     this.$el.html(content);
     this.onRender();
+    this.voteOnRender();
     return this;
   },
 
@@ -38,6 +39,16 @@ AGRO.Views.reviewItem = Backbone.View.extend({
     });
   },
 
+  voteOnRender: function() {
+    this.$(".btn-warning")
+        .removeClass("btn-warning").addClass("btn-default");
+    if (this.model.isUpvoted() && !this.model.like().isNew()) {
+      this.$(".upvote").removeClass("btn-default").addClass("btn-warning");
+    } else if (this.model.isDownvoted() && !this.model.like().isNew()) {
+      this.$(".downvote").removeClass("btn-default").addClass("btn-warning");
+    }
+  },
+
   upvote: function(event) {
     event.preventDefault();
     if (this.model.isVoted()) {
@@ -51,6 +62,7 @@ AGRO.Views.reviewItem = Backbone.View.extend({
         this.model.set({num_votes: this.model.get('num_votes') + 2});
       }
     } else {
+      // target.removeClass("btn-default").addClass("btn-warning");
       this.model.like().save({review_id: this.model.id, value: 1});
       this.model.set({num_votes: this.model.get('num_votes') + 1});
     }
@@ -59,7 +71,6 @@ AGRO.Views.reviewItem = Backbone.View.extend({
   downvote: function(event) {
     event.preventDefault();
     if (this.model.isVoted()) {
-      // if currently upvoted
       if (this.model.isUpvoted()) {
         this.model.destroy_like();
         this.model.like().save({review_id: this.model.id, value: -1});

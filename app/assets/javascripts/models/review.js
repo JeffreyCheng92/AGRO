@@ -38,6 +38,10 @@ AGRO.Models.Review = Backbone.Model.extend({
     return (this.like().get('value') === 1) ? true : false;
   },
 
+  isDownvoted: function() {
+    return (this.like().get('value') === -1) ? true : false;
+  },
+
   destroy_like: function() {
     this.like().destroy();
     this.like().unset("id");
