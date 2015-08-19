@@ -26,7 +26,9 @@ AGRO.Routers.Router = Backbone.Router.extend({
 
   search: function(query) {
     this.games.fetch({ data: { query: query }});
+    this.tags.fetch({ data: { query: query }});
     var searchView = new AGRO.Views.searchIndex({
+      tags: this.tags,
       games: this.games
     });
     this._swapView(searchView);

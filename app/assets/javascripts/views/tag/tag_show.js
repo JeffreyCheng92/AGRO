@@ -2,8 +2,6 @@ AGRO.Views.tagShow = Backbone.CompositeView.extend({
   template: JST["tags/tag_show"],
 
   initialize: function(options) {
-    this.model.games().each( this.addGameListItem.bind(this) );
-
     this.listenTo(this.model.games(), "add", this.addGameListItem);
     this.listenTo(this.model, 'sync', this.render);
   },
