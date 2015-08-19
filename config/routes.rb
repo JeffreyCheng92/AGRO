@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :images, only: [:create, :update, :show]
     resources :reviews, only: [:create, :update, :destroy, :index, :show]
     resources :consoles, only: [:show]
-    resources :tags, only: [:show]
+    resources :tags, only: [:index, :show]
     resources :likes, only: [:create, :destroy, :update]
   end
 

@@ -1,15 +1,24 @@
 <h3 class="text-center">Search Results..</h3>
 
-<h4><%= games.size() %> Total Found Games: </h4>
-<table class="game-list table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Avg Rating</th>
-    </tr>
-  </thead>
+<% if (games.size() > 0) { %>
+  <h4><%= games.size() %> Total Games Found: </h4>
+  <table class="game-list table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Avg Rating</th>
+      </tr>
+    </thead>
 
-  <tbody class="games-table">
+    <tbody class="games-table">
 
-  </tbody>
-</table>
+    </tbody>
+  </table>
+<% } else { %>
+  <h4> No Games Were Found.. :( </h4>
+<% } %>
+
+<h4><%= tags.size() %> Total Tags Found: </h4>
+<div class="tag-list">
+
+</div>

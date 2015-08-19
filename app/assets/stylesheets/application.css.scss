@@ -18,6 +18,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.tag-list-item {
+  padding: 3px;
+  color: #ad1010;
+}
+
 input.token-input {
   color: white;
 }
