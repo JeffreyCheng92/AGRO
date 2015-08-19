@@ -13,10 +13,13 @@
  *= require_tree .
  *= require_self
  *= require bootstrap-tokenfield
+ *= require font-awesome
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 .tag-list-item {
   padding: 3px;

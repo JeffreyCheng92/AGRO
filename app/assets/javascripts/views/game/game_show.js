@@ -13,6 +13,7 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
 
   events: {
     "click .delete-button": "deleteGame",
+    "click .back": "back",
   },
 
   render: function() {
@@ -54,6 +55,11 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
       })
     });
     this.addSubview('.review-form', form);
+  },
+
+  back: function(event) {
+    event.preventDefault();
+    window.history.back();
   },
 
   deleteGame: function(event) {
