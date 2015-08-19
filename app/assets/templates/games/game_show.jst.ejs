@@ -3,7 +3,9 @@
 
   <h5> <button class="btn btn-default back fa fa-arrow-left"></button>
     Tags: <% game.tags().each(function(tag) { %>
-      <%= tag.escape('label') + " " %>
+      <a class="tag-list-item" href="/#/tags/<%= tag.get('id') %>">
+        <%= tag.escape('label') + " " %>
+      </a>
     <% }) %>
   </h5>
 </div>
