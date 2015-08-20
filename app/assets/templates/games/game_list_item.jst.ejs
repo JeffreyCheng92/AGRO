@@ -1,9 +1,8 @@
-  <td>
-    <a class="game-item" href="#/games/<%= game.id %>">
-      <%= game.escape('title') %>
-    </a>
+
+  <td class="game-item-title">
+    <h4><%= game.escape('title') %></h4>
   </td>
-  <td>
+  <td class="game-item-rating">
     <div class="star-rating"
          data-score="<%= game.get('average_rating') %>">
     </div>

@@ -29,9 +29,9 @@
 #pong-loader {
   position: absolute;
   z-index: 20;
-  transform:translate(-50%);
+  transform:translate(-50%, -50%);
   left: 50%;
-  top: 40%;
+  top: 50%;
 }
 //
 
@@ -91,6 +91,77 @@ input.tt-input {
   text-indent: 10px;
 }
 ////////////////////
+
+// game list item
+
+tr.game-list-item:nth-child(even) {
+  background: #CCC;
+  opacity: 0.6;
+}
+tr.game-list-item:nth-child(odd) {
+  background: #FFF;
+  opacity: 0.6;
+}
+
+tr.game-list-item:hover {
+  background-color: red;
+}
+
+td.game-item-title {
+  color: black;
+}
+
+/////////////////////
+
+// alphabet bar
+
+.alphabet-bar {
+  min-height: 20px;
+  padding-bottom: 40px;
+}
+.alphabet {
+    list-style-type: none;
+    margin:50px auto 0;
+    padding:0;
+    cursor: pointer;
+    width:80%;
+    text-align:center;
+}
+
+.alphabet li {
+    float:left;
+    margin:0;
+    padding:0;
+    border-right:1px solid darkgrey;
+    font-size: 13px;
+    -moz-box-sizing:border-box;
+    color:black;
+    display:inline-block;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    width:3.84%;
+}
+
+.alphabet li:last-child {
+    border-right: none;
+}
+
+.alphabet li:hover {
+    color: green;
+    background-color: lightgrey;
+}
+
+.selected {
+  background-color: red;
+}
+
+.alphabet li.selected:hover {
+  background-color: red;
+  color: black;
+}
+
+/////////////////////////
 
 button.glyphicon-search {
   top: 6px;
@@ -177,46 +248,7 @@ button {
   opacity: 0.6;
 }
 
-.alphabet-bar {
-  min-height: 20px;
-  padding-bottom: 40px;
-}
-.alphabet {
-    list-style-type: none;
-    margin:50px auto 0;
-    padding:0;
-    cursor: pointer;
-    width:80%;
-    text-align:center;
-}
 
-.alphabet li {
-    float:left;
-    margin:0;
-    padding:0;
-    border-right:1px solid darkgrey;
-    font-size: 13px;
-    -moz-box-sizing:border-box;
-    color:black;
-    display:inline-block;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    width:3.84%;
-}
-
-.alphabet li:last-child {
-    border-right: none;
-}
-
-.alphabet li:hover {
-    color:green;
-    background-color: lightgrey;
-}
-
-.selected {
-  background-color: red;
-}
 
 .sidebar img {
   width: 100%;
@@ -250,18 +282,7 @@ button {
   transform:translate(-50%, -50%);
 }
 
-tr.game-list-item:nth-child(even) {
-  background: #CCC;
-  opacity: 0.6;
-}
-tr.game-list-item:nth-child(odd) {
-  background: #FFF;
-  opacity: 0.6;
-}
 
-a.game-item {
-  color: black;
-}
 
 a.edit-link {
   color: white;

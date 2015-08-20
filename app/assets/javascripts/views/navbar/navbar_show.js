@@ -1,10 +1,6 @@
 AGRO.Views.navbarShow = Backbone.View.extend({
   template: JST["navbars/navbar"],
 
-  initialize: function(options) {
-    //put listeners in here
-  },
-
   events: {
     "click .log-out": "logout",
     "submit .navbar-search": "search",
@@ -74,6 +70,7 @@ AGRO.Views.navbarShow = Backbone.View.extend({
   navigate: function (event) {
     var link = $(event.currentTarget).attr('href');
     Backbone.history.navigate('fakey-mcfakerson');
+    Backbone.history.navigate(link, { trigger: true });
   },
 
   emptySearchField: function(event) {

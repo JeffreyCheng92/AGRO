@@ -7,6 +7,10 @@ AGRO.Views.gameListItem = Backbone.View.extend({
     this.listenTo(this.model, "sync", this.render);
   },
 
+  events: {
+    "click td": "goToGame",
+  },
+
   render: function () {
     var content = this.template({game: this.model});
     this.$el.html(content);
@@ -26,4 +30,11 @@ AGRO.Views.gameListItem = Backbone.View.extend({
       }
     });
   },
+
+  goToGame: function(event) {
+    event.preventDefault();
+    Backbone.history.navigate("games/" + this.model.get('id'),
+                               { trigger: true });
+  }
+
 });

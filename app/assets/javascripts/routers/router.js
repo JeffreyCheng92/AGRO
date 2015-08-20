@@ -32,25 +32,9 @@ AGRO.Routers.Router = Backbone.Router.extend({
 
   search: function(query) {
     this._addPongy();
-    this.games.fetch({
-      data: { query: query },
-      success: function() {
-        $("#pong-loader").empty();
-      },
-      error: function() {
-        $("#pong-loader").empty();
-      }
-    });
+    this.games.spinnerFetch({ data: { query: query }});
     this._addPongy();
-    this.tags.fetch({
-      data: { query: query },
-      success: function() {
-        $("#pong-loader").empty();
-      },
-      error: function() {
-        $("#pong-loader").empty();
-      }
-    });
+    this.tags.spinnerFetch({ data: { query: query } });
     var searchView = new AGRO.Views.searchIndex({
       tags: this.tags,
       games: this.games
@@ -61,12 +45,12 @@ AGRO.Routers.Router = Backbone.Router.extend({
   gameIndex: function() {
     this._addPongy();
     this.games.spinnerFetch();
-    var gameIndexView = new AGRO.Views.gameIndex({collection: this.games});
+    var gameIndexView = new AGRO.Views.gameIndex({ collection: this.games });
     this._swapView(gameIndexView);
   },
 
   home: function() {
-    this.games.fetch({data: { top: true }});
+    this.games.spinnerFetch({ data: { top: true }});
     var gameHomeView = new AGRO.Views.gameHome({ collection: this.games });
     this._swapView(gameHomeView);
   },
@@ -116,11 +100,11 @@ AGRO.Routers.Router = Backbone.Router.extend({
     this._swapView(userEditView);
   },
 
-  imageShow: function(id) {
-    var image = this.images.getOrFetch(id);
-    var view = new AGRO.Views.imagesShow({ model: image });
-    this._swapView(image);
-  },
+  // imageShow: function(id) {
+  //   var image = this.images.getOrFetch(id);
+  //   var view = new AGRO.Views.imagesShow({ model: image });
+  //   this._swapView(image);
+  // },
 
   consoleShow: function(id){
     var consoul = this.consoles.getOrFetch(id);
@@ -152,10 +136,4 @@ AGRO.Routers.Router = Backbone.Router.extend({
     $("#pong-loader").html($pong);
   },
 
-  // _removePongy: function() {
-  //   {
-  //     success: function() { $("#pong-loader").empty(); },
-  //     error: function() { $("#pong-loader").empty(); }
-  //   }
-  // },
 });
