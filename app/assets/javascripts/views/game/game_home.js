@@ -2,6 +2,7 @@ AGRO.Views.gameHome = Backbone.CompositeView.extend({
   template: JST["games/game_home"],
 
   initialize: function(options) {
+    this.collection.each(this.addGameThumbnail.bind(this));
     this.listenTo(this.collection, "add", this.addGameThumbnail);
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.render);
