@@ -60,8 +60,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
 
   gameIndex: function() {
     this._addPongy();
-    debugger
-    this.games.spinnerFetch({});
+    this.games.spinnerFetch();
     var gameIndexView = new AGRO.Views.gameIndex({collection: this.games});
     this._swapView(gameIndexView);
   },
