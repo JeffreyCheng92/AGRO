@@ -9,6 +9,8 @@ AGRO.Views.gameHome = Backbone.CompositeView.extend({
   },
 
   render: function() {
+    $(".main-body").css("background", "rgba(255, 255, 255, 0.2)")
+                   .css("height", "100vh");
     var content = this.template();
     this.$el.html(content);
     this.attachSubviews();

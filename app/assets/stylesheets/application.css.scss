@@ -33,7 +33,7 @@
   left: 50%;
   top: 50%;
 }
-//
+////////////////////////
 
 // login/register page
 input.login-field::-webkit-input-placeholder {
@@ -159,6 +159,31 @@ td.game-item-title {
 .alphabet li.selected:hover {
   background-color: red;
   color: black;
+}
+
+/////////////////////////
+
+// home page
+
+.game-thumbnail-item:first-child {
+  border-left: 1px solid black;
+}
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.game-thumbnail-item {
+  display: inline-block;
+  float: left;
+  min-width: 25%;
+  padding-top: 10px;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: -1px;
+  margin-left: -1px;
 }
 
 /////////////////////////
