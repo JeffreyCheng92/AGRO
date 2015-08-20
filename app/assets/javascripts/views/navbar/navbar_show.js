@@ -20,7 +20,7 @@ AGRO.Views.navbarShow = Backbone.View.extend({
 
   onRender: function() {
     this.$('.typeahead').typeahead({
-      hint: true,
+      hint: false,
       highlight: true,
       minLength: 3,
       limit: 7
@@ -34,7 +34,6 @@ AGRO.Views.navbarShow = Backbone.View.extend({
   },
 
   typeaheadSource: function(query, sync, async) {
-    var args = arguments;
     $.ajax({
       url: '/api/games',
       dataType: 'json',
@@ -43,8 +42,18 @@ AGRO.Views.navbarShow = Backbone.View.extend({
         var titles = _.map(data, function(object) {
           return object.title;
         });
-        // console.log(args);
         async(titles);
+      }
+    });
+    $.ajax({
+      url: '/api/tags',
+      dataType: 'json',
+      data: {query: query},
+      success: function(data) {
+        var labels = _.map(data, function(object) {
+          return object.label;
+        });
+        async(labels);
       }
     });
   },

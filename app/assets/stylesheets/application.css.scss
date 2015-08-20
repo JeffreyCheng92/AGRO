@@ -25,6 +25,15 @@
   position: absolute;
 }
 
+//spinner
+#pong-loader {
+  z-index: 20;
+  transform:translate(-50%);
+  left: 50%;
+  top: 40%;
+}
+//
+
 // login/register page
 input.login-field::-webkit-input-placeholder {
   color:    #bdbdbd;
@@ -49,8 +58,9 @@ input.login-field {
 .static-navbar {
   opacity: 0.6;
 }
-//
+////////////////////
 
+// background stuff
 body {
   padding-top: 50px;
 }
@@ -59,11 +69,10 @@ body {
   background-image: url("supermario.jpg");
 }
 
-.user-link {
-  color: red;
-}
+////////////////////
 
-input.form-control.typeahead.tt-input {
+// search bar
+input.tt-input {
   background-color: gray !important;
 }
 
@@ -72,6 +81,15 @@ input.form-control.typeahead.tt-input {
   background-color: white;
   border-radius: 2px;
 }
+
+.tt-cursor {
+  color:#f1b218;
+}
+
+.tt-suggestion {
+  text-indent: 10px;
+}
+////////////////////
 
 button.glyphicon-search {
   top: 6px;
@@ -139,9 +157,6 @@ textarea.form-control::-webkit-input-placeholder {
     border: 1px solid white;
     outline: none;
 }
-
-
-
 
 .panel {
   background: rgba(0, 0, 0, 0.4);
@@ -257,4 +272,8 @@ input.form-control {
 
 textarea.form-control {
   color: white;
+}
+
+.user-link {
+  color: red;
 }
