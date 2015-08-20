@@ -1,0 +1,11 @@
+<div class="game-thumbnail-item">
+  <a href="/#/games/<%= game.get('id') %>">
+    <img src="<%= cover.get("thumbnail_url") %>"/>
+  </a>
+  <div class="game-name">
+    <%= game.escape('title') %>
+  </div>
+  <div class="star-rating"
+       data-score="<%= game.get('average_rating') %>">
+  </div>
+</div>

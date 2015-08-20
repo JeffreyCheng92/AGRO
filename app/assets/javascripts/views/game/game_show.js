@@ -82,7 +82,7 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
       //hard coding link to meet size criteria in show page
       var link = cover.get('url').split("ad/").join("ad/c_scale,h_400,w_350/");
       var $img = $('<img>').attr('src', link);
-      this.$(".image-link").attr("href", "#/images/" + cover.id)
+      this.$(".image-link").attr("href", cover.get('url'))
                            .html($img);
     }
   },

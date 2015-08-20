@@ -11,8 +11,8 @@ AGRO.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    "": "gameIndex",
-    "games/top": "gameTop",
+    "": "home",
+    "games": "gameIndex",
     "games/new": "gameNew",
     "games/:id": "gameShow",
     "games/:id/edit": "gameEdit",
@@ -41,7 +41,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
     this._swapView(gameIndexView);
   },
 
-  gameTop: function() {
+  home: function() {
     this.games.fetch({data: { top: true }});
     var gameHomeView = new AGRO.Views.gameHome({ collection: this.games });
     this._swapView(gameHomeView);
