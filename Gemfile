@@ -5,7 +5,7 @@ gem 'backbone-on-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'cloudinary'
 gem 'figaro'
-gem 'rails_12factor'
+
 gem 'searchkick'
 gem 'seed_dump'
 gem 'font-awesome-sass'
@@ -30,9 +30,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -48,4 +45,9 @@ group :development, :test do
 
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+
+group :production do
+  gem 'rails_12factor'
 end
