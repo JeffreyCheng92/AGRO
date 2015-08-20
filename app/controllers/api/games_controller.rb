@@ -46,6 +46,21 @@ class Api::GamesController < ApplicationController
     elsif params[:query]
       query = params[:query].gsub("+", " ").downcase
       @games = Game.where("LOWER(title) LIKE ?", "%#{query}%").order(:title)
+    elsif params[:top]
+      @games = Game.includes(:cover).find_by_sql("
+        SELECT
+          games.*
+        FROM
+          games
+        JOIN
+          reviews ON games.id = reviews.game_id
+        GROUP BY
+          games.id
+        ORDER BY
+          AVG(reviews.rating) DESC
+        LIMIT
+          8"
+      )
     else
       @games = Game.all.order(:title)
     end
