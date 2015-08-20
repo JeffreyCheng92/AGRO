@@ -10,6 +10,7 @@ AGRO.Views.navbarShow = Backbone.View.extend({
     "submit .navbar-search": "search",
     "blur .typeahead": "emptySearchField",
     "click .typeahead": "addUserTopic",
+    "click .navlink": "navigate"
   },
 
   render: function() {
@@ -68,6 +69,11 @@ AGRO.Views.navbarShow = Backbone.View.extend({
           window.location = "";
       }
     });
+  },
+
+  navigate: function (event) {
+    var link = $(event.currentTarget).attr('href');
+    Backbone.history.navigate('fakey-mcfakerson');
   },
 
   emptySearchField: function(event) {

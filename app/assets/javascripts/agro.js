@@ -17,11 +17,5 @@ window.AGRO = {
 
     var navbar_view = new AGRO.Views.navbarShow();
     $("#navbar").html(navbar_view.render().$el);
-
-    $(".navlink").on('click', function(event) {
-      var link = $(event.currentTarget).attr('href');
-      Backbone.history.navigate('.');
-      Backbone.history.navigate(link, { trigger: true });
-    });
   }
 };

@@ -27,6 +27,7 @@
 
 //spinner
 #pong-loader {
+  position: absolute;
   z-index: 20;
   transform:translate(-50%);
   left: 50%;

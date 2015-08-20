@@ -12,6 +12,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": "home",
+    "fakey-mcfakerson": "fakeyMcFakerson",
     "games": "gameIndex",
     "games/new": "gameNew",
     "games/:id": "gameShow",
@@ -25,9 +26,31 @@ AGRO.Routers.Router = Backbone.Router.extend({
     "tags/:id": "tagShow",
   },
 
+  fakeyMcFakerson: function () {
+    return false;
+  },
+
   search: function(query) {
-    this.games.fetch({ data: { query: query }});
-    this.tags.fetch({ data: { query: query }});
+    this._addPongy();
+    this.games.fetch({
+      data: { query: query },
+      success: function() {
+        $("#pong-loader").empty();
+      },
+      error: function() {
+        $("#pong-loader").empty();
+      }
+    });
+    this._addPongy();
+    this.tags.fetch({
+      data: { query: query },
+      success: function() {
+        $("#pong-loader").empty();
+      },
+      error: function() {
+        $("#pong-loader").empty();
+      }
+    });
     var searchView = new AGRO.Views.searchIndex({
       tags: this.tags,
       games: this.games
@@ -36,7 +59,9 @@ AGRO.Routers.Router = Backbone.Router.extend({
   },
 
   gameIndex: function() {
-    this.games.fetch();
+    this._addPongy();
+    debugger
+    this.games.spinnerFetch({});
     var gameIndexView = new AGRO.Views.gameIndex({collection: this.games});
     this._swapView(gameIndexView);
   },
@@ -121,5 +146,17 @@ AGRO.Routers.Router = Backbone.Router.extend({
     this._currentView = view;
     this.$rootEl.html(view.$el);
     view.render();
-  }
+  },
+
+  _addPongy: function() {
+    var $pong = $("<div class='pong-loader'>");
+    $("#pong-loader").html($pong);
+  },
+
+  // _removePongy: function() {
+  //   {
+  //     success: function() { $("#pong-loader").empty(); },
+  //     error: function() { $("#pong-loader").empty(); }
+  //   }
+  // },
 });
