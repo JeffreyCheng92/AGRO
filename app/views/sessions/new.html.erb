@@ -9,37 +9,43 @@
     <div class="jumbotron">
       <div class="jumbotron-container">
 
-        <h2 class="jumbotron-header text-center">Log In</h2>
+        <h2 class="text-center">Log In</h2>
 
 
-        <form action="<%= session_url %>" method="post">
+        <form class="col-md-12" action="<%= session_url %>" method="post">
 
           <%= auth_token %>
 
           <div class="form-group">
-            <label for="users-username">Username: </label>
-            <span class="fa fa-user"></span>
+            <span class="login-icon fa fa-user"></span>
             <input type="text"
                    name="user[username]"
                    value="<%= @user.username %>"
-                   class="form-control"
+                   class="form-control login-field"
                    id="users-username"
                    placeholder="Username">
           </div>
 
           <div class="form-group">
-            <label for="users-password">Password: </label>
-            <span class="fa fa-key"></span>
+            <span class="login-icon fa fa-key"></span>
             <input type="password"
                    name="user[password]"
                    id="users-password"
-                   class="form-control"
+                   class="form-control login-field"
                    placeholder="Password">
           </div>
 
+          <div class="col-md-6 text-left">
+            <input class="btn btn-primary login-btn login"
+                   type="submit"
+                   value="Log In">
+          </div>
 
-         <input class="btn btn-primary login" type="submit" value="Log In">
-         <button class="btn btn-default guest">Proceed as guest</button>
+          <div class="col-md-6 text-right">
+            <button class="btn btn-default guest login-btn">
+              Proceed as guest
+            </button>
+          </div>
 
         </form>
       </div>

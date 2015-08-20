@@ -25,6 +25,40 @@
   position: absolute;
 }
 
+// login/register page
+input.login-field::-webkit-input-placeholder {
+  color:    #bdbdbd;
+  text-indent: 20px;
+}
+
+input.login-field {
+  text-indent: 20px;
+}
+
+.login-icon {
+  position: absolute;
+  left: 0;
+  color: white;
+  padding: 10px;
+}
+
+.login-btn {
+  min-width: 150px;
+}
+
+.static-navbar {
+  opacity: 0.6;
+}
+//
+
+body {
+  padding-top: 50px;
+}
+
+.mario {
+  background-image: url("supermario.jpg");
+}
+
 .user-link {
   color: red;
 }
@@ -84,12 +118,8 @@ textarea.form-control::-webkit-input-placeholder {
   text-align: center;
 }
 
-.new-user {
-  max-width: 600px;
-}
-
 .jumbotron {
-  min-width: 600px;
+  min-width: 500px;
   min-height: 200px;
   position: absolute;
   top: 50%;
@@ -99,6 +129,11 @@ textarea.form-control::-webkit-input-placeholder {
 
 }
 
+.form-group {
+  position: relative;
+}
+
+
 .form-control {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid white;
@@ -106,10 +141,7 @@ textarea.form-control::-webkit-input-placeholder {
 }
 
 
-body {
-  padding-top: 50px;
-  background-image: url("supermario.jpg");
-}
+
 
 .panel {
   background: rgba(0, 0, 0, 0.4);

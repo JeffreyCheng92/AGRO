@@ -12,7 +12,7 @@ AGRO (Authentic Game Reviews Online) is a clone of Yelp built on Rails and Backb
 - [X] Create games
 - [X] Create users
 - [X] Create reviews/posts
-- [ ] Search for games by title
+- [X] Search for games by title
 
 ## Design Docs
 * [View Wireframes][views]
@@ -70,7 +70,7 @@ first. Will do more if time allows.
 
 ### Bonus Features (TBD)
 - [ ] Screenshots for games
-- [ ] "Like" button and counter for reviews
+- [X] "Like" button and counter for reviews
 - [ ] Pagination/infinite scroll on games show
 - [ ] Review history (on profile page)
 - [ ] User-to-user private messages
