@@ -13,6 +13,7 @@ AGRO.Views.consoleShow = Backbone.CompositeView.extend({
   },
 
   render: function() {
+    $(".main-body").css("background", "rgba(255, 255, 255, 0.2)");
     var content = this.template({ consoul: this.model });
     this.$el.html(content);
     this.attachSubviews();

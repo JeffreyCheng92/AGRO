@@ -8,7 +8,7 @@ AGRO.Views.gameIndex = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "sync", this.render);
 
     this.addAlphaBar();
-    this.collection.each(this.addGameListItem.bind(this));
+    // this.collection.each(this.addGameListItem.bind(this));
   },
 
   removeGameListItem: function (game) {
@@ -20,6 +20,7 @@ AGRO.Views.gameIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
+    $(".main-body").css("background", "rgba(255, 255, 255, 0.2)");
     this.$el.html(this.template());
     this.attachSubviews();
     return this;

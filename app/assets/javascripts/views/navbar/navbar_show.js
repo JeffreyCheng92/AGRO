@@ -68,6 +68,7 @@ AGRO.Views.navbarShow = Backbone.View.extend({
   },
 
   navigate: function (event) {
+    event.preventDefault();
     var link = $(event.currentTarget).attr('href');
     Backbone.history.navigate('fakey-mcfakerson');
     Backbone.history.navigate(link, { trigger: true });
