@@ -219,7 +219,7 @@ td.game-item-title {
 
 .sidebar-list {
   list-style:none;
-  margin-left: -40px;
+  margin-left: -45px;
 }
 
 .sidebar-list-item {
@@ -228,8 +228,17 @@ td.game-item-title {
   padding-left: 40px;
 }
 
+.chosen {
+  background-color: white;
+  color: blue;
+  padding: 3px;
+  padding-right: 55px;
+  padding-left: 40px;
+}
+
 .sidebar-list-item:hover {
-  color: red;
+  color: green;
+  background: yellow;
 }
 
 /////////////////////////

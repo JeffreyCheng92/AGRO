@@ -41,7 +41,11 @@ AGRO.Views.gameHome = Backbone.CompositeView.extend({
   findGames: function(event) {
     event.preventDefault();
 
+    this.$(".chosen").removeClass("chosen").addClass("sidebar-list-item");
+
     var target = $(event.currentTarget);
+
+    target.addClass("chosen").removeClass("sidebar-list-item");
 
     this._addPongy();
     // this.subviews(".game-thumbnails").each( function(view) { view.remove(); });
