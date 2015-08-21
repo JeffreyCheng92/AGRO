@@ -53,10 +53,15 @@ AGRO.Views.gameIndex = Backbone.CompositeView.extend({
 
     // Setting the subview hash object to empty to prevent persisting views
     // from rerendering.
-    // this._subviews[".game-list"] = _([]);
-    this.collection.fetch({
+    this._addPongy();
+    this.collection.spinnerFetch({
       data: { letter: target.data("letter") }
     });
+  },
+
+  _addPongy: function() {
+    var $pong = $("<div class='pong-loader'>");
+    $("#pong-loader").html($pong);
   },
 
 });
