@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :consoles, only: [:show]
     resources :tags, only: [:index, :show]
     resources :likes, only: [:create, :destroy, :update]
+    resources :mails, only: [:create]
   end
 
 end
