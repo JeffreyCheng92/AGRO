@@ -13,7 +13,7 @@
   <script type="text/javascript">
     <% if logged_in? %>
       window.current_user = {
-        id: <%= (current_user.id) %>
+        id: <%= (current_user.id) %>,
       }
     <% end %>
 
@@ -23,7 +23,7 @@
     };
   </script>
 </head>
-<body class="mario">
+<body class="donkeykong">
 
   <div class="container main-body">
     <%= yield %>

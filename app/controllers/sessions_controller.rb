@@ -20,6 +20,5 @@ class SessionsController < ApplicationController
     log_out
     flash[:is_logging_out] = true
     render json: @user
-    # redirect_to new_session_url
   end
 end

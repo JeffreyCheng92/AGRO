@@ -6,10 +6,10 @@
 
 <div class="login-background">
   <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron logintron">
       <div class="jumbotron-container">
 
-        <h2 class="text-center">Log In</h2>
+        <h2 class="text-center" style="color: white">Log In</h2>
 
 
         <form class="col-md-12" action="<%= session_url %>" method="post">
@@ -36,7 +36,7 @@
           </div>
 
           <div class="col-md-6 text-left">
-            <input class="btn btn-primary login-btn login"
+            <input class="btn btn-primary login-btn enter"
                    type="submit"
                    value="Log In">
           </div>
@@ -58,6 +58,6 @@
     event.preventDefault();
     $("#users-username").val("guest");
     $("#users-password").val("123123");
-    $(".login").trigger("click");
+    $(".enter").trigger("click");
   });
 </script>

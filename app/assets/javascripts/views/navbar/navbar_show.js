@@ -62,7 +62,7 @@ AGRO.Views.navbarShow = Backbone.View.extend({
       url: '/session',
       method: 'DELETE',
       success: function(result) {
-          window.location = "";
+        window.location = "";
       }
     });
   },
