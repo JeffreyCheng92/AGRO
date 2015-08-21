@@ -48,9 +48,16 @@ AGRO.Views.gameHome = Backbone.CompositeView.extend({
     this._addPongy();
     // this.subviews(".game-thumbnails").each( function(view) { view.remove(); });
 
-    this.collection.spinnerFetch({
-      data: { console: target.data("console") },
-    });
+    if (target.data("console") === 0 ) {
+      this.collection.spinnerFetch({
+        data: { top: true },
+      });
+    } else {
+      this.collection.spinnerFetch({
+        data: { console: target.data("console") },
+      });
+    }
+
 
   },
 

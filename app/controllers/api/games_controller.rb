@@ -39,51 +39,55 @@ class Api::GamesController < ApplicationController
   end
 
   def index
-    sleep(1)
-    if params[:letter]
-      let = params[:letter]
-      @games = Game.where("LOWER(title) LIKE ?", "#{let.downcase}%")
-                   .order(:title)
-    elsif params[:query]
+    if params[:query]
       query = params[:query].gsub("+", " ").downcase
-      @games = Game.where("LOWER(title) LIKE ?", "%#{query}%").order(:title)
-    elsif params[:top]
-      @games = Game.includes(:cover).find_by_sql("
-        SELECT
-          games.*
-        FROM
-          games
-        JOIN
-          reviews ON games.id = reviews.game_id
-        GROUP BY
-          games.id
-        ORDER BY
-          AVG(reviews.rating) DESC
-        LIMIT
-          8"
-      )
-    elsif params[:console]
-      @games = Game.includes(:cover).find_by_sql(
-      ["
-        SELECT
-          games.*
-        FROM
-          games
-        JOIN
-          reviews ON games.id = reviews.game_id
-        JOIN
-          game_consoles ON games.id = game_consoles.game_id
-        WHERE
-          game_consoles.console_id = ?
-        GROUP BY
-          games.id
-        ORDER BY
-          AVG(reviews.rating) DESC
-        LIMIT
-          8",
-      params[:console]])
+      @games = Game.select("title, id")
+                   .where("LOWER(title) LIKE ?", "%#{query}%").order(:title)
+      render 'navsearch'
     else
-      @games = Game.all.order(:title)
+      sleep(1)
+      if params[:letter]
+        let = params[:letter]
+        @games = Game.where("LOWER(title) LIKE ?", "#{let.downcase}%")
+                     .order(:title)
+      elsif params[:top]
+        @games = Game.includes(:cover).find_by_sql("
+          SELECT
+            games.*
+          FROM
+            games
+          JOIN
+            reviews ON games.id = reviews.game_id
+          GROUP BY
+            games.id
+          ORDER BY
+            AVG(reviews.rating) DESC
+          LIMIT
+            8"
+        )
+      elsif params[:console]
+        @games = Game.includes(:cover).find_by_sql(
+        ["
+          SELECT
+            games.*
+          FROM
+            games
+          JOIN
+            reviews ON games.id = reviews.game_id
+          JOIN
+            game_consoles ON games.id = game_consoles.game_id
+          WHERE
+            game_consoles.console_id = ?
+          GROUP BY
+            games.id
+          ORDER BY
+            AVG(reviews.rating) DESC
+          LIMIT
+            8",
+        params[:console]])
+      else
+        @games = Game.all.order(:title)
+      end
     end
   end
 

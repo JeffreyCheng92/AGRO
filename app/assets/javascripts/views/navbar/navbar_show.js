@@ -4,8 +4,8 @@ AGRO.Views.navbarShow = Backbone.View.extend({
   events: {
     "click .log-out": "logout",
     "submit .navbar-search": "search",
-    "blur .typeahead": "emptySearchField",
-    "click .typeahead": "addUserTopic",
+    // "blur .typeahead": "emptySearchField",
+    // "click .typeahead": "addUserTopic",
     "click .navlink": "navigate"
   },
 
@@ -20,7 +20,6 @@ AGRO.Views.navbarShow = Backbone.View.extend({
       hint: false,
       highlight: true,
       minLength: 3,
-      limit: 7
     },
     {
       name: 'availableTopics',
@@ -74,9 +73,9 @@ AGRO.Views.navbarShow = Backbone.View.extend({
     Backbone.history.navigate(link, { trigger: true });
   },
 
-  emptySearchField: function(event) {
-    $(event.currentTarget).val("");
-  },
+  // emptySearchField: function(event) {
+  //   $(event.currentTarget).val("");
+  // },
 
   search: function(event) {
     event.preventDefault();
