@@ -211,6 +211,27 @@ td.game-item-title {
   background-size: cover;
 }
 
+.top-games-sidebar {
+  position: absolute;
+  top: 60px;
+  left: 5px;
+}
+
+.sidebar-list {
+  list-style:none;
+  margin-left: -40px;
+}
+
+.sidebar-list-item {
+  padding: 3px;
+  padding-right: 55px;
+  padding-left: 40px;
+}
+
+.sidebar-list-item:hover {
+  color: red;
+}
+
 /////////////////////////
 
 button.glyphicon-search {
