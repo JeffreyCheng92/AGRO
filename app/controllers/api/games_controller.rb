@@ -81,7 +81,7 @@ class Api::GamesController < ApplicationController
           AVG(reviews.rating) DESC
         LIMIT
           8",
-      9])
+      params[:console]])
     else
       @games = Game.all.order(:title)
     end
