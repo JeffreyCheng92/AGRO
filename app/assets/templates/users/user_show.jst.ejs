@@ -32,6 +32,14 @@
               </td>
               <td><%= user.escape('reviews') %></td>
             </tr>
+            <tr>
+              <td>
+                <span class="fa fa-trophy">
+                  <strong>Karma Points: </strong>
+                </span>
+              </td>
+              <td><%= user.get('karma') %></td>
+            </tr>
           </table>
         </div>
       </div>

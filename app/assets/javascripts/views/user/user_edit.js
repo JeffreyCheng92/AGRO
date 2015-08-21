@@ -47,6 +47,11 @@ AGRO.Views.userEdit = Backbone.View.extend({
                           imageable_type: "User"
                         };
 
+        this.$(".upload-button").html("success")
+                                .removeClass("btn-default")
+                                .addClass("btn-success");
+        this.$(".filename")
+            .html(data.original_filename.substring(0, 10) + "...");
       } else {
         this.$('.help-inline').html("Image upload failed");
       }

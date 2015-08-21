@@ -6,7 +6,7 @@ AGRO.Views.searchIndex = Backbone.CompositeView.extend({
     this.tags = options.tags;
     this.games.reset();
     this.tags.reset();
-    
+
     this.listenTo(this.tags, "add", this.addTagListItem);
     this.listenTo(this.games, "add", this.addGameListItem);
     this.listenTo(this.tags, "sync", this.render);
@@ -14,6 +14,7 @@ AGRO.Views.searchIndex = Backbone.CompositeView.extend({
   },
 
   render: function() {
+    $(".main-body").css("background", "rgba(255, 255, 255, 0.2)");
     var content = this.template({
       games: this.games,
       tags: this.tags,

@@ -39,6 +39,7 @@ class Api::GamesController < ApplicationController
   end
 
   def index
+    sleep(1)
     if params[:letter]
       let = params[:letter]
       @games = Game.where("LOWER(title) LIKE ?", "#{let.downcase}%")
@@ -61,6 +62,26 @@ class Api::GamesController < ApplicationController
         LIMIT
           8"
       )
+    elsif params[:console]
+      @games = Game.includes(:cover).find_by_sql(
+      ["
+        SELECT
+          games.*
+        FROM
+          games
+        JOIN
+          reviews ON games.id = reviews.game_id
+        JOIN
+          game_consoles ON games.id = game_consoles.game_id
+        WHERE
+          game_consoles.console_id = ?
+        GROUP BY
+          games.id
+        ORDER BY
+          AVG(reviews.rating) DESC
+        LIMIT
+          8",
+      9])
     else
       @games = Game.all.order(:title)
     end
