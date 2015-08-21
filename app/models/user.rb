@@ -48,6 +48,10 @@ class User < ActiveRecord::Base
     return (user && user.is_password?(password)) ? user : nil
   end
 
+  def karma
+    Like.where("user_id = ?", self.id).count
+  end
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
