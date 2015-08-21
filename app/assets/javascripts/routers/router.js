@@ -50,7 +50,6 @@ AGRO.Routers.Router = Backbone.Router.extend({
   },
 
   home: function() {
-    $(document.body).removeClass().addClass("mario");
     this.games.spinnerFetch({ data: { top: true }});
     var gameHomeView = new AGRO.Views.gameHome({ collection: this.games });
     this._swapView(gameHomeView);
@@ -125,6 +124,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
   },
 
   _swapView: function(view) {
+    $(document.body).removeClass().addClass("mario");
     $('body').scrollTop(0);
     if (this._currentView) { this._currentView.remove(); }
     this._currentView = view;
