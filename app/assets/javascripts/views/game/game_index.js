@@ -20,7 +20,7 @@ AGRO.Views.gameIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    $(".main-body").css("background", "rgba(255, 255, 255, 0.2)");
+    // $(".main-body").css("background", "rgba(255, 255, 255, 0.2)");
     this.$el.html(this.template());
     this.attachSubviews();
     return this;

@@ -25,6 +25,11 @@
   position: absolute;
 }
 
+.main-body {
+  background: rgba(255, 255, 255, 0.2);
+  min-height: 100vh;
+}
+
 //spinner
 #pong-loader {
   position: absolute;
@@ -74,6 +79,7 @@ input.login-field {
 // background stuff
 body {
   padding-top: 50px;
+  background-attachment: fixed;
 }
 
 .mario {

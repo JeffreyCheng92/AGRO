@@ -127,6 +127,7 @@ AGRO.Routers.Router = Backbone.Router.extend({
   _swapView: function(view) {
     $(document.body).removeClass().addClass("mario");
     $('body').scrollTop(0);
+    // $(".main-body").css("height", "inherit");
     if (this._currentView) { this._currentView.remove(); }
     this._currentView = view;
     this.$rootEl.html(view.$el);
