@@ -250,6 +250,19 @@ td.game-item-title {
 
 /////////////////////////
 
+// user show
+
+.recent-review-list {
+  list-style: none;
+  margin-left: -30px;
+}
+
+.recent-review-list-item>a{
+  color: red;
+}
+
+//////////////////////
+
 button.glyphicon-search {
   top: 6px;
 }
