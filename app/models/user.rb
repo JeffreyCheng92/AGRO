@@ -52,6 +52,26 @@ class User < ActiveRecord::Base
     Like.where("user_id = ?", self.id).count
   end
 
+  def recent_reviews
+    Game.find_by_sql(
+    ["
+      SELECT
+        games.id, games.title
+      FROM
+        games
+      JOIN
+        reviews ON reviews.game_id = games.id
+      JOIN
+        users ON reviews.author_id = users.id
+      WHERE
+        users.id = ?
+      ORDER BY
+        reviews.created_at DESC
+      LIMIT
+        5",
+      self.id])
+  end
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
