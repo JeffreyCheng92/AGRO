@@ -51,10 +51,16 @@ AGRO.Views.gameHome = Backbone.CompositeView.extend({
     if (target.data("console") === 0 ) {
       this.collection.spinnerFetch({
         data: { top: true },
+        success: function() {
+          this.$(".top-games-header").html("Top 8 Games");
+        }.bind(this)
       });
     } else {
       this.collection.spinnerFetch({
         data: { console: target.data("console") },
+        success: function() {
+          this.$(".top-games-header").html("Top 8 " + target.html() + " Games");
+        }.bind(this)
       });
     }
 
