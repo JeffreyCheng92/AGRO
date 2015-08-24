@@ -58,7 +58,32 @@ Game.create!([
   {title: "Pokemon Yellow", author_id: 1, description: "Pokémon Yellow is an enhanced version of the Game Boy games Pokémon Red and Blue. Like its predecessors, it is a third-person, overhead perspective and consists of three basic screens: an overworld, in which the player navigates the main character; a side-view battle screen; and a menu interface, in which the player configures his or her Pokémon, items, or gameplay settings. The player can use his or her Pokémon to battle other Pokémon. When the player encounters a wild Pokémon or is challenged by a trainer, the screen switches to a turn-based battle screen that displays the engaged Pokémon. During battle, the player may select a maneuver for his or her Pokémon to fight using one of four moves, use an item, switch his or her active Pokémon, or attempt to flee. Pokémon have hit points (HP); when a Pokémon's HP is reduced to zero, it faints and can no longer battle until it is revived. Once an enemy Pokémon faints, the player's Pokémon involved in the battle receive a certain number of experience points (EXP). After accumulating enough EXP, a Pokémon may level up. A Pokémon's level controls its physical properties, such as the battle statistics acquired, and the moves learned.\n\nCatching Pokémon is another essential element of the gameplay. During battle with a wild Pokémon, the player may throw a Poké Ball at it. If the Pokémon is successfully caught, it will come under the ownership of the player. Factors in the success rate of capture include the HP of the target Pokémon and the type of Poké Ball used: the lower the target's HP and the stronger the Poké Ball, the higher the success rate of capture. The ultimate goal of the games is to complete the entries in the Pokédex, a comprehensive Pokémon encyclopedia, by capturing, evolving, and trading to obtain all 151 creatures. Pokémon Yellow allows players to trade Pokémon between two cartridges via a Game Link Cable, including the previous games Pokémon Red and Blue. This method of trading must be done to fully complete the Pokédex, since each of the two games have version-exclusive Pokémon. The Link Cable also makes it possible to battle another player's Pokémon team.\n\nPokémon Yellow features several enhancements and changes. Including the below-mentioned inclusion of Pikachu as the only available Pokémon to start with, Pikachu is given both a voice and a personality unique from other Pokémon. It follows the player on the overworld, and can be examined by speaking to it. While it initially has an indifferent opinion of the player, it can grow to love or hate him based on the player's actions; leveling up will keep Pikachu happy, while fainting frequently will make it unhappy (this enhanced feature would be used again in Pokémon HeartGold and SoulSilver, the remakes of Pokémon Gold and Silver). There is an area in Pokémon Yellow that features a \"Surfing Pikachu\" mini-game. In order to play it, players must have a Pikachu who can learn \"Surf\", a Water-based attack. At the time, players could only accomplish this by winning a contest to get a \"surfing Pikachu\". However, if players use their Pikachu from Yellow in Pokémon Stadium and beat a certain mode under the proper circumstances, they are rewarded with the move Surf, which can be used both in battle, out of battle, and in the above-mentioned mini-game. Pokémon Yellow has slightly improved graphics from its predecessors and can print Pokédex entries onto stickers using the Game Boy Printer.", developer: "Game Freak", release_date: "October 18, 1999", rating: "E"},
   {title: "Pokemon Silver", author_id: 1, description: "Like Pokémon Red, Blue and Yellow, Pokémon Gold and Silver are played from a top-down perspective, or third-person, with players directly navigating the protagonist around the fictional universe, interacting with objects and people. As the player explores this world he or she will encounter different terrains, such as grassy fields, forests, caves, and seas in which different Pokémon species reside. As the player randomly encounters one of these creatures, the field switches to a turn-based \"battle scene\", where the Pokémon will fight.\n\nThere are two main goals within the games: following through the main storyline and defeating the Elite Four and Lance to become the new Champion, and completing the Pokédex by capturing, evolving, and trading to obtain all 251 creatures. A major aspect of this is developing and raising the player's Pokémon by battling other Pokémon, which can be found in the wild or owned by other Trainers. This system of accumulating experience points (EXP) and leveling up, characteristic and integral to all Pokémon video games, controls the physical properties of the Pokémon, such as the battle statistics acquired, and the moves learned.", developer: "Game Freak", release_date: "October 15, 2000", rating: "E"},
   {title: "Pokemon Gold", author_id: 1, description: "Like Pokémon Red, Blue and Yellow, Pokémon Gold and Silver are played from a top-down perspective, or third-person, with players directly navigating the protagonist around the fictional universe, interacting with objects and people. As the player explores this world he or she will encounter different terrains, such as grassy fields, forests, caves, and seas in which different Pokémon species reside. As the player randomly encounters one of these creatures, the field switches to a turn-based \"battle scene\", where the Pokémon will fight.\n\nThere are two main goals within the games: following through the main storyline and defeating the Elite Four and Lance to become the new Champion, and completing the Pokédex by capturing, evolving, and trading to obtain all 251 creatures. A major aspect of this is developing and raising the player's Pokémon by battling other Pokémon, which can be found in the wild or owned by other Trainers. This system of accumulating experience points (EXP) and leveling up, characteristic and integral to all Pokémon video games, controls the physical properties of the Pokémon, such as the battle statistics acquired, and the moves learned.", developer: "Game Freak", release_date: "October 15, 2000", rating: "E"},
+  {title: "Pokemon LeafGreen", author_id: 1, description: "Pokémon FireRed Version and LeafGreen Version are enhanced remakes of the original Pokémon Red and Blue video games, which were released in 1996. The new titles were developed by Game Freak and published by Nintendo for the Game Boy Advance and have compatibility with the Game Boy Advance Wireless Adapter, which originally came bundled with the games. FireRed and LeafGreen were first released in Japan in January 2004 and released to North America and Europe in September and October respectively. Nearly two years after their original release, Nintendo re-marketed them as Player's Choice titles.\n\nFireRed and LeafGreen are members of the Pokémon series of role-playing video games. As in previous games, the player controls the player character from an overhead perspective, and participates in turn-based combat encounters. However, new features such as a contextual help menu and a new region the player may access have also been added. Throughout the games, the player captures and raises Pokémon for use in battle.\n\nThe games received mostly positive reviews, obtaining an aggregate score of 81 percent on Metacritic. Most critics praised the fact that the games introduced new features while still maintaining the traditional gameplay of the series. Reception of the graphics and audio was more mixed, with some reviewers complaining that they were too simplistic and lacked improvement compared to the previous games, Pokémon Ruby and Sapphire. FireRed and LeafGreen were commercial successes, selling a total of around 12 million copies worldwide.\n\nAs with all Pokémon role-playing games released for handheld consoles, FireRed and LeafGreen are in third-person, overhead perspective. The main screen is an overworld, in which the player navigates the protagonist. Here a menu interface may be accessed, in which the player may configure his or her Pokémon, items, and gameplay settings. When the player encounters a wild Pokémon or is challenged by a trainer, the screen switches to a turn-based battle screen that displays the player's Pokémon and the engaged Pokémon. During battle, the player may select a move for his or her Pokémon to perform, use an item, switch his or her active Pokémon, or attempt to flee. All Pokémon have hit points (HP); when a Pokémon's HP is reduced to zero, it faints and can no longer battle until it is revived. Once an enemy Pokémon faints, all of the player's Pokémon involved in the battle receive a certain amount of experience points (EXP). After accumulating enough EXP, a Pokémon may level up.\n\nCapturing Pokémon is another essential element of the gameplay. During battle with a wild Pokémon, the player may throw a Poké Ball at it. If the Pokémon is successfully caught, it will come under the ownership of the player. Factors in the success rate of capture include the HP of the target Pokémon and the type of Poké Ball used: the lower the target's HP and the stronger the Poké Ball, the higher the success rate of capture.\n\nWhile FireRed and LeafGreen are remakes of Red and Green (Pokémon Green was only released in Japan, whereas the American version was Blue), they contain usability enhancements such as a contextual tutorial feature which allows players to look up data at any point in the game. Additionally, when continuing a saved game, players are shown the last four actions they performed, allowing them to remember what they were doing.", developer: "Game Freak", release_date: "September 9, 2004", rating: "E"},
+  {title: "Pokemon FireRed", author_id: 1, description: "Pokémon FireRed Version and LeafGreen Version are enhanced remakes of the original Pokémon Red and Blue video games, which were released in 1996. The new titles were developed by Game Freak and published by Nintendo for the Game Boy Advance and have compatibility with the Game Boy Advance Wireless Adapter, which originally came bundled with the games. FireRed and LeafGreen were first released in Japan in January 2004 and released to North America and Europe in September and October respectively. Nearly two years after their original release, Nintendo re-marketed them as Player's Choice titles.\n\nFireRed and LeafGreen are members of the Pokémon series of role-playing video games. As in previous games, the player controls the player character from an overhead perspective, and participates in turn-based combat encounters. However, new features such as a contextual help menu and a new region the player may access have also been added. Throughout the games, the player captures and raises Pokémon for use in battle.\n\nThe games received mostly positive reviews, obtaining an aggregate score of 81 percent on Metacritic. Most critics praised the fact that the games introduced new features while still maintaining the traditional gameplay of the series. Reception of the graphics and audio was more mixed, with some reviewers complaining that they were too simplistic and lacked improvement compared to the previous games, Pokémon Ruby and Sapphire. FireRed and LeafGreen were commercial successes, selling a total of around 12 million copies worldwide.\n\nAs with all Pokémon role-playing games released for handheld consoles, FireRed and LeafGreen are in third-person, overhead perspective. The main screen is an overworld, in which the player navigates the protagonist. Here a menu interface may be accessed, in which the player may configure his or her Pokémon, items, and gameplay settings. When the player encounters a wild Pokémon or is challenged by a trainer, the screen switches to a turn-based battle screen that displays the player's Pokémon and the engaged Pokémon. During battle, the player may select a move for his or her Pokémon to perform, use an item, switch his or her active Pokémon, or attempt to flee. All Pokémon have hit points (HP); when a Pokémon's HP is reduced to zero, it faints and can no longer battle until it is revived. Once an enemy Pokémon faints, all of the player's Pokémon involved in the battle receive a certain amount of experience points (EXP). After accumulating enough EXP, a Pokémon may level up.\n\nCapturing Pokémon is another essential element of the gameplay. During battle with a wild Pokémon, the player may throw a Poké Ball at it. If the Pokémon is successfully caught, it will come under the ownership of the player. Factors in the success rate of capture include the HP of the target Pokémon and the type of Poké Ball used: the lower the target's HP and the stronger the Poké Ball, the higher the success rate of capture.\n\nWhile FireRed and LeafGreen are remakes of Red and Green (Pokémon Green was only released in Japan, whereas the American version was Blue), they contain usability enhancements such as a contextual tutorial feature which allows players to look up data at any point in the game. Additionally, when continuing a saved game, players are shown the last four actions they performed, allowing them to remember what they were doing.", developer: "Game Freak", release_date: "September 9, 2004", rating: "E"},
+  {title: "Pokemon Emerald", author_id: 1, description: "Pokémon Emerald is a role-playing video game developed by Game Freak and published by Nintendo for the Game Boy Advance handheld video game console. It was first released in Japan on September 16, 2004, and was later released in North America, Australia, and Europe. It is an enhanced remake of Pokémon Ruby and Sapphire.\n\nPlayers control a Pokémon trainer, whose general goal is to traverse the Hoenn region and conquer a series of eight Pokémon gyms in order to challenge the Elite Four and its champion. Players capture creatures called Pokémon along the way using Poké Balls and use them to fight other trainers' Pokémon. It keeps Pokémon that debuted in Ruby and Sapphire while incorporating Pokémon from Pokémon Gold and Silver in the after-game, that were not featured in Ruby and Sapphire. It features the same plot of Ruby and Sapphire except it incorporates the Pokémon Rayquaza into the story and introduces the Battle Frontier, a tournament in which players' characters can participate after the game's credits.\n\nThe setting and plot remains largely the same as Pokémon Ruby and Sapphire. Players can choose from either a boy or girl (both of whom have been given new green costumes) and choose between one of three Pokémon before they proceed into the rest of the game's world. Players are tasked with filling a device called a Pokédex by catching different Pokémon species and evolving them. They are also tasked to complete eight gym challenges and defeat the Elite Four and its champion by battling their Pokémon. Along their journey they face both Team Magma and Team Aqua (whereas Ruby and Sapphire had you face only one of them based on which version you had). Each has a goal to change the world to their liking; Magma desires more landmass while Aqua desires more water. They plan to accomplish their respective goals by summoning the legendary Pokémon Groudon and Kyogre. Late in the game, they both summon their respective legendary Pokémon; however the Pokémon refuse to obey either team and begin fighting, which puts the world in a constantly switching state of droughts and rain. The players' character climbs a tower in order to summon the legendary Pokémon Rayquaza, who quells the other two Pokémon's rage. After players beat the Elite Four, they are able to encounter two Pokémon flying across Hoenn called Latias and Latios and can access an area called the Battle Frontier.", developer: "Game Freak", release_date: "May 1, 2005", rating: "E"},
+  {title: "Pokemon Diamond", author_id: 1, description: "Pokémon Diamond Version and Pearl Version are role-playing games (RPGs) developed by Game Freak and published by Nintendo for the Nintendo DS. With the enhanced remake Pokémon Platinum, the games comprise the fifth installment and fourth generation of the Pokémon series of RPGs. First released in Japan on September 28, 2006, the games were later released to North America, Australia, and Europe over the course of 2007.\n\nLike previous Pokémon games, Diamond and Pearl chronicle the adventures of a young Pokémon trainer as he/she trains and battles Pokémon while also thwarting the schemes of a criminal organization. The games add many new features, such as Internet play over the Nintendo Wi-Fi Connection and changes to battle mechanics and Pokémon Contests, along with addition of 107 new Pokémon. The games are independent of each other but feature largely the same plot and while both can be played separately, it is necessary to trade between them in order to complete the games' Pokédexes.\n\nDevelopment of Diamond and Pearl was announced at a Nintendo Press conference in the fourth calendar quarter of 2004. The games were designed with features of the DS. It was forecasted to be released in Japan in 2005, but was shipped in 2006. In promotion of the games, Nintendo sold a limited-edition Nintendo DS Lite in Japan, and held a release party celebrating their North American release.\n\nThe games received generally favorable reviews. Most critics praised the addition of Wi-Fi features and felt that the gameplay, though it had not received much updating from previous games, was still engaging. Reviewers were divided on the graphics, however, and the audio was criticized as being primitive. The games enjoyed more commercial success than their Game Boy Advance predecessors: with around 18 million units sold worldwide, Diamond and Pearl have sold over 2 million more units than Ruby and Sapphire and almost 6 million more units than FireRed and LeafGreen, while outselling their successors, Black and White, by over 2 million copies.", developer: "Game Freak", release_date: "April 22, 2007", rating: "E"},
+  {title: "Pokemon Pearl", author_id: 1, description: "Pokémon Diamond Version and Pearl Version are role-playing games (RPGs) developed by Game Freak and published by Nintendo for the Nintendo DS. With the enhanced remake Pokémon Platinum, the games comprise the fifth installment and fourth generation of the Pokémon series of RPGs. First released in Japan on September 28, 2006, the games were later released to North America, Australia, and Europe over the course of 2007.\n\nLike previous Pokémon games, Diamond and Pearl chronicle the adventures of a young Pokémon trainer as he/she trains and battles Pokémon while also thwarting the schemes of a criminal organization. The games add many new features, such as Internet play over the Nintendo Wi-Fi Connection and changes to battle mechanics and Pokémon Contests, along with addition of 107 new Pokémon. The games are independent of each other but feature largely the same plot and while both can be played separately, it is necessary to trade between them in order to complete the games' Pokédexes.\n\nDevelopment of Diamond and Pearl was announced at a Nintendo Press conference in the fourth calendar quarter of 2004. The games were designed with features of the DS. It was forecasted to be released in Japan in 2005, but was shipped in 2006. In promotion of the games, Nintendo sold a limited-edition Nintendo DS Lite in Japan, and held a release party celebrating their North American release.\n\nThe games received generally favorable reviews. Most critics praised the addition of Wi-Fi features and felt that the gameplay, though it had not received much updating from previous games, was still engaging. Reviewers were divided on the graphics, however, and the audio was criticized as being primitive. The games enjoyed more commercial success than their Game Boy Advance predecessors: with around 18 million units sold worldwide, Diamond and Pearl have sold over 2 million more units than Ruby and Sapphire and almost 6 million more units than FireRed and LeafGreen, while outselling their successors, Black and White, by over 2 million copies.", developer: "Game Freak", release_date: "April 22, 2007", rating: "E"},
+  {title: "Pokemon Platinum", author_id: 1, description: "Pokémon Platinum Version is an enhanced remake of Pokémon Diamond and Pearl developed by Game Freak and published by Nintendo for the Nintendo DS handheld game console. It was released on September 13, 2008 in Japan, March 22, 2009 in North America, May 14, 2009 in Australia, and May 22, 2009 in Europe. The developers made Platinum with the intent of making it a stronger version of Diamond and Pearl, which they described as the \"ultimate\" Pokémon titles.\n\nPokémon Platinum has been met with generally positive reception, holding aggregate scores of 84 and 83.14% at Metacritic and Game Rankings respectively. It was praised for the additions and changes made to Diamond and Pearl by publications such as IGN, Nintendo Power, and GamePro, though it has been criticized for being too similar to them. IGN included it as the ninth best Nintendo DS game ever made, as well as nominating it as one of the best DS role-playing games of 2009. It was the fastest-selling game in Japan at the time, selling 7.06 million copies by May 7, 2010.\n\nLike previous Pokémon games, Diamond and Pearl chronicle the adventures of a young Pokémon trainer as he/she trains and battles Pokémon while also thwarting the schemes of a criminal organization. The games add many new features, such as Internet play over the Nintendo Wi-Fi Connection and changes to battle mechanics and Pokémon Contests, along with addition of 107 new Pokémon. The games are independent of each other but feature largely the same plot and while both can be played separately, it is necessary to trade between them in order to complete the games' Pokédexes.\n\nDevelopment of Diamond and Pearl was announced at a Nintendo Press conference in the fourth calendar quarter of 2004. The games were designed with features of the DS. It was forecasted to be released in Japan in 2005, but was shipped in 2006. In promotion of the games, Nintendo sold a limited-edition Nintendo DS Lite in Japan, and held a release party celebrating their North American release.", developer: "Game Freak", release_date: "April 22, 2007", rating: "E"},
+
+  {title: "Pokemon SoulSilver", author_id: 1, description: "Pokémon HeartGold Version and SoulSilver Version are enhanced remakes of the 1999 video games Pokémon Gold and Silver. The games are part of the Pokémon series of role-playing video games, and were developed by Game Freak and published by Nintendo for the Nintendo DS. First released in Japan on September 12, 2009, the games were later released to North America, Australia, and Europe during March 2010.\n\nHeartGold and SoulSilver take place in the Johto region of the franchise's fictional universe, which features special creatures called Pokémon. The basic goal of the game is to become the best Pokémon trainer in the Johto and Kanto regions, which is done by raising and cataloging Pokémon and defeating other trainers. The games are bundled with a peripheral called the Pokéwalker, a pedometer resembling a Poké Ball which can connect to the Nintendo DS game card via infrared signals.\n\nSimilar to Pokémon Gold and Silver, HeartGold and SoulSilver take place in the Johto and Kanto regions of the franchise's fictional universe. The universe centers on the existence of creatures, called Pokémon, with special abilities. The silent protagonist is a young Pokémon trainer who lives in New Bark Town. At the beginning of the games, the player chooses either a Chikorita, Cyndaquil, or Totodile as their starter Pokémon from Professor Elm. After performing a delivery for the professor and obtaining a Pokédex, he decides to let the player keep the Pokémon and start them on a journey.\n\nThe goal of the game is to become the best trainer in Johto and Kanto, which is done by raising Pokémon, completing a catalogue of Pokémon called a Pokédex, defeating the eight Gym Leaders in Johto for Gym Badges, challenging the best trainers in the region known as the Elite Four and the Champion, and then defeating the eight Gym Leaders in the Kanto region. Finally, the player may face off against Red atop Mt. Silver, who serves as the game's final boss.\n\nThroughout the game, the player will battle against members of Team Rocket, a criminal organization originally from Kanto. They were originally defeated by the protagonist of FireRed and LeafGreen, and have attempted to come back as an organization, while awaiting the return of their leader, Giovanni. To attempt to contact him, they take over the radio tower and broadcast a message calling out to him.\n\nWhile being the remakes of Gold and Silver, the games tie in plot elements of Crystal as well, such as the added emphasis on Suicune over the other legendary beasts, as well as the post-ending Battle Frontier. (In Crystal, only the Battle Tower was available.) Additionally, Johto and Kanto were given Generation IV features such as Pal Park.", developer: "Game Freak", release_date: "March 14, 2010", rating: "E"},
+  {title: "Pokemon HeartGold", author_id: 1, description: "Pokémon HeartGold Version and SoulSilver Version are enhanced remakes of the 1999 video games Pokémon Gold and Silver. The games are part of the Pokémon series of role-playing video games, and were developed by Game Freak and published by Nintendo for the Nintendo DS. First released in Japan on September 12, 2009, the games were later released to North America, Australia, and Europe during March 2010.\n\nHeartGold and SoulSilver take place in the Johto region of the franchise's fictional universe, which features special creatures called Pokémon. The basic goal of the game is to become the best Pokémon trainer in the Johto and Kanto regions, which is done by raising and cataloging Pokémon and defeating other trainers. The games are bundled with a peripheral called the Pokéwalker, a pedometer resembling a Poké Ball which can connect to the Nintendo DS game card via infrared signals.\n\nSimilar to Pokémon Gold and Silver, HeartGold and SoulSilver take place in the Johto and Kanto regions of the franchise's fictional universe. The universe centers on the existence of creatures, called Pokémon, with special abilities. The silent protagonist is a young Pokémon trainer who lives in New Bark Town. At the beginning of the games, the player chooses either a Chikorita, Cyndaquil, or Totodile as their starter Pokémon from Professor Elm. After performing a delivery for the professor and obtaining a Pokédex, he decides to let the player keep the Pokémon and start them on a journey.\n\nThe goal of the game is to become the best trainer in Johto and Kanto, which is done by raising Pokémon, completing a catalogue of Pokémon called a Pokédex, defeating the eight Gym Leaders in Johto for Gym Badges, challenging the best trainers in the region known as the Elite Four and the Champion, and then defeating the eight Gym Leaders in the Kanto region. Finally, the player may face off against Red atop Mt. Silver, who serves as the game's final boss.\n\nThroughout the game, the player will battle against members of Team Rocket, a criminal organization originally from Kanto. They were originally defeated by the protagonist of FireRed and LeafGreen, and have attempted to come back as an organization, while awaiting the return of their leader, Giovanni. To attempt to contact him, they take over the radio tower and broadcast a message calling out to him.\n\nWhile being the remakes of Gold and Silver, the games tie in plot elements of Crystal as well, such as the added emphasis on Suicune over the other legendary beasts, as well as the post-ending Battle Frontier. (In Crystal, only the Battle Tower was available.) Additionally, Johto and Kanto were given Generation IV features such as Pal Park.", developer: "Game Freak", release_date: "March 14, 2010", rating: "E"},
+
+  {title: "Super Smash Bros Wii U", author_id: 1, description: "Super Smash Bros. for Nintendo 3DS and Super Smash Bros. for Wii U are fighting video games developed by Sora Ltd. and Bandai Namco Games, with assistance from tri-Crescendo, and published by Nintendo for the Nintendo 3DS and Wii U consoles in 2014. The two games collectively represent the fourth installment in the Super Smash Bros. series of games, although Sakurai stated that they are officially the fourth and fifth installments, respectively.\n\nLike the rest of the series, Super Smash Bros. for Nintendo 3DS and Super Smash Bros. for Wii U are non-traditional fighting games where players use different attacks to weaken their opponents and knock them out of the arena. The games are crossover titles that feature characters, items, music, and stages from various Nintendo franchises such as Mario, Donkey Kong, Pokémon, Kirby, Metroid, Star Fox, The Legend of Zelda and Kid Icarus, as well as from third-party franchises such as Sonic the Hedgehog, Mega Man, Pac-Man, and Street Fighter. New features include having up to eight players fighting at a time on the Wii U, using Miis as fighters, and the addition of customizable special moves unlockable for every character. Some older features have been removed, such as the story mode in predecessor Brawl and the presence of characters with multiple forms (for example, Zelda and Sheik, formerly one character, now must be selected separately).\n\nBoth versions have received positive reviews, with critics applauding the fine-tuning of existing Super Smash Bros. gameplay elements, but criticizing some issues with online play. Both versions have sold quickly, with the 3DS version selling over 7.04 million copies worldwide as of June 2015, and the Wii U version selling over 3.83 million copies during the same period of time.", developer: "Sora Ltd, Bandai Namco Games", release_date: "October 3, 2014", rating: "E"},
+
+  {title: "Splatoon", author_id: 1, description: "Splatoon is a third-person shooter video game developed and published by Nintendo for the Wii U, released in Japan on May 28, 2015, in North America and Europe on May 29, 2015, and in Australia on May 30, 2015. The game centers around characters known as \"Inklings\"—beings that can transform between humanoid and squid forms, and hide or swim through colored ink sprayed on surfaces using gun or brush-based weaponry. Splatoon features several gamemodes, including 4-on-4 online multiplayer and a single player campaign.\n\nSplatoon received positive reviews upon its unveiling and release, with critics praising Nintendo's decision to enter the genre with a new intellectual property (IP), the game's overall style and presentation, gameplay mechanics, and its soundtrack. Criticism was directed at the exclusion of voice chat and private lobbies—features that are commonplace in the genre of multiplayer shooters, the small number of multiplayer maps, and issues with online matchmaking. Splatoon debuted to strong sales, debuting at number one and two respectively on sales charts in Japan and the United Kingdom; 144,000 copies were sold during its launch week in Japan, and the game was the fastest-selling new IP on the Wii U in the United Kingdom. As of June 30, 2015, 1.62 million copies of the game have been sold worldwide.\n\nSplatoon is primarily a team-based third-person shooter which is playable by up to eight players in online four-versus-four matches, although the game also features local one-versus-one multiplayer matches and a single player campaign. Players control characters called Inklings, who have the ability to shape-shift between humanoid and squid forms. In humanoid form, Inklings can shoot ink in their team's color, which can be used to cover the environment or \"splat\" opposing players or enemies. Transforming into a squid allows players to swim through ink of their own color, even up walls and through grates, hiding from the enemy and replenishing their ink supply in the process. Conversely, enemy ink is much slower to move across in humanoid form and cannot be swum through in squid form. Players can use their ink to try and \"splatter\" their opponents, which will send them back to their team's respawn point whilst also providing a large splat of ink. In all modes, players can use the Wii U GamePad to view a map of the surroundings and instantly launch towards the location of another teammate, as well as use optional gyroscopic controls to assist with aiming.", developer: "Nintendo EAD Group No. 2", release_date: "May 29, 2015", rating: "10+"},
+  {title: "ZombiU", author_id: 1, description: "Zombi is a first-person survival horror game set in London, in which the player assumes the role of a random survivor in a zombie apocalypse. The player collects various items and weapons used to fight and kill zombies that are located or looted from different areas. If the player's character is killed by a zombie (which can occur with a single bite), the character will permanently die and the player will then take the role of another random survivor. The previous character will become a zombie, whom the player must kill in order to reclaim his original inventory. If the player has Miiverse enabled, it is possible that other players' characters will also appear as zombies carrying the items they had collected. The player can also tag clues and hints onto walls that other players can see when they're on their own adventure.\n\nThe game's controls extensively use the features of the Wii U GamePad. During normal play, the touchscreen is used to manage the player's inventory and displays a mini-map of the immediate area, which shows the player's location and nearby items. The touchscreen is also used for context-sensitive actions, such as barricading doors or hacking combination locks. The Wii U GamePad gyroscope, which allows the controller to sense its rotation and tilt in three-dimensional space, is also utilized: while viewing the touchscreen the player may move the controller around in space to focus on and scan different areas of the area in order to find items. While performing any of these actions, the perspective on the television switches to a fixed third-person view, showing the player character and the surrounding area. In this state, the player is vulnerable to attack and must watch both the Wii U GamePad touchscreen and the television screen in order to avoid potential harm.", developer: "Ubisoft Montpellier", release_date: "November 18, 2012", rating: "M"},
+
+  {title: "Monster Hunter 3", author_id: 1, description: "Players of Monster Hunter Tri take on the role of a monster slayer from the Guild, assigned to help revitalize Moga Village, a small fishing community that is under threat of monsters from a nearby deserted island. The player does this by completing free hunts on the island, where they collect materials and slay or capture monsters which are converted into resources that can be used to improve the village, and by completing time-limited quests for the Guild, typically slaying or capturing a monster in a specific region, for in-game money and material resources that can be used to improve their equipment that allows them to take on more difficult monsters. Improving the village gives the player access to a farming area and a fishing fleet, from which raw resources can be harvested, companions that can help while on the field, and access to a trader that can provide rare items to the player.\n\nThe player's character does not have any innate statistics but instead gains these from the equipment they outfit the character in. In particular, the player selects from one of ten weapon classes, primarily divided into melee weapons like swords and hammers, and ranged weapons like bows and bowguns. Each weapon type has a unique style of play when used in the field; sword users need to build up consecutive attacks to increase a combo meter to inflict larger damage on their foes but must keep an eye on their blade's sharpness, while bowmen can perform weak but fast ranged attacks including applying special coatings to their arrows to inflict debuffs on enemies. The player can also equip different sets of armor, which impart attack and defensive bonuses. Some weapons and armor include slots that gem decorations can be slotted into which boosts the item's statistics. Various armor pieces give special skill boosts, and if the player can equip a set that boosts a skill past set thresholds, they can gain additional passive bonuses such as full resistance to fire or poison attacks. The player can swap weapons and armor outside of adventuring.\n\nTo progress in the game, the player is typically required to collect parts of the larger monsters that they are assigned to kill, and using those to forge or upgrade weapons and armor. By being able to take on higher-ranked Guild quests with improved equipment, the player will gain access to a larger array of monster parts and world resources that lead to better equipment they can then craft.\n\nIn the field, the player has a health and stamina meter, as well as an item pouch with limited space where resources like healing potions, bombs, and materials picked up in the field are stored. Certain materials can be combined to make more potent items, such as stronger healing potions. However, once the item pouch is full, the player must choose to discard or swap out items with new ones. As the player hunts, they will take damage from monsters; if their health drops to zero, they are rescued to a base camp where they can set off again, but after falling for a third time, they are returned to the village without any gains made while they were adventuring. The stamina meter drops after performing most intensive actions like running, dodging, or attacking, but restores when the player otherwise is walking around. When the player's stamina is depleted, the character will be forced to stop for a brief period to catch their breath before they can move, leaving them vulnerable to attack. In addition, the maximum stamina that the player has will drop over time while in the field, though certain items can restore the maximum stamina level. While on free hunts, the player can leave the field and return to the village at any time, keeping any items they have collected; on Quest hunts, failure to complete the mission in time or abandoning the quest foregoes any reward items.", developer: "Capcom Production Studio 1", release_date: "April 20, 2010", rating: "T"},
+
+  {title: "Hyrule Warriors", author_id: 1, description: "Hyrule Warriors mixes the hack-and-slash gameplay of Koei Tecmo's Dynasty Warriors series of video games with the settings and characters from Nintendo's The Legend of Zelda series. Amongst many other characters, the player controls an original iteration of Link in melee combat to take on large numbers of enemies from the Legend of Zelda series. While there is a much stronger emphasis on combat than other games in the Legend of Zelda series, the player may use common weapons from prior games in the series, such as a sword, bombs, and Link's signature spin attack. Enemy targeting also returns, in combination with elements from the Dynasty Warriors combat system. Obtaining items through discovering and opening chests is retained as well.\n\nThe game has a context-based combat system, in which the player character's abilities change depending on the weapon chosen. Role-playing elements such as weapon and character leveling also appear. Defeating certain enemies gives players weapons bags, which will grant a random weapon to the character, and materials bags, which can be used to power up characters. \"Sealed weapons\" may also be found in treasure boxes, which increase the types of weapons randomly generated for the player in the field. The game supports an asymmetric local two-player mode with one player using the Wii U GamePad and another using a monitor. The game is also compatible with Amiibo figures, with figures based on The Legend of Zelda series unlocking additional content such as new weapons.\n\nThe main campaign of Hyrule Warriors, \"Legend Mode\", allows players to progress through the game's story; these story chapters can be replayed with any character in \"Free Mode\". Additionally, the game features an \"Adventure Mode\", in which players explore a map based on that of the original The Legend of Zelda and complete specific objectives, such as defeating a certain number of enemies within a time limit or completing a mission with a specific character and weapon. An update released on the game's launch date added \"Challenge Mode\", which encourages players to collect as many rupees as possible in a set scenario. The in-game Bazaar allows players to forge new weapons, spend rupees to raise characters' levels, create potions to temporarily boost a character's stats in battle, and exchange materials for badges that augment characters' abilities. The game also offers an an additional quest to collect 100 Gold Skulltulas, tokens that appear in specific Legend Mode and Adventure Mode levels after defeating enough enemies, which will unlock illustration pieces of the several characters in the game and contribute to upgrading the in-game apothecary.", developer: "Omega Force, Team Ninja", release_date: "September 26, 2014", rating: "T"},
+
+  {title: "Xenoblade Chronicles X", author_id: 1, description: "In a similar fashion to the original, the game plays as an open world role-playing video game, with an emphasis on exploration. Traveling can take place on foot, or in large humanoid robots, approximately four times the height of the average playable character, called \"Skells\" , that the player may opt to control. The Skells have the ability to fly, traverse water, and transform into vehicles such as motorcycles or tanks. Aerial battles will also take place in the game.\n\nDuring the game, the player seeks out and recovers the stasis pods that were ejected from the White Whale's hull during its emergency landing, which land in various places across Mira. In order to search for places with stasis pods, the player must expand the \"Frontier Net\" information system by installing data probes at places called \"Frontier Net Spots\". By establishing data probes at various points on Mira, the Net obtains information on the related areas and expands its scope.", developer: "Monolith Soft, Nintendo SPD", release_date: "December 4, 2015", rating: "T"},
+
+  {title: "Pokken Tournament", author_id: 1, description: "Pokkén Tournament, similar to the Tekken series also by Bandai Namco, is a fighting game in which two fighters battle against each other using various Pokémon. Unlike most arcade fighting games, which use a traditional joystick and buttons, the arcade version is played using console-style controllers, which are designed so that players who are not used to arcade sticks can get into the game more easily. The game is planned to focus more on action, as opposed to the more technical gameplay of Tekken, allowing both hardcore and casual fans to enjoy it. As such, players can perform various techniques taken from the Pokémon series, such as special moves and Mega Evolutions (which can be built up from attacks using a \"Resonance Gauge\"). Currently, ten characters, Lucario, Machamp, Suicune, Gardevoir, Pikachu, Gengar, Weavile, Charizard, Blaziken, and Pikachu Libre have been announced, the latter becoming available in an upcoming update. Assist characters are also available to use: currently, Emolga, Fennekin, Snivy, Frogadier, Eevee, Lapras, Whimsicott and Jirachi are confirmed as supports. Additionally, the game will not feature fighters from the Tekken series.", developer: "Bandai Namco Entertainment", release_date: " Q2 2016", rating: "RP"},
+
+  {title: "Sonic Boom: Rise of Lyric", author_id: 1, description: "Sonic Boom is an action-adventure game with a stronger emphasis on exploration and combat compared to previous Sonic the Hedgehog installments, featuring four main characters whom players control: Sonic, Tails, Knuckles, and Amy. Each character has their own unique abilities and gameplay mechanics: Sonic can use his speed and homing attacks, Tails can fly and use various gadgets, Knuckles can burrow underground and climb on walls, and Amy can use her hammer to swing on poles. Each character also possesses a whip-like weapon called the Enerbeam, which allows them to perform various actions such as hanging from speeding rails, removing enemy shields, and solving puzzles. There is also a focus on collaboration, with player's switching control between multiple characters and using their abilities to progress. The game will support local co-operative multiplayer for two players, with additional modes for up to four players locally.", developer: "Big Red Button", release_date: "November 11, 2014", rating: "10+"},
 ])
+
 GameConsole.create!([
   {game_id: 1, console_id: 6},
   {game_id: 2, console_id: 9},
@@ -143,14 +168,6 @@ GameConsole.create!([
   {game_id: 32, console_id: 19},
   {game_id: 32, console_id: 7},
   {game_id: 32, console_id: 17},
-  # {game_id: 33, console_id: 11},
-  # {game_id: 33, console_id: 12},
-  # {game_id: 33, console_id: 14},
-  # {game_id: 33, console_id: 9},
-  # {game_id: 33, console_id: 19},
-  # {game_id: 33, console_id: 17},
-  # {game_id: 33, console_id: 7},
-
   {game_id: 33, console_id: 1},
   {game_id: 34, console_id: 1},
   {game_id: 35, console_id: 1}, #yellow version
@@ -159,6 +176,30 @@ GameConsole.create!([
   {game_id: 36, console_id: 2},
   {game_id: 37, console_id: 1},
   {game_id: 37, console_id: 2},
+  {game_id: 38, console_id: 3},
+  {game_id: 39, console_id: 3}, #pokemon firered
+  {game_id: 40, console_id: 3}, #pokemon emerald
+  {game_id: 41, console_id: 7}, #diamond
+  {game_id: 42, console_id: 7}, #pearl
+  {game_id: 43, console_id: 7}, #platinum
+  {game_id: 44, console_id: 7}, #soulsilver
+  {game_id: 45, console_id: 7}, #heartgold
+  {game_id: 46, console_id: 8},
+  {game_id: 46, console_id: 20},
+  {game_id: 47, console_id: 20},
+  {game_id: 48, console_id: 20},
+  {game_id: 48, console_id: 9},
+  {game_id: 48, console_id: 18},
+  {game_id: 48, console_id: 13},
+  {game_id: 49, console_id: 8},
+  {game_id: 49, console_id: 20},
+  {game_id: 49, console_id: 19},
+  {game_id: 50, console_id: 20},
+  {game_id: 50, console_id: 8},
+  {game_id: 51, console_id: 20},
+  {game_id: 52, console_id: 20},
+  {game_id: 53, console_id: 20},
+
 ])
 Tag.create!([
   {label: "rpg"}, #1
@@ -181,8 +222,36 @@ Tag.create!([
   {label: "fighting"}, #18
   {label: "fantasy"}, #19
   {label: "sports"}, #20
+  {label: "third-person"}, #21
+  {label: "horror"}, #22
+  {label: "hack-and-slash"}, #22
 ])
 Tagging.create!([
+  {tag_id: 1, game_id: 52},
+  {tag_id: 4, game_id: 52},
+  {tag_id: 3, game_id: 52},
+  {tag_id: 18, game_id: 51},
+  {tag_id: 1, game_id: 51},
+  {tag_id: 3, game_id: 51},
+  {tag_id: 22, game_id: 50},
+  {tag_id: 3, game_id: 50},
+  {tag_id: 3, game_id: 49},
+  {tag_id: 1, game_id: 49},
+  {tag_id: 7, game_id: 48},
+  {tag_id: 6, game_id: 48},
+  {tag_id: 21, game_id: 47},
+  {tag_id: 6, game_id: 47},
+  {tag_id: 8, game_id: 47},
+  {tag_id: 8, game_id: 46},
+  {tag_id: 18, game_id: 46},
+  {tag_id: 1, game_id: 45},
+  {tag_id: 1, game_id: 44},
+  {tag_id: 1, game_id: 43},
+  {tag_id: 1, game_id: 42},
+  {tag_id: 1, game_id: 41},
+  {tag_id: 1, game_id: 40},
+  {tag_id: 1, game_id: 39},
+  {tag_id: 1, game_id: 38},
   {tag_id: 1, game_id: 37},
   {tag_id: 1, game_id: 36},
   {tag_id: 1, game_id: 35},
@@ -253,7 +322,189 @@ Tagging.create!([
   {tag_id: 11, game_id: 7},
   {tag_id: 19, game_id: 7}
 ])
+
 User.create!([
   {username: "jeffreycheng92", email: "jeffreycheng92@gmail.com", session_token: "XZbKptYMEGY9xTLme_8AJw", password_digest: "$2a$10$KvfaMTvmJkg.doVmU4QZdet9gE9DWFYtAPiM/y6CkZrAquA0FqwZK", bio: nil, location: nil},
   {username: "guest", email: "guest@example.com", session_token: "6rRgkHYVHK5j6e-3FROpuQ", password_digest: "$2a$10$BjlOdQ/67K2q3Glm4.7LP.a91iuAFDDPyH5jDAOfudSZF8KEcAjRm", bio: nil, location: nil}
 ])
+
+Game.find(1).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439876888/ycs1fmhcwownkkq9k4iy.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439876888/ycs1fmhcwownkkq9k4iy.jpg"
+)
+Game.find(2).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772812/counter_strike_global_offensive___pc_cover_by_newlinkgamesdf-d6j8esx_sbja6t.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772812/counter_strike_global_offensive___pc_cover_by_newlinkgamesdf-d6j8esx_sbja6t.jpg"
+)
+Game.find(3).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440293136/League_of_Legends_logo_jad6ej.png",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440293136/League_of_Legends_logo_jad6ej.png"
+)
+Game.find(4).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439855985/gv6pt2mevreoeddlcccj.png",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439855985/gv6pt2mevreoeddlcccj.png"
+)
+Game.find(5).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440117255/dwq0aypdowsyrktbjr1t.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440117255/dwq0aypdowsyrktbjr1t.jpg"
+)
+Game.find(6).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439876702/nh2hobifra5izmhsculd.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439876702/nh2hobifra5izmhsculd.jpg"
+)
+Game.find(7).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772810/WoW_Box_Art1_nc1lij.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772810/WoW_Box_Art1_nc1lij.jpg"
+)
+Game.find(8).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772807/Ruby_boxart_dt4tto.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772807/Ruby_boxart_dt4tto.jpg"
+)
+Game.find(9).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772808/Sapphire_boxart_ahyk17.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772808/Sapphire_boxart_ahyk17.jpg"
+)
+Game.find(10).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772806/Codbox_x3vu6o.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772806/Codbox_x3vu6o.jpg"
+)
+Game.find(11).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772807/MapleStory_PCDLboxart_160w_c4tp0h.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772807/MapleStory_PCDLboxart_160w_c4tp0h.jpg"
+)
+Game.find(12).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772806/183539-mario_party_3__u__zeqbaa.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772806/183539-mario_party_3__u__zeqbaa.jpg"
+)
+Game.find(13).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440293582/RuneScape2-18212539_lhag38.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440293582/RuneScape2-18212539_lhag38.jpg"
+)
+Game.find(14).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440293582/RuneScape2-18212539_lhag38.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440293582/RuneScape2-18212539_lhag38.jpg"
+)
+Game.find(15).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440293582/RuneScape2-18212539_lhag38.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440293582/RuneScape2-18212539_lhag38.jpg"
+)
+Game.find(16).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440117819/vwkl4h0ctmluw2peaezx.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440117819/vwkl4h0ctmluw2peaezx.jpg"
+)
+Game.find(17).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439876645/sahfaqtikcyivgf0mfrr.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439876645/sahfaqtikcyivgf0mfrr.jpg"
+)
+Game.find(18).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772808/Spyro_Season_of_Ice_z1ymj7.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772808/Spyro_Season_of_Ice_z1ymj7.jpg"
+)
+Game.find(19).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772814/supermariogalaxy_e7uli7.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772814/supermariogalaxy_e7uli7.jpg"
+)
+Game.find(20).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772809/Super_Mario_64_box_cover_uvxtsv.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772809/Super_Mario_64_box_cover_uvxtsv.jpg"
+)
+Game.find(21).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772806/Assassin_s_Creed_cover_vgplsg.png",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772806/Assassin_s_Creed_cover_vgplsg.png"
+)
+Game.find(22).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439875820/qv3ln9li4q79el71qvsz.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439875820/qv3ln9li4q79el71qvsz.jpg"
+)
+Game.find(23).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439875964/tglibfbwka1rgaef7gfz.png",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439875964/tglibfbwka1rgaef7gfz.png"
+)
+Game.find(24).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1439772807/Borderlandscover_j6p7wc.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1439772807/Borderlandscover_j6p7wc.jpg"
+)
+Game.find(25).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294230/Borderlands2boxart3_q8sqka.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294230/Borderlands2boxart3_q8sqka.jpg"
+)
+Game.find(26).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294258/Destiny_Box_Art_d6dfbi.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294258/Destiny_Box_Art_d6dfbi.jpg"
+)
+Game.find(27).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294281/NBA2k141_mutpvw.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294281/NBA2k141_mutpvw.jpg"
+)
+Game.find(28).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294308/nba-2k15-cover_lnae6m.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294308/nba-2k15-cover_lnae6m.jpg"
+)
+Game.find(29).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294334/NBA2K12_Agnostic_FoB_Final_Jordan-noscale_bhepwi.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294334/NBA2K12_Agnostic_FoB_Final_Jordan-noscale_bhepwi.jpg"
+)
+Game.find(30).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294462/NBA_2K11_cover_bg7iz4.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294462/NBA_2K11_cover_bg7iz4.jpg"
+)
+Game.find(31).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294487/Mlb2k11_asinz3.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294487/Mlb2k11_asinz3.jpg"
+)
+Game.find(32).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294510/MLB2K12_PS31_ex0hns.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294510/MLB2K12_PS31_ex0hns.jpg"
+)
+Game.find(33).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294571/250px-Blue_EN_boxart_vzndoz.png",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294571/250px-Blue_EN_boxart_vzndoz.png"
+)
+Game.find(34).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294591/Pok_C3_A9mon_box_art_-_Red_Version_lqdb4l.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294591/Pok_C3_A9mon_box_art_-_Red_Version_lqdb4l.jpg"
+)
+Game.find(35).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294623/pokemon_yellow_cover_art_by_comunello76-d4xfrr5_vmrvyu.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294623/pokemon_yellow_cover_art_by_comunello76-d4xfrr5_vmrvyu.jpg"
+)
+Game.find(36).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294645/250px-Silver_EN_boxart_zldi3z.png",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294645/250px-Silver_EN_boxart_zldi3z.png"
+)
+Game.find(37).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294663/6163_front_aj57cs.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294663/6163_front_aj57cs.jpg"
+)
+Game.find(38).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294703/Pokemon-LeafGreen_WithAdapter_GBA_ESRB_hfb7jr.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294703/Pokemon-LeafGreen_WithAdapter_GBA_ESRB_hfb7jr.jpg"
+)
+Game.find(39).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294689/61XjZ8DvaFL_bxi2gq.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294689/61XjZ8DvaFL_bxi2gq.jpg"
+)
+Game.find(40).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294730/250px-Pokemon_Emerald_boxart_EN-US_ez85fy.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294730/250px-Pokemon_Emerald_boxart_EN-US_ez85fy.jpg"
+)
+Game.find(41).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294757/250px-Diamond_EN_boxart_j0ii3f.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294757/250px-Diamond_EN_boxart_j0ii3f.jpg"
+)
+Game.find(42).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294742/PearlUS_hy6nhg.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294742/PearlUS_hy6nhg.jpg"
+)
+Game.find(43).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294788/250px-Platinum_EN_boxart_ob5xg5.png",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294788/250px-Platinum_EN_boxart_ob5xg5.png"
+)
+Game.find(44).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294825/250px-SoulSilver_EN_boxart_i7ikot.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294825/250px-SoulSilver_EN_boxart_i7ikot.jpg"
+)
+Game.find(45).cover.update(
+  url: "http://res.cloudinary.com/jeffreycheng/image/upload/v1440294804/250px-HeartGold_EN_boxart_hlo8vq.jpg",
+  thumbnail_url: "http://res.cloudinary.com/jeffreycheng/image/upload/t_media_lib_thumb/v1440294804/250px-HeartGold_EN_boxart_hlo8vq.jpg"
+)
