@@ -2,6 +2,9 @@
 
 http://agro-app.herokuapp.com/
 
+## What is it?
+AGRO (Authentic Game Reviews Online) enables avid gamers  to collaborate on finding the most fulfilling video game (for them) and act as a primary resource for future visitors of the site. Video games are a growing form of entertainment with young adults of today and with new games constantly being developed, many are constantly searching for a new game or one matching their personal preference. With current game review websites, games are mainly reviewed and rated by critics who are not in the same age category or have the same opinion of games as those actually playing the game. AGRO serves as an open platform for people to review games truthfully and also help others at the same time. The site is and will be built by the community in an effort to also serve the community.
+
 ## Minimum Viable Product
 AGRO (Authentic Game Reviews Online) is a clone of Yelp built on Rails and Backbone. Users can:
 
@@ -72,7 +75,7 @@ first. Will do more if time allows.
 - [ ] Screenshots for games
 - [X] "Like" button and counter for reviews
 - [ ] Pagination/infinite scroll on games show
-- [ ] Review history (on profile page)
+- [X] Review history (on profile page)
 - [ ] User-to-user private messages
 - [X] User avatars
 - [ ] Forum for users with defined subforum categories
