@@ -11,7 +11,7 @@ AGRO.Views.gameForm = Backbone.View.extend({
 
   events: {
     "submit form": "sendForm",
-    "click .upload-button": "upload"
+    "click .upload-button": "upload",
   },
 
   render: function() {
