@@ -46,7 +46,6 @@ AGRO.Views.gameHome = Backbone.CompositeView.extend({
     target.addClass("chosen").removeClass("sidebar-list-item");
 
     this._addPongy();
-    // this.subviews(".game-thumbnails").each( function(view) { view.remove(); });
 
     if (target.data("console") === 0 ) {
       this.collection.spinnerFetch({
