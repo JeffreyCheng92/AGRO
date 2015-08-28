@@ -11,6 +11,8 @@
 #  updated_at :datetime         not null
 #
 
+require 'date'
+
 class Review < ActiveRecord::Base
   validates :author, :game, :body, :rating, presence: true
   validate :user_reviews_game_only_once, on: :create
@@ -35,6 +37,10 @@ class Review < ActiveRecord::Base
     total = 0
     likes.each { |like| total += like.value }
     return total
+  end
+
+  def create_time
+    self.created_at.strftime('%m.%d.%y %H:%M UTC')
   end
 
   private
