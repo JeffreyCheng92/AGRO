@@ -192,6 +192,9 @@ td.game-item-title {
 
 .game-thumbnail-item:first-child {
   border-left: 1px solid black;
+  background: rgba(255,255,255,0.4);
+  font-weight: bold;
+  color: crimson;
 }
 
 .clearfix:after {
