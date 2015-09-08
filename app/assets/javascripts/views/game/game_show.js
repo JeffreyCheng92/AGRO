@@ -18,7 +18,11 @@ AGRO.Views.gameShow = Backbone.CompositeView.extend({
 
   render: function() {
     var id = (typeof current_user === "undefined") ? 0 : current_user.id;
-    var content = this.template({ id: id, game: this.model });
+    var content = this.template({
+      id: id,
+      game: this.model,
+      count: this.model.reviews().length
+    });
     this.$el.html(content);
     this.imageHelper();
 
