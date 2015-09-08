@@ -80,6 +80,7 @@ input.login-field {
 body {
   padding-top: 50px;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .mario {
@@ -207,6 +208,7 @@ td.game-item-title {
   display: inline-block;
   float: left;
   min-width: 25%;
+  min-height: 152px;
   padding-top: 10px;
   text-align: center;
   border: 1px solid black;
