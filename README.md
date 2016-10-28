@@ -1,7 +1,5 @@
 # AGRO
 
-http://www.agr.online/session/new
-
 ## Screenshot
 ![game_preview](./docs/agro.png)
 
